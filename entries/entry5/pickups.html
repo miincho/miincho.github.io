@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+
+        function show(id) {
+            var img1 = document.getElementById(id);
+        }
+        </script>
+
+</head>
+<body background="imgs/wall.jpg" style="background-size: cover ;">
+    <link rel="stylesheet" href="style.css">
+
+    <img id="handy" src="imgs/pickupsfront.png" width="1562" height="766">
+
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+        <img src="imgs/handle.png" draggable="true" ondragstart="drag(event)" id="handle" width="704.6px" height="322.4px">
+    </div>
+
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+
+
+</body>
+</html>

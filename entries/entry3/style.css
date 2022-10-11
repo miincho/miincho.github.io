@@ -1,0 +1,96 @@
+body {
+    background-color: #101010;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 5px;
+
+  }
+
+  
+
+html{
+    min-height: 100%;
+    overflow: hidden;
+  }
+  body{
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: rgba(0, 255, 110, 0.75);
+    background-color: rgb(25,25,25);  
+  }
+  .line-1{
+      position: relative;
+      top: 150px;  
+      width: 24em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255,255,255,.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);    
+  }
+  
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 10em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+
+  
+
+#unlock {
+
+        position: fixed;
+        bottom: 120px;
+        right: 35px;
+    
+}
+
+
+#cabinet {
+    position: fixed;
+    bottom: -30px;
+    left: 85px;
+  }
+
+#eyeball {
+  position:absolute; 
+  bottom: 245px;
+  left: 140px;
+  z-index: 1000;
+}
+
+
+#div1 {
+    position: fixed;
+    bottom: 45px;
+    left: 170px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 0px;
+   
+  }
+
+  #div2 {
+    position: fixed;
+    top: 60px;
+    right: 120px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 0px;
+  }
+

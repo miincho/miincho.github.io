@@ -1,0 +1,254 @@
+
+.image {
+  display: none;
+}
+
+.b1:active ~ .image{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b1 {
+    background-color:transparent;
+ 
+    color: transparent;
+    border: none;
+
+    height:150px;
+    width: 150px;
+
+
+    position: fixed;
+    bottom: 85px;
+    left: 635px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+.image2 {
+  display: none;
+}
+
+
+
+.b2:active ~ .image2{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+
+  background-color:transparent;
+  color: transparent;
+}
+
+/*
+.inside2 {
+  display: none;
+}
+
+.b2:active ~ .inside2{
+  display: block;
+  height:"150px";
+  width:"150px";
+}
+*/
+
+.b2 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+    position: fixed;
+    bottom: 85px;
+    left: 468px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+
+.image3 {
+  display: none;
+
+}
+
+.b3:active ~ .image3{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b3 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+
+    position: fixed;
+    bottom: 87px;
+    left: 793px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+
+.image4 {
+  display: none;
+
+}
+
+.b4:active ~ .image4{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b4 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+
+    position: fixed;
+    bottom: 88px;
+    left: 975px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+.image5 {
+  display: none;
+}
+
+.b5:active ~ .image5{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b5 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+    position: fixed;
+    bottom: 260px;
+    left: 969px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+.image6 {
+  display: none;
+}
+
+.b6:active ~ .image6{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b6 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+    position: fixed;
+    bottom: 415px;
+    left: 799px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+
+.image7 {
+  display: none;
+}
+
+.b7:active ~ .image7{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b7 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+
+  height:150px;
+  width: 150px;
+
+    position: fixed;
+    bottom: 570px;
+    left: 792px;
+
+    cursor: url(imgs/pic.png), auto;
+}
+
+
+
+.image8 {
+  display: none;
+}
+
+.b8:active ~ .image8{
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  background-color:transparent;
+  color: transparent;
+}
+
+.b8 {
+  background-color:transparent;
+  color: transparent;
+  border: none;
+  height:150px;
+  width: 150px;
+
+    position: fixed;
+    bottom: 570px;
+    left: 640px;
+
+    cursor: url(imgs/pic.png), auto;
+}

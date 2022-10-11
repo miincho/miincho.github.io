@@ -1,0 +1,116 @@
+
+body {
+    background-color: #101010;
+    font-family: 'VT323', monospace;
+    padding: 5px;
+
+  }
+
+/*
+h1{
+    text-align: right;
+    color: #ffffff;
+    font-size: 40px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+#text {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+  }
+
+*/
+
+  .container .btn {
+    height:80px;
+    width:75px;
+
+    position: absolute;
+    
+  bottom: 344px;
+    left: 908px;
+
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color:transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .container .btn:hover {
+    background-color:#101010;
+    opacity: 0.5;
+  }
+
+
+/*crafting image*/
+.center {
+    display: block;
+    margin-top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/*hover images*/
+  #rabbit {
+    position: fixed;
+    bottom: 115px;
+    left: 335px;
+  }
+#rabbit:hover {
+    content: url(imgs/cooked\ rabbit.png);
+    height:105px;
+    width: 105px;
+    cursor: url(imgs/sword.png), auto;
+}
+
+  #sheep {
+    position: fixed;
+    bottom: 60px;
+    left: 870px;
+  }
+  #sheep:hover {
+    content: url(imgs/mutton.png);
+    height:120px;
+    width: 120px;
+    cursor: url(imgs/sword.png), auto;
+}
+  
+
+  #cat {
+    position: fixed;
+    bottom: 400px;
+    left: -10px;
+  }
+  #cat:hover {
+    content: url(imgs/cat.png);
+    height: 116px;
+    width: 200px;
+    cursor: url(imgs/salmon.png), auto;
+    position: fixed;
+    bottom: 480px;
+    left: 70px;
+  }
+
+
+
+#chicken {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+#chicken:hover {
+    content: url('imgs/cookedchick.png');
+    height: 210px;
+    width: 214.7px;
+    cursor: url(imgs/sword.png), auto;
+  
+}

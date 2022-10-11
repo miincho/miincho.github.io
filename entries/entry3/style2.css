@@ -1,0 +1,188 @@
+
+#folder {
+    position:absolute;
+    top: -50px;
+    left: 300px;
+    z-index: -10;
+}
+
+/* Style the tab */
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 65px;
+
+    transition: 0.3s;
+    background-color: transparent;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: rgb(80, 214, 53);
+    background-color: transparent;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    color: rgb(84, 12, 12);
+    background-color: transparent;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0px;
+    border-top: none;
+  }
+
+  
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+
+/*main tab fonts*/
+  #OVERVIEW.tabcontent{
+    font-family: 'El Messiri', sans-serif;  
+  }
+
+
+  #EVIDENCE.tabcontent{
+    font-family: 'El Messiri', sans-serif;  
+  }
+
+
+  #SUSPECTS.tabcontent{
+    font-family: 'El Messiri', sans-serif;  
+  }
+
+  /* over view page photos*/
+  #img1 {
+    position: absolute;
+  }
+
+  #img2 {
+    position: absolute; 
+    bottom: 65px;
+    right: 380px;
+  }
+  
+/*evidence page text*/
+#caption1 {
+  position: absolute; 
+  top: 150px;
+  left: 635px;
+
+}
+
+#caption2 {
+  position: absolute; 
+  bottom: 170px;
+  left: 650px;
+
+}
+
+#caption3 {
+  position: absolute; 
+  bottom: 190px;
+  right: 425px;
+
+}
+
+/*overview page text*/
+#context {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+/*evidence images*/
+#evd1{
+  position: absolute; 
+  transform: rotate(3deg);
+  top: 145px;
+  left: 420px;
+}
+
+#evd2{
+  position: absolute; 
+  transform: rotate(-2deg);
+  bottom: 140px;
+  left: 400px;
+}
+
+#evd3{
+  position: absolute; 
+  transform: rotate(2deg);
+  top: 180px;
+  right: 410px;
+}
+
+/*suspect images*/
+#suspect1{
+  position: absolute; 
+  transform: rotate(2deg);
+  top: 180px;
+  left: 400px;
+}
+
+#suspect2{
+  position: absolute; 
+  transform: rotate(-2deg);
+  top: 180px;
+  left: 665px;
+}
+
+#suspect3{
+  position: absolute; 
+  transform: rotate(3deg);
+  top: 180px;
+  left: 935px;
+}
+
+/*suspect page text*/
+#caption4 {
+  position: absolute; 
+  top: 140px;
+  left: 440px;
+
+}
+
+#caption5 {
+  position: absolute; 
+  top: 140px;
+  left: 700px;
+
+}
+
+#caption6 {
+  position: absolute; 
+  top: 140px;
+  right: 380px;
+
+}

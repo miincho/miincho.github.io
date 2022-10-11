@@ -1,0 +1,258 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5.5em;
+    column-count: 3;
+    column-gap: 2.3em;
+    padding-left: 12.2%;
+    padding-top: 11%;
+  
+  }
+  
+  .flex-container > div {
+    background-color: transparent;
+    flex-basis: 26%;
+    margin: 10px;
+    padding: 20px;
+  }
+
+
+#title {
+    font-family: 'Changa', sans-serif;
+    font-size:xx-large;
+    color: rgb(75, 23, 23);
+}
+
+#start {
+left:350px;
+top: -10px;
+position: absolute;
+}
+
+#end {
+    right: 350px;
+    top: -10px;
+    position: absolute;
+    }
+    
+
+/*tile hovers*/
+.content1 {
+      display: block;
+      width: 50px;
+      height:50px;
+      background-image: url(imgs/tile.png);
+}
+
+.content1:hover {
+    background-image: url('imgs/bomb.png');
+  }
+
+
+.content2 {
+  display: block;
+  width: 50px;
+  height:50px;
+  background-image: url(imgs/tile.png);
+
+}
+
+.content2:hover {
+background-image: url('imgs/bomb.png');
+}
+
+
+
+
+.content3 {
+  display: block;
+  width: 50px;
+  height:50px;
+  background-image: url(imgs/tile.png);
+}
+
+.content3:hover {
+background-image: url('imgs/one.png');
+}
+
+.content4 {
+  display: block;
+  width: 50px;
+  height:50px;
+  background-image: url(imgs/tile.png);
+}
+
+.content4:hover {
+background-image: url('imgs/2.png');
+}
+
+.content5 {
+  display: block;
+  width: 50px;
+  height:50px;
+  background-image: url(imgs/tile.png);
+
+}
+
+.content5:hover {
+background-image: url('imgs/bomb.png');
+
+}
+
+.content6 {
+  display: block;
+  width: 50px;
+  height:50px;
+  background-image: url(imgs/tile.png);
+}
+
+.content6:hover {
+background-image: url('imgs/bomb.png');
+}
+
+/*content 1 html*/
+.popup {
+    margin: auto; 
+    display: block; 
+}
+
+
+/*
+.button{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    align-items: center; 
+}
+*/
+
+
+/*content 2 html*/
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+    column-gap:2.2em;
+    row-gap: 8.99em;
+    padding-left: 7%;
+    padding-top: 7.7%;
+  
+  }
+  
+  .flex2 > div {
+    background-color: transparent;
+    flex-basis: 15%;
+    margin: 10px;
+    padding: 20px;
+  }
+
+
+#dream {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#dream:hover {
+    content: url(imgs/dream2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#cat {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#cat:hover {
+    content: url(imgs/cat2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#kat {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#kat:hover {
+    content: url(imgs/kat2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#bf {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#bf:hover {
+    content: url(imgs/bf2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+
+
+/*content 3 html*/
+.flex3 {
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+    column-gap:2.2em;
+    row-gap: 8.99em;
+    padding-left: 7%;
+    padding-top: 7.7%;
+  
+  }
+  
+  .flex3 > div {
+    background-color: transparent;
+    flex-basis: 15%;
+    margin: 10px;
+    padding: 20px;
+  }
+
+#eugene {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#eugene:hover {
+    content: url(imgs/eugene2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#mushroom {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#mushroom:hover {
+    content: url(imgs/mushroom2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#yogurt {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#yogurt:hover {
+    content: url(imgs/yogurt2.PNG);
+    width: 207px;
+    height:448px;
+}
+
+#ned {
+    position: fixed;
+    width: 100px;
+    height:100px;
+  }
+#ned:hover {
+    content: url(imgs/ned2.PNG);
+    width: 207px;
+    height:448px;
+}

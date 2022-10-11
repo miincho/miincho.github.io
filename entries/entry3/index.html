@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+
+        function show(id) {
+            var img1 = document.getElementById(id);
+        }
+        </script>
+</head>
+
+<body background="backrooms.jpg" style="background-size: cover ;">
+    <link rel="stylesheet" href="style.css">
+
+
+    <a href="index2.html">
+      <img id="eyeball" src="imgs/eyeball.png" width="70" height="70">
+    </a>
+
+
+
+    <img id="cabinet" src="imgs/cabinets.png" width="520" height="520">
+
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+        
+    </div>
+
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="imgs/keys.png" draggable="true" ondragstart="drag(event)" id="key" width="300" height="300">
+    </div>
+
+<div class="typewriter">
+    <h1 class="line-1 anim-typewriter">unlock the cabinet</h1>
+</div>
+
+
+</body>
+</html>

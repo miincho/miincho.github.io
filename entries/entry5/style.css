@@ -1,0 +1,153 @@
+/*
+#grad1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red; 
+    background-image: linear-gradient(to right, rgb(178, 98, 12) , rgb(36, 118, 153));
+    z-index: -1000;
+}
+*/
+
+#ispy{
+    position: absolute;
+    border: 15px solid rgb(198, 191, 191);
+    transform: rotate(1.9deg);
+    left: 250px;
+    top: 50px; 
+}
+
+#caption{
+    position:absolute;
+    font-family: 'Berkshire Swash', cursive;
+    font-size:35px;
+    left: 300px;
+    bottom: 15px;
+    color:rgb(49, 18, 14);
+}
+
+#ring{
+    position:absolute;
+    z-index: 1000;
+    top:338px;
+    right:420px;
+    transform: rotate(-19deg)
+
+}
+
+#snail{
+    position:absolute;
+    z-index: 1000;
+    bottom: 270px;
+    left:600px;
+}
+
+#skull{
+    position:absolute;
+    z-index: 1000;
+    top: 160px;
+    left:680px;
+    transform: rotate(4deg)
+}
+
+/*pickups.html style*/
+
+#handy{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#div1 {
+    position: fixed;
+    top: 0px;
+    left: 70px;
+    width: 600px;
+    height: 330px;
+    margin: 8px;
+    padding: 10px;
+    border: 0px;
+
+  }
+
+  #div2 {
+    position: fixed;
+    bottom: 150px;
+    right: 480px;
+    width: 600px;
+    height: 330px;
+    margin: 10px;
+    padding: 10px;
+    border: 0px;
+
+  }
+
+   /*screentime.html style*/
+   div.eye{
+position: relative;
+    z-index: 2;
+    left: 300px;
+
+   }
+
+    div.grad {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color: grey;/* For browsers that do not support gradients */
+    background-image: radial-gradient(#d7513a, #351f43, #b06529);
+    z-index:-1;
+
+  }
+
+div.time, div.outline{
+    position:fixed; 
+    top:0; 
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 2;
+    pointer-events: none;
+
+
+    background-image: url(imgs/time.svg);
+    opacity: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+
+div.outline {
+    background-image: url(imgs/outline.svg);
+    z-index: 3;
+
+}
+
+
+
+
+  .flex-container {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          
+          .flex-container > div {
+            background-color: transparent;
+            width: 800px;
+            height: 400px;
+            z-index: 2;
+          }
+
+.screen2 {
+    flex-basis: 100%;
+    height: 0;
+}
+
+
+
