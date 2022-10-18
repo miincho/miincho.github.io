@@ -1,0 +1,110 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: black;
+}
+
+
+.text{
+
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+
+#trophy{
+    width: 315px;
+    height: 375px;
+
+}
+
+#star{
+    width: 321px;
+    height: 302px;
+
+}
+
+
+div.text {
+align-content: center;
+    padding: 20px;
+  }
+
+@media screen and (min-width: 600px) {
+    div.text {
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    div.text {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: auto;
+    margin: 0 auto;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 33%;
+    max-width: 22%;
+    padding: auto;
+    margin: 0 auto;
+  }
+  
+  .column img {
+    vertical-align: right;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+
+
+/* confetti effect*/
+  body {
+    user-select: none;
+  }
+  
+  #confetti-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .confetti {
+    position: absolute;
+    z-index: 9999;
+  }
+  
+  .confetti-item {
+    width: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+  }

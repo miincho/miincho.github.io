@@ -1,0 +1,264 @@
+
+
+  /* gif from codepen: https://codepen.io/nikma/pen/pEjEVN */
+body{
+    margin:0;
+  }
+  .div {
+    background: url(https://64.media.tumblr.com/2b0ec5e7d4763b0cc6aaba6982be379c/tumblr_occujlvMQE1qze3hdo1_r2_500.gif) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: 0;
+  }
+  .m:first-child {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s infinite;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(200, 200, 200, 1);
+  }
+  
+
+  /*  */
+  /*  */
+  
+  #profile-header{
+    background: url(https://cdn.discordapp.com/attachments/576382988615548953/869688243157876766/tumblr_occujlvMQE1qze3hdo1_r2_500.gif) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  /*   height: 82vh; */
+    margin: 0; 
+  }
+  #profile-name{
+    display: 0px;;
+  }
+  
+  #followers-count,#following-count{
+    display:none;
+  }
+
+
+  #board{
+    position:absolute;
+    width: 750px;
+    height: 750px;
+    left: 3%;
+    top: 10%;
+  }
+
+  #textspeech{
+    position:absolute; 
+    width: 818px;
+    height: 226px;
+    right: 3%;
+    top: 10%;
+  }
+
+#pawnhover{
+  position:absolute;
+  width: 92px;
+  height: 92px;
+  top: 49.6%;
+  left: 25%;
+
+}
+
+#pawnhover:hover{
+  content: url(imgs/pawnhover.png);
+  position:absolute;
+  width: 95px;
+  height:156px;
+  top:43.1%;
+  left:24.85%;
+}
+
+
+#knight1{
+  position:absolute;
+  width: 92px;
+  height: 92px;
+  top: 59.7%;
+  left: 30.35%;
+
+}
+
+#knight1:hover{
+  content: url(imgs/knight1hover.png);
+  position:absolute;
+  width: 445px;
+  height:403px;
+  top:43.4%;
+  left:19.1%;
+}
+
+#knight2{
+  position:absolute;
+  width: 92px;
+  height: 92px;
+  top: 59.7%;
+  left: 14%;
+
+}
+
+#knight2:hover{
+  content: url(imgs/knight2hover.png);
+  position:absolute;
+  width: 409px;
+  height:414px;
+  top:42.7%;
+  left:4.65%;
+}
+
+/* animation */
+
+.typewriter{
+  position:absolute;
+  z-index: 100;
+  left:66%;
+  top:20%;
+}
+
+
+body {
+
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  z-index: 10000; 
+  color: rgb(0, 0, 0);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12;
+  font-kerning: normal;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret 1.0s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(0, 0, 0) }
+}
+
+
+
+
+
+input[type="checkbox"] {
+  content: url('imgs/scoresheet.png');
+  position:absolute;
+  appearance: none;
+  display: block;
+  width:500px;
+  height: 500px;
+  left: 69.5%;
+  top: 35%;
+}
+
+input[type="checkbox"]:checked {
+  content: url('imgs/flipped.png');
+  position:absolute;
+}
+
+
+
+
+.box{  
+  background-color: rgb(0, 0, 0); 
+  opacity: 75%;
+  position: absolute; 
+  height: 82%; 
+  width: 50%; 
+  left: 49%; 
+  top: 10%; 
+} 
+
+#choice1{
+  position:absolute;
+  width: 350px;
+  height: 160;
+  z-index:500;
+  left: 50%;
+  top: 35%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+#choice1:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(50%);
+}
+
+
+
+
+#choice2{
+  position:absolute;
+  width: 350px;
+  height: 160;
+  z-index:500;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#choice2:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(50%);
+}
+
+
+
+#choice3{
+  position:absolute;
+  width: 350px;
+  height: 160;
+  z-index:500;
+  left: 50%;
+  top: 65%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#choice3:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(50%);
+}
+
+

@@ -1,0 +1,81 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: black;
+}
+
+
+.text{
+
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+
+#first{
+    width:464px;
+    height:672px;
+
+}
+
+#second{
+    width: 405px;
+    height: 553px;
+
+}
+
+@media screen and (min-width: 600px) {
+    div.text {
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    div.text {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: auto;
+    margin: 0 auto;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 0%;
+    max-width: 22%;
+    padding: auto;
+    align-self: center;
+    margin: 0 auto;
+  }
+  
+  .column img {
+    vertical-align:auto;
+    margin: 0 auto;
+
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
