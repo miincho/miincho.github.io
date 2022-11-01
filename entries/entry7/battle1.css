@@ -1,0 +1,33 @@
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("pokeback.png");
+  filter:brightness(50%);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.1); 
+
+
+}
+
+
+
+#battle{
+  position:    absolute;
+  color:       #fff;
+  width:       50%;
+  height: auto;
+  left: 25%;
+  top:15%;
+  filter: drop-shadow(0 0 0.75rem rgb(44, 174, 255));
+
+}

@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    padding: 10px;
+    margin: auto;
+ padding-top: 10%;
+  }
+  .grid-item {
+
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  input[type="checkbox"] {
+    content: url('imgs/silhouette.png');
+
+    appearance: none;
+    display: block;
+    object-fit: scale-down;
+    margin: auto;
+  display: grid;
+  max-width: 100%;
+  flex: 1;
+  min-height: 0;
+  transition:transform 0.25s ease;
+    width:50%;
+    height:auto;
+    left: 69.5%;
+    top: 35%;
+  }
+  
+  input[type="checkbox"]:checked {
+    content: url('imgs/silhouettefill.png');
+
+  }
+
+  #who{
+    width:40%;
+    height:auto;
+
+  }
