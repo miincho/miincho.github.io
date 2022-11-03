@@ -39,7 +39,7 @@
   transition:transform 0.25s ease;
 }
 #card1:hover {
-  -webkit-transform:scale(1.2); /* or some other value */
+  -webkit-transform:scale(2); /* or some other value */
   transform:scale(1.2);
   cursor: url(imgs/ball.png), auto;
   
@@ -196,7 +196,7 @@
 }
 
 
-.item11 { grid-area: main9; }
+/*.item11 { grid-area: main9; }
 #card9{
   margin: auto;
   width:70%;
@@ -211,20 +211,20 @@
   transition:transform 0.25s ease;
 }
 #card9:hover {
-  -webkit-transform:scale(1.2); /* or some other value */
+  -webkit-transform:scale(1.2);  
   transform:scale(1.2);
   cursor: url(imgs/ball.png), auto;
-  
 }
-
+*/
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header '
-    'menu main main2 main3 '
-    'menu main4 main5 main6'
-    'menu main7 main8 main9';
+    'header header header'
+    'menu main main2'
+    'menu main3 main4'
+    'menu main5 main6'
+    'menu main7 main8';
   gap: 5px;
  /* background-color: #000000;*/
   padding: 5px;
@@ -236,6 +236,8 @@
   padding: 20px 0;
   font-size: 30px;
 }
+
+
 
 body {
 	background: linear-gradient(-45deg, #407134, #e73c7e78, #23a5d597, #ad94be);
@@ -261,7 +263,6 @@ body {
 #bio{
   font-size:1.25vw;
   font-family: 'Orbitron', sans-serif;
-  text-align: left;
   padding-left: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -271,4 +272,64 @@ body {
 
 .cards{
   filter: drop-shadow(10px 5px 4px #1b1b6b65);
+}
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas:
+    'left right ';
+  gap: 5px;
+ /* background-color: #000000;*/
+  padding: 5px;
+}
+
+.inside1 { 
+  font-size:1.25vw;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bolder;
+  padding-left: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+ 
+  z-index: 5000000;
+  grid-area: left;
+  text-align: left;
+}
+.inside2 { 
+  font-size:1.25vw;
+  font-family: 'Orbitron', sans-serif;
+  padding-left: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  z-index: 5000000;
+  grid-area: right;
+  text-align: left;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    
+    grid-template-areas:
+    'header'
+    'menu'
+    'main'
+    'main2'
+    'main3'
+    'main4'
+    'main5'
+    'main6'
+    'main7'
+    'main8';
+
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 50px;
+  }
+
+  .inside1, .inside2{
+    font-size:4vw;
+  }
 }
