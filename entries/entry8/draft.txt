@@ -1,0 +1,247 @@
+<div id="content">
+        <div id="cardPile">
+        </div>
+        <div id="cardSlots">
+        </div>
+        <div id="row3">
+        </div>
+  
+    <div id="successMessage">
+      <h2>You did it!</h2>
+      <button onclick="init()">go back in time</button>
+    </div>
+  </div>
+
+
+
+  /* Add some margin to the page and set a default font and colour */
+
+body {
+  margin: 30px;
+  line-height: 1.8em;
+  color: #333;
+}
+
+
+/* Main content area */
+
+#content {
+  margin: 80px 70px;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+/* Slots for final card positions */
+
+#cardSlots {
+  margin: 30px auto 0 auto;
+  background: #ddf;
+}
+
+/* The initial pile of unsorted cards */
+
+#cardPile {
+  margin: 0 auto;
+  background: #ffd;
+}
+
+#row3 {
+  margin: 30px auto;
+  background: #ffd;
+}
+
+#cardSlots, #cardPile, #row3{
+
+
+  width: 500px;
+  height: 120px;
+
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+
+/* Individual cards and slots */
+
+
+
+
+#cardPile div {
+  float: left;
+  width: 58px;
+  height: 78px;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 0;
+  border: 2px solid #333;
+  -moz-border-radius: 90px;
+  -webkit-border-radius: 90px;
+  border-radius: 90px;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+#cardSlots div {
+  float: left;
+  width: 58px;
+  height: 78px;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 0;
+  border: 2px solid #333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}
+
+#cardSlots div.hovered {
+  background: #aaa;
+}
+
+#cardSlots div {
+  border-style: dashed;
+}
+
+#cardPile div {
+  background: #666;
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0 0 3px #000;
+}
+
+#cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+/* Individually coloured cards */
+
+#card1.correct { background: green; }
+#card2.correct { background: green; }
+#card3.correct { background: green; }
+#card4.correct { background: green; }
+#card5.correct { background: green; }
+#card6.correct { background: green; }
+#card7.correct { background: green; }
+#card8.correct { background: green; }
+#card9.correct { background: green; }
+
+
+/* "You did it!" message */
+#successMessage {
+  position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: #dfd;
+  border: 2px solid #333;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;
+}
+
+
+
+
+var correctCards = 0;
+$( init );
+
+function init() {
+
+  // Hide the success message
+  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+
+  // Reset the game
+  correctCards = 0;
+  $('#cardPile').html( '' );
+  $('#cardSlots').html( '' );
+
+  // Create the pile of shuffled cards
+  var numbers = [ 1,2,3];
+
+
+  for ( var i=0; i<3; i++ ) {
+    $('<div>' + numbers[i] + '</div>').data( 'number', numbers[i] ).attr( 'id', 'card'+numbers[i] ).appendTo( '#cardPile' ).draggable( {
+      containment: '#content',
+      stack: '#cardPile div',
+      cursor: 'move',
+      revert: true
+    } );
+  }
+
+  // Create the card slots
+  var words = [ 'X', 'X','X'];
+  for ( var i=1; i<=2; i++ ) {
+    $('<div>' + words[i-1] + '</div>').data( 'number', i ).appendTo( '#cardSlots' ).droppable( {
+      accept: '#cardPile div',
+      hoverClass: 'hovered',
+      drop: handleCardDrop
+    } );
+  }
+
+}
+
+
+
+
+function handleCardDrop( event, ui ) {
+    var slotNumber = $(this).data( 'number' );
+    var cardNumber = ui.draggable.data( 'number' );
+  
+    // If the card was dropped to the correct slot,
+    // change the card colour, position it directly
+    // on top of the slot, and prevent it being dragged
+    // again
+  
+    if ( slotNumber == cardNumber ) {
+      ui.draggable.addClass( 'correct' );
+      ui.draggable.draggable( 'disable' );
+      $(this).droppable( 'disable' );
+      ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+      ui.draggable.draggable( 'option', 'revert', false );
+      correctCards++;
+    } 
+    
+    // If all the cards have been placed correctly then display a message
+    // and reset the cards for another go
+  
+    if ( correctCards == 2 ) {
+      $('#successMessage').show();
+      $('#successMessage').animate( {
+        left: '380px',
+        top: '200px',
+        width: '400px',
+        height: '100px',
+        opacity: 1
+      } );
+    }
+  
+  }
+
+
+
