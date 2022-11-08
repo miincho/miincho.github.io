@@ -67,18 +67,27 @@ body {
   font-style: normal;
   color: #ffc759;
 }
-.item4 { 
+.item4{ 
   grid-area: text; 
   font-family: dovetail-mvb, serif;
   font-weight: 500;
   font-style: normal;
-
 }
+
+#message { 
+  grid-area: text; 
+  font-family: dovetail-mvb, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16pt;
+}
+
 #bodytext{
   text-align: justify;
   font-size: 15pt;
   padding: 5%;
   color: #ffc759;
+
 }
 
 .item5 { 
@@ -87,6 +96,8 @@ body {
 #headshot{
   width:90%;
   height:auto;
+  max-width:300px;
+  min-width:300px;
   filter: drop-shadow(0 0 0.75rem #ff789c);
 
 }
@@ -254,4 +265,8 @@ body {
   width: 150%;
   height:auto;
 }
+
+
+
+
 }
