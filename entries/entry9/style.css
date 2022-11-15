@@ -1,0 +1,143 @@
+body{
+  background-color: black;
+}
+.item1 { grid-area: title; }
+.item2 { grid-area: info; }
+.item3 { grid-area: hover1; }
+.item4 { grid-area: hover2; }
+.item5 { grid-area: hover3; }
+.item6 { grid-area: hover4; }
+.item13 { grid-area: hover5; }
+.item7 { grid-area: man; }
+#pacman {
+  width:400px;
+  height: auto; 
+}
+.item8 { grid-area: img1; }
+.item9 { grid-area: img2; }
+.item10 { grid-area: img3; }
+.item11 { grid-area: img4; }
+.item12 { grid-area: img5; }
+
+.video {
+  width:12vw;
+  height: auto;
+  justify-content: bottom;
+}
+
+
+#title{
+/******font-family: roster, serif;
+font-weight: 400;
+font-style: italic;
+***/
+text-align: center;
+font-family: bungee, sans-serif;
+
+font-weight: 800;
+
+font-style: normal;
+color: rgb(182, 170, 242);
+
+font-size: 36;
+letter-spacing: .5rem;
+}
+
+#caption{
+  font-family: capucine-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(245, 245, 130);
+  font-size: 0.9vw;
+  padding: 8%;
+}
+
+#caption2{
+  font-family: capucine-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 1.5vw;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.food{
+  width:60%;
+  height: auto;
+  transition: transform .7s ease-in-out;
+
+  margin-top: 90%;
+}
+
+
+.food:hover {
+  transform: rotate(360deg);
+
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    ' title title title title title title'
+    'info hover1 hover2 hover3 hover4 hover5'
+    ' man img1 img2 img3 img4 img5'
+;
+  gap: 10px;
+
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: black;
+}
+
+
+#secret {
+  font-style: italic;
+  font-size: 12vw;
+    text-align: center;
+  display:none;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: yellow;
+    
+    }
+
+    #secret {
+      font-style: italic;
+      font-size: 12vw;
+        text-align: center;
+      display: block;
+    }
+
+.item1 { display: none; }
+.item2 { display: none; }
+.item3 { display: none; }
+.item4 { display: none; }
+.item5 { display: none; }
+.item6 { display: none; }
+.item7 { display: none; }
+.item8 { display: none; }
+.item9 { display: none; }
+.item10 { display: none; }
+.item11 { display: none; }
+.item12 { display: none; }
+.item13 { display: none; }
+
+#pacman{display: none;}
+.video{display: none;}
+#title{display: none;}
+#caption{display: none;}
+#caption2{display: none;}
+.food{display: none;}
+.food:hover{display: none;}
+.grid-container{display: none;}
+.grid-container > div{display: none;}
+  }
