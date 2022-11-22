@@ -1,0 +1,116 @@
+  /* INDEX 2 --------------------------------------------------------------------------
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+
+
+
+  .item5 { 
+    grid-area: img5; 
+    color:white;
+    font-size: 1vw;
+position: absolute;
+    font-family: tablet-gothic-narrow, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+padding: 5%;
+
+user-select: none;
+
+z-index: 100000000000000000000000000000;
+word-wrap: break-word;
+width: 150px;
+text-align: left;
+
+}
+.item6 { 
+    grid-area: img6; 
+
+}
+.item7 { 
+    grid-area: img7; 
+
+}
+.item8 { 
+    grid-area: img8; 
+    color:white;
+    font-size: 1vw;
+
+    font-family: tablet-gothic-narrow, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+padding: 5%;
+
+user-select: none;
+
+z-index: 100000000000000000000000000000;
+word-wrap: break-word;
+width: 150px;
+text-align: right;
+right: 0%;
+}
+
+
+.grid-container2 {
+    display: grid;
+    grid-template-areas:
+      'img5 img6 img7 img8'
+      
+  ;
+    gap: 10px;
+
+    padding: 10px;
+    left: 0%;
+    bottom: 0%;
+    
+  }
+  
+  .grid-container2 > div {
+
+
+    padding: 20px 0;
+    
+  
+  }
+
+  #bgcolor{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+  }
+
+
+  */
+
+body{
+    background-color: black;
+}
+
+
+ img {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    transform: translate (-50%,-50%);
+    width:40%;
+    height:auto;
+    animation: fadein 0.7s;
+ }
+
+ @keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ }
+  

@@ -1,33 +1,21 @@
 .item1 { 
     grid-area: img1;
+    user-select: none
     ; 
 }
 .item2 { 
     grid-area: img2; 
+    user-select: none
     ; 
 }
 .item3 { 
     grid-area: img3; 
+    user-select: none;
 
 }
 .item4 { 
     grid-area: img4; 
-
-}
-.item5 { 
-    grid-area: img5; 
-
-}
-.item6 { 
-    grid-area: img6; 
-
-}
-.item7 { 
-    grid-area: img7; 
-
-}
-.item8 { 
-    grid-area: img8; 
+    user-select: none;
 
 }
 
@@ -92,34 +80,14 @@
     user-select: none;
 }
 
-#screen5 {
-    top: 80%;
-    width:17%;
-    height:auto;
-    padding: none;
-    margin: none;
-    z-index: -2324324;
-    position: absolute;
-    user-select: none;
-}
 
-#phone5{
-    top: 80%;
-    width:18%;
-    height:auto;
-    padding: none;
-    margin: none;
-    z-index: 10000000000;
-    position: absolute;
-    user-select: none;
-}
 
 
 .grid-container {
   display: grid;
   grid-template-areas:
     'img1 img2 img3 img4'
-    'img5 img6 img7 img8'
+    
 ;
   gap: 10px;
   /*background-color: #2196F3;*/
@@ -134,9 +102,42 @@
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-  
 
 }
+
+@media only screen and (max-width: 800px) {
+    .grid-container {
+      
+      grid-template-areas:
+      'img1'
+      'img2'
+      'img3'
+      'img4';
+  
+
+    }
+
+    .item1, .item2, .item3, .item4 {
+        margin-bottom: 200%;
+
+    }
+  
+    #screen2, #phone2, #screen3, #phone3, #screen4, #phone4{
+        width:80%;
+        height: auto;
+    }
+
+
+    .marquee span {
+        line-height: 9vw;
+        font-size: 4.5vw;
+    }
+}
+
+
+
+
+
 
 canvas{
     position: absolute;
@@ -164,9 +165,11 @@ canvas{
     text-align: center;
     user-select: none;
 }
+
+#bottomtxt{
+
+}
 */
-
-
 
 
 
@@ -174,7 +177,7 @@ canvas{
     position: relative;
     display: block;
     width: 100%;
-    height: 6vw;
+    height: 7vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -204,7 +207,7 @@ canvas{
     white-space: nowrap;
     min-width: 100%;
     height: 100%;
-    line-height: 6vw;
+    line-height: 7vw;
     font-size: 3vw;
     word-spacing: 0.5em;
     animation: marquee 10s linear infinite;
@@ -222,3 +225,28 @@ canvas{
         transform: translate(-100%, 0);
     }
 }
+
+
+/*
+.button {
+    background-color: darkorange; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+  
+*/
+
+#dice{
+    width:2.5vw;
+    height: auto;
+}
+
+
