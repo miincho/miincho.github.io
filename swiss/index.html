@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/lib/p5.js"></script>
+
+</head>
+<body>
+    
+
+    <div class="grid-container">
+        <div class="item1">
+            <h2 id="name">JOE <br> HISAISHI </h2>
+            </div>
+        <div class="item2">
+            <h5 class="desc">
+            Mamoru Fujisawa (藤澤 守), <br>
+            known professionally as <br>
+            Joe Hisaishi (久石 譲), <br>
+            is a composer, musical <br>
+            director, conductor and  <br>
+            pianist</h5>
+            </div>
+        <div class="item3">
+            <h5 class="desc">
+            Hisaishi's compositions are  <br>
+            influenced by J-pop music, <br>
+            electronic music and New <br>
+            Age music </h5>
+            </div>  
+        <div class="item4">
+            <h5 class="desc"> 
+            Click a square to listen <br>
+            to a composition <br>
+            Double-click to pause <br>
+            Enjoy :)) </h5>
+            </div>
+        <div class="item5">
+            <a onclick="document.getElementById('1').play()" ondblclick="document.getElementById('1').pause()" >
+                <img class="square" src="imgs/rect1.png">
+            </a>
+            <audio id="1" src="imgs/merry1.mp3"></audio>
+            </div>
+
+        <div class="item6">
+            <a onclick="document.getElementById('2').play()" ondblclick="document.getElementById('2').pause()" >
+                <img class="square" src="imgs/rect2.png">
+            </a>
+                <audio id="2" src="imgs/summers2.mp3"></audio>
+            </div>  
+        <div class="item7">
+            <a onclick="document.getElementById('3').play()" ondblclick="document.getElementById('3').pause()" >
+                <img class="square" src="imgs/rect3.png">
+            </a>
+                <audio id="3" src="imgs/name3.mp3"></audio>
+            </div>
+        <div class="item8">
+            <a onclick="document.getElementById('4').play()" ondblclick="document.getElementById('4').pause()" >
+                <img class="square" src="imgs/rect4.png">
+            </a>
+                <audio id="4" src="imgs/summer4.mp3"></audio>
+            </div>
+        <div class="item9">
+            <a onclick="document.getElementById('5').play()" ondblclick="document.getElementById('5').pause()" >
+                <img class="square" src="imgs/rect5.png">
+            </a>
+                <audio id="5" src="imgs/nostalgia5.mp3"></audio>
+            </div>  
+        <div class="item10">
+            <a onclick="document.getElementById('6').play()" ondblclick="document.getElementById('6').pause()" >
+                <img class="square" src="imgs/rect6.png">
+            </a>
+                <audio id="6" src="imgs/spring6.mp3"></audio>
+            </div>
+        <div class="item11">
+            <a onclick="document.getElementById('7').play()" ondblclick="document.getElementById('7').pause()" >
+                <img class="square" src="imgs/rect7.png">
+            </a>
+                <audio id="7" src="imgs/totoro7.mp3"></audio>
+            </div>
+        <div class="item12">
+            <a onclick="document.getElementById('8').play()" ondblclick="document.getElementById('8').pause()" >
+                <img class="square" src="imgs/rect8.png">
+            </a>
+                <audio id="8" src="imgs/kiki8.mp3"></audio>
+            </div>  
+
+
+      </div>
+
+      
+
+
+</body>
+</html>
