@@ -1,0 +1,155 @@
+body{
+    background-image: url("imgs/back3.png");
+    background-size:cover;
+    background-color: #000000;
+    font-family: 'Helvetica', sans-serif;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+#title{
+    text-align: right;
+    font-size: 3vw;
+    color:antiquewhite;
+}
+
+
+
+.item1 { grid-area: one; }
+.item2 { grid-area: two; }
+.item3 { grid-area: three; }
+.item4 { grid-area: four; }
+.item5 { grid-area: five; }
+.item6 { grid-area: six; }
+.item7 { grid-area: seven; }
+.item8 { grid-area: eight; }
+.item9 { grid-area: nine; }
+.item10 { grid-area: ten; }
+.item11 { grid-area: eleven; }
+.item12 { grid-area: twelve; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'one five nine'
+      'two six ten'
+      'three seven eleven'
+      'four eight twelve';
+    gap: 10px;
+    /*background-color: #2196F3;*/
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+   /* background-color: rgba(255, 255, 255, 0.8);*/
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+  /* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 5%;
+
+  }
+
+  #bottomtitle{
+    font-size: 1.3vw;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+
+
+    /* entry linkes style */
+    #bot{
+        bottom:10px;
+        position:absolute;
+
+    }
+
+    .block{
+        width: 100vw;
+        height:auto;
+    }
+
+    .thumb{
+position:absolute;
+width: 70vw;
+height: auto;
+left:50px;
+top:100;
+z-index: -5;
+    }
+
+
+    .thumb:hover{
+        color: #111; 
+        background: rgb(243, 247, 165); 
+        box-shadow: 0 0 100px rgb(243, 247, 165); 
+
+    }
+
+
+/* media query stuff*/
+
+    @media only screen and (max-width: 700px) {
+
+        #title{
+            text-align: right;
+            font-size: 10vw;
+            color:antiquewhite;
+            padding-right: 2%;
+        }
+
+        #bottomtitle{
+            font-size: 4.5vw;
+          }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five'
+      'six'
+      'seven'
+      'eight'
+      'nine'
+      'ten'
+      'eleven'
+      'twelve'
+      ;
+    gap: 10px;
+    /*background-color: #2196F3;*/
+    padding: 10px;
+  }
+
+      }
