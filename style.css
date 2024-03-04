@@ -80,7 +80,7 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6.5%;
+    width: 25px;
     animation: rotation 20s infinite linear;
 }
   
