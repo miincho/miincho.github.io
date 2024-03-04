@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #ABABAB; 
+    font-family: 'plex_regular';
+    line-height: 1.2;
+}
+
+.colorSelect{
+    position: absolute;
+    position: fixed;
+    display:flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    right: 5%;
+    bottom: 3%;
+}
+
+#mink:hover{
+    cursor: help;
+}
+
+.circle{
+    border: 1.5px white solid;
+    width: 18px;
+    height: 18px;
+    border-radius: 20px;
+}
+
+    .cirle:hover{
+        cursor: pointer;
+    }
+
+.category{
+    font-size: 0.9em;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.top, .middle, .bottom{
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.top{
+    background-color: #1C1C1C ;
+    padding-bottom: 5%;
+}
+
+.middle{
+    background-color: #0A0A09 ;
+    padding-top: 1.5%;
+    padding-bottom: 5%;
+}
+
+.bottom{
+    background-image: linear-gradient(#121212, #1C1C1C);
+    display:flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+header {
+    background-image: linear-gradient(#121212, #1C1C1C);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 2%;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.headerLink{
+    padding-left: 2%;
+    color: #05E96E;
+}
+
+.accent{
+    color: #05E96E;
+}
+
+.icon{
+    margin-right: auto; 
+    height: 25px;
+    width: 25px;
+    /* background-color: #bbb; */
+    border-radius: 20%;
+    display: inline-block;
+    animation: rotation 20s infinite linear;
+}
+  
+.icon:hover{
+    filter: drop-shadow(0px 0px 3px #6d6d6d);
+}
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.color-picker .div{
+    width: 20px;
+    height: 20px;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.flex1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
+.flex2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px; 
+}
+
+/*project section styling*/
+.project {
+    flex: 0 0 50%;
+    box-sizing: border-box; /*padding and border are included in width*/
+}
+
+.project:hover{
+    filter: drop-shadow(0px 0px 6px #6d6d6d);
+}
+
+.parenthesis{
+    font-family: 'synt_regular';
+}
+
+.name{
+    font-family: 'synt_italic';
+    font-size: 4em;
+}
+
+.about{
+    max-width: 500px ;
+}
+
+.selected{
+    font-family: 'synt_italic';
+    font-size: 2.2em;
+}
+
+.squares span{
+    border: 1.35px solid #ABABAB;
+    padding: 7px;
+}
+
+.squares{
+    padding-top: 7%;
+    max-width: 400px;
+    line-height: 2.5;
+    text-align: right;
+}
+
+.project img{
+    /* width: 728px;
+    height: 450px; */
+    width: 100%;
+    height:auto;
+    border: 0.5px #ABABAB solid;
+}
+
+/*ascii overlay THIS SHIT DONT WORK!!!!! FUCK!!!*/
+/* .top {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    background-color: #1c1c1c;
+    overflow: hidden; 
+}
+
+#canvas1,
+.controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.ascii-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 20; 
+} */
+
+
+/* .flex1 {
+    z-index: 1; 
+} */
+
+
+
+/*media query be querying bro*/
+@media(max-width: 700px){
+    .flex2 {
+        grid-template-columns: 1fr; 
+    }
+
+    .flex1{
+        flex-direction: column;
+    }
+
+    .name{
+        font-size: 3.3em;
+        padding-bottom: 7%;
+    }
+
+    .about, .squares{
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .selected{
+        font-size: 2em;
+    }
+
+    header {
+        padding-top: 5%;
+        /* padding-bottom: 5%; */
+        padding-left:7%;
+        padding-right:7%;
+    }
+
+    .headerLink{
+        padding-left: 5%;
+    }
+
+    .top{
+        padding-bottom: 7%;
+        padding-top: 7%;
+    }
+
+    .middle{
+        padding-top: 5%;
+        padding-bottom: 7%;
+    }
+}
