@@ -504,6 +504,10 @@ hr{
         display:none;
     }
 
+    .icon{
+        width:25px;
+    }
+
     .name{
         font-size: 2em;
     }
@@ -513,7 +517,7 @@ hr{
     }
 
     .draggable{
-        font-size: 0.9em;
+        font-size: 0.8em;
         max-width: 278px;
     }
 
@@ -528,11 +532,13 @@ hr{
     .titleone{
         left:5%; 
         top: -5%;
+        width:250px;
     }
     
     .titletwo{
-        left:33%; 
-        bottom:12%; 
+        left:23%; 
+        bottom:18%; 
+        width:250px;
     }
 
     .img-grid{
