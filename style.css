@@ -76,7 +76,7 @@ hr{
     cursor:help;
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -504,8 +504,8 @@ hr{
         display:none;
     }
 
-    .icon{
-        width:5%;
+    .icon img{
+        width:25px;
     }
 
     .name{
