@@ -1,0 +1,146 @@
+body{
+    background-color: #D5D5D5;
+    font-family: 'plex_medium';
+}
+
+/*page borders*/
+#top, #bottom, #left, #right {
+    background: #FB8469;
+    position: fixed;
+    }
+
+#left, #right {
+    top: 0; 
+    bottom: 0;
+    width: 3px;
+}
+
+#left { 
+    left: 0; 
+}
+
+#right { 
+    right: 0; 
+}
+    
+#top, #bottom {
+    left: 0; 
+    right: 0;
+    height: 3px;
+}
+
+#top { 
+    top: 0; 
+}
+    
+#bottom { 
+    bottom: 0; 
+}
+
+/*content begins here*/
+.instructions{
+    font-size: 0.9em;
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.grid{
+    margin-top: 10%;
+    display: grid;
+    grid-template-areas:
+    'one three'
+    'two three'
+    ;
+    justify-content: center;
+    /*align-items: center;*/
+    gap: 10px;
+}
+
+.input{
+    grid-area: one;
+    border: 2px solid #FB8469;
+    padding: 25px 25px 0 25px;
+    min-width: 400px;
+}
+
+#questForm{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=submit]{
+    font-family: 'plex_medium';
+    border: 2px solid #FB8469;
+    background-color: #FB8469;
+    padding: 12px;
+    /* margin-top: 25px; */
+    max-width: fit-content;
+    align-self: flex-end;
+}
+
+input[type=type]{
+    font-family: 'plex_medium';
+    border: 2px solid #FB8469;
+    background-color: #D5D5D5;
+    padding: 12px;
+    margin-top: 15px;
+    float:right;
+    outline: none;
+}
+
+input[type=type]:focus{
+    border: 2px solid #FB8469;
+    background-color: #D5D5D5;
+}
+
+.output{
+    grid-area: two;
+    border: 2px solid #FB8469;
+    margin: 15px 0 0 0;
+    height: 50px;
+    font-size: 0.9em;
+}
+
+.topics{
+    grid-area: three;
+    border: 2px solid #FB8469;
+    padding: 25px;
+    margin: 0 0 0 15px;
+}
+
+
+.modules{
+    border: 2px solid #FB8469;
+    padding: 15px;
+    margin: 15px 0 0 0;
+    font-size: 0.9em;
+}
+
+.modules:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid{
+        margin-top: 10%;
+        display: grid;
+        grid-template-areas:
+        'one'
+        'two'
+        'three'
+        ;
+        gap: 10px;
+    }
+
+    .topics{
+        margin: 0;
+    }
+
+    input[type=submit]{
+        margin-bottom: 5%;
+    }
+  }
