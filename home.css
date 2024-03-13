@@ -46,6 +46,16 @@ hr{
     padding:0;
 }
 
+.gradient {
+    width: 100%;
+    height: 100px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #121212, transparent);
+    z-index: 99;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -55,10 +65,9 @@ hr{
     padding-right:2%;
 }
 
-/* .header-left{
-    display: flex;
-    flex-direction: row;
-} */
+.header-left{
+    z-index: 100;
+}
 
 .name{
     color: #B0B0B0;
@@ -84,7 +93,8 @@ hr{
     animation: rotation 20s infinite linear;
     position: fixed;
     top: 4%;
-    right:2.5%
+    right:2.5%;
+    z-index: 100;
 }
   
 .icon:hover{
@@ -152,15 +162,15 @@ hr{
 
 .project-footers{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 0 0 30px 0;
+    margin: 0 2% 0 0; 
+    max-width:20vw; 
 }
 
 .descriptions{
-    max-width:600px;
-    align-self: flex-end;
-    padding-bottom: 2%;
+    font-size: 0.85em;
+    margin: 15% 0 0 0;
 }
 
 .project-type{
@@ -169,8 +179,10 @@ hr{
 }
 
 .project-title{
-    font-size: 2.5em;
+    font-size: 2em;
+    line-height: 1;
     font-family: 'argent_italic';
+    padding-top: 2%;
 }
 
 .view-details{
@@ -179,12 +191,19 @@ hr{
     font-weight: 600;
     border: 1px solid #8B8B8B;
     padding: 8px;
-    margin-top: 20px;
+    margin-top: 10%;
 }
 
 .view-details:hover{
     background-color: #8B8B8B;
     color:#0F0F0F;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 3%;
 }
 
 .projects img{
@@ -197,13 +216,10 @@ hr{
     height: auto;
 }
 
-.projects{
-    padding-top: 2%;
-}
-
 /*project img gridS*/
 .img-grid{
     padding: 0 0 40px 0;
+    max-width: 80%;
 }
 
 /*1*/
@@ -383,65 +399,65 @@ hr{
     width: 135px;
     height: 29px;
     left: 30%;
-    bottom: 21%;
+    bottom: 5%;
 }
 
 #drag2{
     width: 235px;
     height: 47px;
-    right: 10%;
-    bottom:56%;
+    right: 15%;
+    bottom:43%;
 }
 
 /*2*/
 #drag3{
     width: 145px;
     height: 30px;
-    left: 20%;
+    left: 39%;
     top: 15%;
 }
 
 #drag4{
     width: 170px;
     height: 45px;
-    right: 19%;
-    bottom:35%;
+    right: 14%;
+    bottom:18%;
 }
 
 /*3*/
 #drag5{
     width: 144px;
     height: 45px;
-    left: 1%;
-    top:58%;
+    left: 20%;
+    bottom:10%;
 }
 
 #drag6{
     width: 125px;
     height: 43px;
-    left: 60%;
-    top: 28%;
+    left: 68%;
+    top: 33%;
 }
 
 #drag7{
     width: 105px;
     height: 30px;
-    left: 68%;
-    top: 33%;
+    left: 72%;
+    top: 42%;
 }
 
 /*4*/
 #drag8{
     width: 178px;
     height: 45px;
-    left: 30%;
-    top: 45%;
+    left: 55%;
+    top: 65%;
 }
 
 #drag9{
     width: 155px;
     height: 61px; 
-    left: 70%;
+    right: 10%;
     bottom: 28%;
 }
 
@@ -449,48 +465,62 @@ hr{
 #drag10{
     width: 180px;
     height: 48px;
-    left: 32%;
-    top: 60%;
+    left: 55%;
+    top: 65%;
 }
 
 #drag11{
     width: 208px;
     height: 48px; 
-    left: 40%;
-    top: 65%;
+    left: 62%;
+    top: 75%;
 }
 
 #drag12{
     width: 90px;
     height: 30px;
-    left: 73%;
+    left: 79%;
     top: 8%;
 }
 
 /*6*/
 #drag13{
-    width: 200px;
-    height: 73px;
+    width: 148px;
+    height: 46px;
     left: 22%;
-    top: 65%;
+    bottom: 15%;
 }
 
 #drag14{
-    width: 200px;
-    height: 30px; 
-    left: 60%;
-    top: 2%;
+    width: 115px;
+    height: 44px; 
+    right: 23%;
+    top: 0.2%;
 }
 
 #drag15{
-    width: 230px;
+    width: 165px;
     height: 45px;
-    right: 2%;
-    top: 63%;
+    right: 0.2%;
+    bottom: 5%;
 
 }
 
 /*footer*/
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.links{
+    text-decoration: underline;
+}
+
+.links:hover{
+    cursor: pointer;
+}
+
 .footer{
     background-image: linear-gradient(#121212, #1C1C1C);
     display:flex;
@@ -505,6 +535,29 @@ hr{
 @media(max-width: 700px){
     .project-draggables div{
         display:none;
+    }
+
+    .header-left{
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .project-footers{
+        grid-area: bottom;
+        max-width:100%;
+
+    }
+
+    .img-grid{
+        grid-area: top;
+        max-width:100%;
+    }
+
+    .projects{
+        display:grid;
+        grid-template-areas: 
+        'top'
+        'bottom';
     }
 
     .icon img{
@@ -533,13 +586,13 @@ hr{
     }
 
     .titleone{
-        left:5%; 
+        left:8%; 
         top: -5%;
         width:250px;
     }
     
     .titletwo{
-        left:23%; 
+        left:25%; 
         bottom:18%; 
         width:250px;
     }
@@ -568,10 +621,6 @@ hr{
         display: none;
     }
 
-    .project-footers{
-        flex-direction: column;
-    }
-
     .project-title{
         font-size: 2em;
     }
@@ -579,5 +628,6 @@ hr{
     .descriptions{
         padding: 20px 0 0 0;
         font-size: 0.88em;
+        margin: 0;
     }
 }
