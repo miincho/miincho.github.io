@@ -1,0 +1,417 @@
+/*Scrollbar*/
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ababab #0f0f0f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0f0f0f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ababab;
+    border-radius: 0px;
+    border: 3px none #ffffff;
+  }
+
+.under{
+  text-decoration: underline;
+}
+
+hr{
+    border:none;
+    height: 0.5px;
+    background-color: #8B8B8B;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0F0F0F; 
+    color: #8B8B8B;
+    font-family: 'plex_regular';
+    line-height: 1.2;
+    overflow-x:hidden;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(#121212, #1C1C1C);
+    padding-top: 1%;
+    padding-left:2%;
+    padding-right:2%;
+}
+
+.header-left{
+  z-index: 100;
+}
+
+.name{
+    color: #B0B0B0;
+    font-family: 'argent_italic';
+    font-size: 2.9em;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    animation: rotation 20s infinite linear;
+    position: fixed;
+    top: 4%;
+    right: 2.5%;
+    z-index: 100;
+}
+  
+.icon:hover{
+    filter: drop-shadow(0px 0px 3px #6d6d6d);
+    animation-play-state: paused;
+}
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .gradient {
+    width: 100%;
+    height: 100px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #121212, transparent);
+    z-index: 99;
+}
+
+.hero-img{
+  /* margin: 3% 0 3% 0; */
+  background-color: #1B1B1B; 
+  padding: 3% 2% 0% 2%;
+  position: relative;
+}
+
+.hero-img img{
+  width: 100%;
+  display: block;
+  margin:auto;
+}
+
+.project-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3%;
+  padding: 0 2% 3% 2%;
+}
+
+.p1-img1{
+  width: 100%;
+}
+
+.p1-img2{
+  width: 100%;
+  border: 1.5px solid #8B8B8B; 
+}
+
+.project-type{
+  color: #7177FF; 
+  font-size: 0.8em;
+}
+
+.project-title{
+  font-size: 3em;
+  line-height: 1;
+  font-family: 'argent_italic';
+  padding-top: 4%;
+  padding-left: 2%
+}
+
+.descriptions{
+  /* font-size: 0.85em; */
+  max-width: 30vw;
+  margin: 10% 0 0 0;
+}
+
+.timeline span{
+  color: #7177FF;
+  /* line-height: 2; */
+  /* font-weight: 700; */
+}
+
+.timeline{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  justify-content: flex-end;
+}
+
+.timeline div{
+  align-self: flex-start;
+  padding-top: 3%;
+}
+
+/*concept*/
+.project-content{
+  padding: 4% 4% 4% 4%;
+}
+
+.concept-img{
+  max-width:50vw;
+}
+
+.concept-img img{
+  width: 100%;
+}
+
+.img-captions{
+  font-size: 0.8em;
+  padding-bottom: 8px;
+}
+
+.bodytext{
+  max-width: 30vw;
+}
+
+.pixel-header{
+  font-family: 'argent_italic';
+  font-size: 2.5em;
+  padding: 4% 4% 0 4%;
+  /* padding-bottom: 15%; */
+}
+
+.color-subheader{
+  color: #7177FF;
+  padding-bottom: 2%;
+}
+
+.one{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/*process*/
+.two{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.process-img{
+  max-width: 50vw;
+  /* padding-top: 5%; */
+}
+
+
+
+/*back 2 regularly scheduled program*/
+.four-grid {
+  display:grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.four-grid img{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.four-grid{
+  padding-top: 8%;
+  /* padding-bottom: 10%; */
+  /* margin: 0 4% 0 4%; */
+}
+
+/*final section*/
+.three img{
+  position: relative;
+  width:100%;
+}
+
+.spreads{
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+
+.motionG {
+  /* width: 70%; */
+  display: block;
+  margin: auto;
+  padding-bottom: 10%
+}
+
+
+  /*alternate image padding!!!*/
+  .four-alt{
+    padding-top: 0%;
+    /* display:grid;
+    grid-template-columns: auto auto;
+    gap: 30px;   */
+  }
+
+  .four-alt-two{
+    padding-top: 10%;
+  }
+
+  .four-alt img{
+    display: block;
+    margin: auto;  
+    width: 70%;
+  }
+
+  .four-alt-two img{
+    display: block;
+    margin: auto;  
+    width: 50%;
+  }
+
+  .centered{
+    display: flex;
+    justify-content: center;
+  }
+
+/*footer*/
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.links{
+  text-decoration: underline;
+}
+
+.links:hover{
+  cursor: pointer;
+}
+
+.footer{
+  background-image: linear-gradient(#121212, #1C1C1C);
+  display:flex;
+  justify-content: space-between;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left:2%;
+  padding-right:2%;
+}
+
+/*the worst part of my day*/
+@media(max-width: 700px){
+  .name{
+    padding-top: 15px;
+    font-size: 2em;
+  }
+
+  .hero-img img{
+    margin-top: 10%;
+  }
+
+  .p1-img2{
+    border: 1px solid #6d6d6d;
+  }
+
+  .project-title{
+    font-size: 2em;
+  }
+
+  .project-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .descriptions, .timeline{
+    max-width: 100vw;
+    font-size: 0.8em;
+    padding-bottom: 5%;
+  }
+
+  .pixel-header{
+    font-size: 1.9em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .one, .two{
+    flex-direction: column;
+  }
+
+  .bodytext, .bodytext-final{
+    max-width: 100vw;
+    font-size: 0.8em;
+
+  }
+
+  .concept-img, .process-img{
+    max-width: 100vw;
+  }
+
+  .img-captions{
+    padding-top: 10%; 
+  }
+
+  .color-subheader{
+    font-size: 0.8em;
+  }
+
+  .four-grid {
+    display:grid;
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+
+  .media-remove{
+    display:none;
+  }
+
+  .final-gallery{
+    grid-template-columns: auto;
+
+  }
+
+  .bodytext-final{
+    padding-top: 20%;
+  }
+
+  .motionG{
+    width:100%;
+  }
+
+  .footer{
+    padding-bottom: 10%;
+  }
+
+  .footer div{
+    max-width: 200px;
+  }
+
+  .four-alt img{
+    width: 100%; 
+  }
+
+  .four-alt-two img{
+    width: 100%; 
+  }
+
+  .four-alt-two {
+    padding-bottom: 10%;
+  }
+
+}

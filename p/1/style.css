@@ -350,4 +350,12 @@ a{
     padding-top: 20%;
   }
 
+  .footer{
+    padding-bottom: 10%;
+  }
+
+  .footer div{
+    max-width: 200px;
+  }
+
 }
