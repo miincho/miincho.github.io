@@ -1,3 +1,11 @@
+function hidePreloader() {
+    var preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+    window.removeEventListener("load", hidePreloader);
+}
+
+window.addEventListener("load", hidePreloader);
+
 /*draggable text boxes*/
 $(function() {
     $("#drag1").draggable({

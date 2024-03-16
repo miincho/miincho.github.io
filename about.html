@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="fonts/fontsheet.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="gradient"></div>
+    <div class="header">
+        <div class="header-left">
+            <a href="/index.html"><div class="name">m1nkyung cho</div></a>
+            <!-- <div id="click-me" class="sentences">is wishing your dreams come true <3</div> -->
+        </div>
+        <div class="icon"><img src="/assets/Asset 2.svg"></div>
+    </div>
+
+    <hr>
+
+    <div class="me">
+        <div class="me-img">
+            <img id='image' src="/assets/me2.png">
+            <div class="spanss">
+                <span><a href="https://www.linkedin.com/in/minkyung-cho-a83313237" target="_blank">LinkedIn</a></span>
+                <span><a href="mailto:minkyungcho2003@gmail.com" target="_blank">Email</a></span>
+                <span><a href="https://github.com/miincho" target="_blank">Github</a></span>
+                <span><a href="https://www.instagram.com/min.c03/" target="_blank">Instagram</a></span>
+                <span><a href="/assets/MinkyungCho_Resume.pdf" target="_blank">Resume</a></span>
+                </div>
+        </div>
+        <div class="me-text">
+            <span> "But people themselves alter so much that there is something new to be observed in them forever" 
+            <br>- Jane Austen </span>
+            <br><br>
+            Personal memories, the poetry of everyday objects, and the nuances of people’s nature shape the core of my creative narrative. I strive to infuse the profound and the mundane into my work to pose a question to the observer, urging them to reconsider what they know, to embrace the unfamiliar, and to experience the familiar in a new light.
+            <br><br>
+            My design process starts with variety and gradually gets filtered down to a refined expression. I am driven by ideologies that demand impact and depth, creating pieces that are not just aesthetically pleasing but also interactive and challenging.
+            <br><br>
+            As a current student in Communication Design at Parsons, my creative journey covers the realms of digital and print media, giving life to books, branding, illustration, web design, and a touch of 3D modeling.
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- <div>
+            <div> You can check out my spotify too <a href="https://open.spotify.com/user/minkyungcho2003?si=3d27596c90404591" class="links" target="_blank">Spotify</a></div>
+        </div> -->
+        <div>Last Updated: 2024 March 16</div>
+    </div>
+
+<style>
+    .footer {
+        /* position: absolute;
+        bottom: 0;
+        width: 100%; */
+        
+        background-image: linear-gradient(#121212, #1C1C1C);
+        display:flex;
+        justify-content: flex-end;
+        padding-top: 3%;
+        padding-bottom: 2%;
+        border-top: 1px solid #8B8B8B;
+        /* padding-left:2%; */
+    }
+
+    .footer div{
+        padding-right:2%; 
+    }
+
+    /* .links{
+        text-decoration: underline;
+    }
+
+    .links:hover{
+        cursor: pointer;
+    } */
+
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+
+    .me{
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        padding-top: 8%;
+        padding-bottom: 8%;
+        /* margin-top: 5%; */
+        background-color: #0f0f0f;
+        /* align-items: center; */
+    }
+    .me-img img{
+        width:100%;
+        background-color: #05E96E;
+        padding: 5%;
+        margin-bottom: 5%;
+        transition: background-color 0.5s ease;
+    }
+    .me-img{
+        display:block;
+        max-width: 20vw;
+    }
+    .me-img span{
+        border: 1px solid #8B8B8B;
+        font-weight: 600;
+        padding: 2.8%;
+        line-height: 3;
+    }
+        .me-img span:hover{
+            background-color: #8B8B8B;
+            color:black;
+            cursor:pointer;
+        }
+    .me-text{
+        max-width: 30vw;
+        padding-left: 10vw;
+    }
+    .me-text span{
+        font-style: italic;
+    }
+
+    /*Scrollbar*/
+    /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: #ababab #0f0f0f;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #0f0f0f;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #ababab;
+        border-radius: 0px;
+        border: 3px none #ffffff;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #0f0f0f; 
+        color: #8B8B8B;
+        font-family: 'plex_regular';
+        line-height: 1.2;
+        overflow-x:hidden;
+    }
+
+    hr{
+        border:none;
+        height: 0.5px;
+        background-color: #8B8B8B;
+        margin:0;
+        padding:0;
+    }
+
+    .gradient {
+        width: 100%;
+        height: 100px; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, #121212, transparent);
+        z-index: 99;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        background-image: linear-gradient(#121212, #1C1C1C);
+        padding-top: 1%;
+        padding-left:2%;
+        padding-right:2%;
+        padding-bottom: 2%; 
+    }
+
+    .header-left{
+        z-index: 100;
+    }
+
+    .name{
+        color: #B0B0B0;
+        font-family: 'argent_italic';
+        font-size: 2.9em;
+    }
+
+    .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    animation: rotation 20s infinite linear;
+    position: fixed;
+    top: 4%;
+    right:2.5%;
+    z-index: 100;
+}
+  
+.icon:hover{
+    filter: drop-shadow(0px 0px 3px #6d6d6d);
+    animation-play-state: paused;
+}
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*media query ughhhhhhhhhhhhhhhh*/
+@media(max-width: 700px){
+
+    .me{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .me-img, .me-text{
+        max-width: 100%;
+    }
+
+    .me-img img{
+        max-width: 50%;
+        display: block;
+        margin: auto;
+    }
+
+    .me-img span{
+        border: 1px solid #8B8B8B;
+        font-size: 0.9em; 
+        padding: 2%;
+        line-height: 3;
+    }
+
+    .spanss{
+        margin: 5%;
+    }
+
+    .me-text{
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 0.9em;
+    }
+
+    .header-left{
+        padding-left: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .icon img{
+        width:25px;
+    }
+
+    .name{
+        font-size: 2em;
+    }
+}
+
+</style>
+
+<script>
+    const image = document.getElementById('image');
+
+    image.addEventListener('mouseover', function() {
+        const randomColor = getRandomColor();
+        this.style.backgroundColor = randomColor;
+    });
+
+    image.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '#05E96E';
+    });
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+}
+</script>
+</body>
+</html>
