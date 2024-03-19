@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHAT ARE YOUR FEARS</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="../tests/fontsheet.css">
+</head>
+<body>
+    
+    <div class="header_fixed_container">
+        <header>
+            <div class="emotion_selector_parent">
+                <div class="emotion_selector">
+                    <div class="accent1"  data-color="#FF0000" id="SAD">  </div>
+                    <div class="accent2"  data-color="#00C2FF" id="OKAY">  </div>
+                    <div class="accent3" data-color="#00D662" id="HAPPY"> </div>
+                </div>
+                <div class="emotion_caption">YOU'RE FEELING <span id="you"></span></div>
+            </div>
+
+            <div class="progress_bar accent"></div>
+
+            <div class="rotating_square">
+                <div class="container">
+                    <div class="cube">
+                        <div class="face front accent"></div>
+                        <div class="face front accent"></div>
+                        <div class="face back accent"></div>
+                        <div class="face right accent"></div>
+                        <div class="face left accent"></div>
+                        <div class="face top accent"></div>
+                        <div class="face bottom accent"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <div class="content accentborder">
+        <div class="instruction accentborder">
+            Trust your instincts and answer the questions truthfully. Try not to spend more than a few seconds on each decision
+            <br><br> <div class="highlightedInstruction accent">....What do you regret?</div>
+
+
+            <div class="middle one accentborder">
+                <span class="halfOp">Select One Option</span>
+                <br><br><br><br>
+
+                <input type="radio" id="Height" name="fear1" value="Height">
+                <label for="Height">I REGRET MY<span class="highlightedWords accent"> RELATIONSHIPS</span> </label><br>
+
+                <input type="radio" id="Death" name="fear1" value="Death">
+                <label for="Death"> I REGRET MY<span class="highlightedWords accent"> CAREER</span>  <span style="opacity: 50%;">(coming soon)</span></label><br>
+
+                <input type="radio" id="Confinement" name="fear1" value="Confinement">
+                <label for="Confinement"> I REGRET MY<span class="highlightedWords accent"> TIME</span>   <span style="opacity: 50%;">(coming soon)</span></label><br>
+
+                <input type="radio" id="Dark" name="fear1" value="Dark">
+                <label for="Dark"> I REGRET<span class="highlightedWords accent"> NOTHING</span> <span style="opacity: 50%;">(coming soon)</span> </label>
+            </div>
+            
+
+            <div class="middle three accentborder">
+                Your answers have been recieved. Your room is now ready for you. 
+                <br><br><br>               
+                <br><br><br>
+            </div>
+
+            <div class="next ">
+                <div class="bottombutton accentbgcolor" onclick="toggleMiddleSections()">--></div>
+            </div>
+        </div>
+    </div>
+
+<script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+[
+    {
+      "piece": "torso_baby",
+      "description": "You carry a nurturing essence within, embodying the spirit of a caregiver. Your tendencies gravitate towards protection, warmth, and the instinct to provide solace to those around you.",
+      "name": "The Mother's"
+    },
+    {
+      "piece": "torso_bat",
+      "description": "In the realm of darkness, you find your comfort. There's a mysterious allure to your personality, with a tendency to navigate the shadows, harboring secrets and embracing the enigmatic facets of life.",
+      "name": "The Night's"
+    },
+    {
+      "piece": "torso_centipede",
+      "description": "Your connections are myriad, weaving through the tapestry of your life. You exhibit adaptability, resilience, and the ability to thrive in diverse environments, much like the intricate legs of a centipede.",
+      "name": "The Insect's"
+    },
+    {
+      "piece": "torso_clay",
+      "description": "You possess an artisan's touch, shaping and molding not just the clay of your own existence but also influencing the world around you. Your creativity and ability to craft beauty define your character.",
+      "name": "The Sculptor's"
+    },
+    {
+      "piece": "torso_crashdummy",
+      "description": "Life's collisions have molded you into a resilient soul. Your experiences, though impactful, have forged strength and an ability to endure. You navigate challenges with a survivor's spirit.",
+      "name": "The Survivor's"
+    },
+    {
+      "piece": "torso_disco",
+      "description": "Your life is a rhythmic dance, filled with vibrancy and energy. There's a natural flair for joy and celebration in your personality, as you move through the rhythms of life with grace and enthusiasm.",
+      "name": "The Dancer's"
+    },
+    {
+      "piece": "torso_doll",
+      "description": "Masterfully orchestrating the elements of your life, you are the puppeteer of your destiny. Your influence extends to those around you, subtly guiding and shaping the narrative of your existence.",
+      "name": "The Puppeteer's"
+    },
+    {
+      "piece": "torso_dripping",
+      "description": "Your essence is like liquid gold, adding a gilded touch to everything you touch. You bring a sense of richness and refinement to your surroundings, with a tendency to elevate the ordinary to the extraordinary.",
+      "name": "The Gilder's"
+    },
+    {
+      "piece": "torso_intestines",
+      "description": "Your understanding of the intricacies of life is akin to a skilled physician. You delve into the depths, seeking knowledge and insight. Your analytical nature allows you to diagnose and understand the complexities of existence.",
+      "name": "The Doctor's"
+    },
+    {
+      "piece": "torso_redmech",
+      "description": "Passion courses through your metallic veins. You embody the intensity of the color red, exhibiting a fervent drive and unwavering commitment. Your pursuits are marked by boldness and a desire to make a lasting impact.",
+      "name": "The Scarlet's"
+    },
+    {
+      "piece": "torso_strawberry",
+      "description": "Your life is an abundant harvest, filled with the sweetness of experiences. You cultivate relationships and moments with care, savoring the richness of life's offerings.",
+      "name": "The Farmer's"
+    },
+    {
+      "piece": "torso_void",
+      "description": "Within the depths of your being lies an abyss, a mysterious and profound space. You embrace the unknown, finding comfort in the vastness of possibilities and the mysteries that life unfolds.",
+      "name": "The Abyss'"
+    },
+    {
+      "piece": "torso_whitemech",
+      "description": "Precision and efficiency define your character, much like a well-crafted automaton. You approach life with a methodical mindset, ensuring that every cog in the machinery of your existence functions with purpose and order.",
+      "name": "The Automaton's"
+    },
+    
+    {
+      "piece": "head_3dogs",
+      "description": "You exhibit the discipline and loyalty akin to a well-trained trio. Your life is marked by order, loyalty, and a steadfast commitment to those you hold dear.",
+      "name": "well trained"
+    },
+    {
+      "piece": "head_angel",
+      "description": "Your presence is otherworldly, carrying an ethereal grace that sets you apart. You navigate life with a sense of divine beauty and a connection to the intangible.",
+      "name": "ethereal "
+    },
+    {
+      "piece": "head_bignose",
+      "description": "With a keen sense of smell, you have a heightened appreciation for the nuanced scents around you. It brings a unique perspective, though it can also make you sensitive to odors that others might not notice.",
+      "name": "smelly"
+    },
+    {
+      "piece": "head_blackcat",
+      "description": "Fortune accompanies you like a faithful companion. Your life is marked by serendipitous moments, and luck seems to favor your journey",
+      "name": "lucky "
+    },
+    {
+      "piece": "head_cartoonrabbit",
+      "description": "Your life is a vivid tapestry of animated experiences. A playful and vibrant quality infuses your personality, making each day a joyful adventure.",
+      "name": "animated"
+    },
+    {
+      "piece": "head_clown",
+      "description": "The jovial spirit you bring is infectious, but it might overshadow moments of seriousness. Balancing joy with depth can create a more nuanced and authentic experience.",
+      "name": "jovial "
+    },
+    {
+      "piece": "head_crashdummy",
+      "description": "Life's collisions have left marks of strength, but acknowledging vulnerabilities is essential. Embracing imperfections can lead to a more authentic and empathetic connection with others.",
+      "name": "broken"
+    },
+    {
+      "piece": "head_disco",
+      "description": "Your groovy approach to life brings rhythm, but it may also lead to unpredictability. Balancing spontaneity with structure can enhance your overall experience.",
+      "name": "groovy"
+    },
+    {
+      "piece": "head_fish",
+      "description": "Your soul resonates with the fluidity of water. You navigate the currents of life with grace and adaptability, finding solace in the ebb and flow of experiences.",
+      "name": "aquatic"
+    },
+    {
+      "piece": "head_heart",
+      "description": "Emotions course through you like a sentimental melody. Your heart guides your actions, and you navigate life with a deep connection to your feelings and those of others.",
+      "name": "sentimental "
+    },
+    {
+      "piece": "head_hellokitty",
+      "description": "Your cheerful nature brings positivity to every situation, creating a warm and inviting atmosphere. You have a talent for lifting others' spirits. However, your constant cheerfulness might make it challenging for others to understand when you're genuinely feeling down or need support.",
+      "name": "cheerful"
+    },
+    {
+      "piece": "head_lettucedog",
+      "description": "Prioritizing health is a core aspect of your personality, contributing to overall well-being. Your lifestyle choices inspire others to adopt healthier habits. The focus on health may lead to occasional rigidity, making it challenging for you to indulge or adapt to spontaneous situations.",
+      "name": "healthy"
+    },
+    {
+      "piece": "head_moth",
+      "description": "Your affinity for the night brings a unique perspective and creativity. Nocturnal tendencies might enhance your ability to navigate and appreciate quiet moments. Being nocturnal may lead to challenges in aligning with standard schedules, potentially affecting relationships and daily activities",
+      "name": "nocturnal"
+    },
+    {
+      "piece": "head_muzzle",
+      "description": "Your tendency for exploration allows you to delve into details and uncover hidden aspects. This curiosity contributes to a rich and nuanced understanding of situations. Overemphasis on details might lead to occasional overthinking, causing delays in decision-making.",
+      "name": "snouty"
+    },
+    {
+      "piece": "head_openedmech",
+      "description": "Your openness and transparency allow for authentic connections. Others appreciate your vulnerability and the realness you bring to relationships. Being too exposed may make you susceptible to emotional vulnerability, potentially leading to discomfort or difficulty dealing with criticism.",
+      "name": "exposed"
+    },
+    {
+      "piece": "head_point",
+      "description": "Your sharp mind and clarity of thought enable you to analyze situations effectively. Others rely on your keen insights and problem-solving skills.The sharpness may occasionally come across as overly critical, potentially impacting interpersonal relationships.",
+      "name": "sharp"
+    },
+    {
+      "piece": "head_rabbit",
+      "description": ":Despite facing adversity, your resilience is a testament to your ability to bounce back from setbacks. Your experiences have cultivated a deep understanding of navigating challenges.The label of \"unlucky\" might sometimes lead to a mindset that anticipates negative outcomes. This outlook may inadvertently contribute to missed opportunities or hesitancy in pursuing new ventures. Balancing the acknowledgment of past challenges with a proactive approach to future opportunities is crucial.",
+      "name": "lucky "
+    },
+    {
+      "piece": "head_shark",
+      "description": "Your assertiveness and determination are akin to a predator, propelling you towards your goals with focus and intensity. The bloodthirsty nature may lead to a competitive and aggressive stance, potentially straining collaborative efforts.",
+      "name": "bloodthirsty"
+    },
+    {
+      "piece": "head_sliced",
+      "description": "Your character bears the marks of division, yet you find unity within the fragments. Life's slices have shaped you, and you embrace the beauty that arises from the pieces coming together. The sense of division may create internal conflicts, making it challenging to fully integrate aspects of your personality.",
+      "name": "divided"
+    },
+    {
+      "piece": "head_tv",
+      "description": "Your life unfolds in a constant stream of varied experiences and influences. This dynamic perspective may contribute to adaptability. The static nature might lead to a resistance to change, potentially hindering personal and professional growth.",
+      "name": "static"
+    },
+    {
+      "piece": "head_void",
+      "description": "Mystery cloaks your being like an enigmatic void. You navigate the unknown with a sense of wonder and intrigue, embracing the mysteries that life unfolds.\r\nThe enigmatic nature may create challenges in communication, making it difficult for others to fully understand your thoughts and intentions.",
+      "name": "enigmatic"
+    },
+    {
+      "piece": "head_voideye",
+      "description": "Your gaze extends beyond the ordinary, much like a voideye. You possess a penetrating insight, exploring the depths of situations and people with a discerning eye. The intense focus on gazing may lead to occasional detachment, making it challenging to fully immerse yourself in the present moment.",
+      "name": "gazing"
+    },
+    
+    
+     {
+      "piece": "leg_chair",
+      "description": "Your grounded nature serves as a solid foundation for others. People often turn to you for support and stability, appreciating your reliability.The constant role as a pedestal may occasionally lead to feelings of being taken for granted. Balancing support for others with self-care is essential.",
+      "name": "pedestal"
+    },
+    {
+      "piece": "leg_chicken",
+      "description": "Your ability to nurture and enhance growth is akin to fertilizer. You contribute to the development of ideas and relationships, fostering a thriving environment. The role of a fertilizer may lead to neglecting personal boundaries. It's crucial to ensure your contributions are reciprocated and valued.",
+      "name": "fertilizer"
+    },
+    {
+      "piece": "leg_doll",
+      "description": "Your influence is reminiscent of a deity, shaping and inspiring those around you. Your actions carry a profound impact, and people look to you for guidance.The expectation of godlike abilities may create pressure. Balancing your impact with humility and acknowledging your limitations is crucial.",
+      "name": "deity"
+    },
+    {
+      "piece": "leg_fish",
+      "description": "Your presence is associated with good fortune, and people feel fortunate to have you around. Your positive energy brings luck and joy to various situations. Relying on luck may sometimes lead to a lack of proactive decision-making. Striking a balance between spontaneity and intentionality is key.",
+      "name": "lucky dinner"
+    },
+    {
+      "piece": "leg_flatdoll",
+      "description": "Like a soul catcher, you have a knack for understanding and connecting with the essence of others. Your empathy and insight create deep and meaningful relationships. Absorbing others' emotions may sometimes be emotionally taxing. Establishing boundaries and self-care practices is essential for your well-being.",
+      "name": "soul catcher"
+    },
+    {
+      "piece": "leg_frog",
+      "description": "Your adaptability and resilience are akin to the transformative nature of a rebirther. You navigate life's changes with grace, embracing growth and renewal. The constant cycle of change may occasionally lead to a fear of stagnation. Recognizing the value of stability while welcoming growth is important.",
+      "name": "rebirther"
+    },
+    {
+      "piece": "leg_green",
+      "description": "Your frugality and resourcefulness, like a miser, ensure that you make the most of what you have. Your ability to save and invest wisely contributes to stability. The reluctance to spend or share may hinder collaborative efforts. Balancing financial prudence with generosity is important for fostering meaningful connections.",
+      "name": "miser"
+    },
+    {
+      "piece": "leg_mannequin",
+      "description": "Your ability to adapt and play different roles, like a faker, makes you versatile in various situations. You navigate social dynamics with ease. The constant adaptation may sometimes lead to a sense of identity confusion. Ensuring authenticity and maintaining a sense of self is crucial.",
+      "name": "faker"
+    },
+    {
+      "piece": "leg_mech",
+      "description": "Your precision and detailed approach, like an elaborator, contribute to the intricacies of projects and plans. Your methodical mindset ensures thoroughness.The focus on details may occasionally lead to overthinking. Balancing precision with efficiency is important for productivity.",
+      "name": "elaborator "
+    },
+    {
+      "piece": "leg_metallic",
+      "description": "Your resilience and unwavering commitment, like metallic strength, make you a determined force. You tackle challenges with a steadfast approach. The determination may sometimes lead to stubbornness. Being open to alternative approaches while staying focused is crucial.",
+      "name": "determination"
+    },
+    {
+      "piece": "leg_yellow",
+      "description": "Your vibrant and positive energy, akin to a beacon, guides and inspires those around you. Your optimism is infectious, creating a bright atmosphere. The constant role as a beacon may lead to the expectation of always being positive. Acknowledging and addressing personal challenges is important for authenticity.",
+      "name": "beacon"
+    }
+  ]
