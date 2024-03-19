@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kha's stats</title>
+
+    <link rel="stylesheet" href="khari.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+</head>
+<body>
+
+       
+    <div class="dropdown">
+        <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
+        <div id="myDropdown" class="dropdown-content">
+          <a href="../messages/messages.html">Messages</a>
+          <a href="../about.html">About</a>
+          <a href="../select.html">Home</a>
+          <a href="#khari">Info</a>
+        </div>
+      </div>
+
+
+
+    <div class="grid">
+        <div class="item1">
+            <div id="arrows">
+                <a href="../Profile2/profile2.4.html"><img id="khariMain" src="../homeimgs/KhaMain.png"></a>
+                <a href="khari.html"><img id="leftArrow" src="../homeimgs/arrow2.png"></a>
+                <a href="Kyu.html"><img id="rightArrow" src="../homeimgs/arrow1.png"></a>
+
+            </div>
+            <img id="gender" src="../homeimgs/gender2.png">
+        </div>
+        <div class="item2">
+            <p id="contextInfo">
+                This was the second profile in this dataset 
+                that was also deployed from March 4th, 2023 to March 7th, 2023. 
+                <br> <br>
+                This profile also had a similar "casual" aesthetic. I guess this helps 
+                show the difference between a male and female profile when compared the 
+                Khari profile
+                <br> <br>
+                This one came in third in terms of like count with 76 likes. 
+            </p>
+            <img id="context" src="../homeimgs/contextBg.png">
+        </div>
+        <div class="item3">
+            <div class="grid3">
+                <div class="profileImage">
+                    <p class="profileOverlap">
+                        Profile Information
+                    </p>
+                    <img class="banner" src="../homeimgs/banner.png">
+                </div>
+
+                <div id="profileInfo">
+                    <p>
+                        Name: Kha <br>
+                        Birthday: January 5th, 2003 <br>
+                        Religion: Agnostic <br>
+                        School: NYU <br>
+                        Height: 5'8" <br>
+                    </p>
+                </div>
+                <div id="profileInfo2">
+                    <p>
+                        Pets: <img id="cat" src="../homeimgs/iconNone.png">
+                    </p>
+                </div>
+            </div>
+        </div>  
+        <div class="item4">
+            <div class="profileImage">
+                <p class="profileOverlap">
+                    Match Information
+                </p>
+                <img class="banner" src="../homeimgs/banner.png">
+            </div>
+            <div id="stat1">
+                <img class= "stats" src="../homeimgs/stat1.1.png">
+                <p class="statCaption">21 out of 76 identified as female</p>
+            </div>
+            <div id="stat2">
+                <img class= "stats" src="../homeimgs/stat1.2.png">
+                <p class="statCaption">36 out of 76 identified as male</p>
+            </div>
+            <div id="stat3">
+                <img class= "stats" src="../homeimgs/stat1.3.png">
+                <p class="statCaption">20.46 was the average age</p>
+            </div>
+            <div id="stat4">
+                <img class= "stats" src="../homeimgs/stat1.4.png">
+                <p class="statCaption">3 roses were gifted</p>
+            </div>
+        </div>
+      </div>
+
+
+
+        <!--dropdown menu function-->
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+    
+</body>
+</html>

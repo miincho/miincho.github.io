@@ -1,0 +1,132 @@
+body{
+    background-image: url(../homeimgs/textureBg.png);
+    font-family: "t26-carbon", monospace;
+    padding-bottom: 10%;
+}
+
+.item1 { 
+    grid-area: header;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top:2%;
+
+}
+.item2 { grid-area: menu; }
+
+.phone{
+    grid-area:phone;
+}
+
+#ring {
+    width:150px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'phone'
+    'menu'
+    ;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+.banner{
+    width:500px;
+    height: auto;
+    position: relative;
+}
+
+#titleText{
+    position: absolute;
+    z-index: 2;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.texts {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    filter: drop-shadow(5px 5px #21363a90) sepia(1) blur(3px) contrast(0.5);
+  }
+
+.texts:hover{
+    filter: drop-shadow(5px 5px #21363a90);
+    transform: translate(-5px, -5px) scale(1.5);
+    z-index: 100;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .banner {
+        width: 300px;
+    }
+
+    #titleText{
+        font-size: 15pt;
+    }
+  }
+
+
+  /*dropdown menu button*/
+  .dropbtn {
+    border: none;
+    cursor: pointer;
+    width:50px;
+    padding: 20px;
+  }
+
+  .icons{
+    width:90px;
+    height:auto;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    filter: drop-shadow(5px 5px #21363a90);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    /*background-color: #608a7f;*/
+    min-width: 160px;
+    overflow: auto;
+    z-index: 5;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    /*background-color: #a7b3b1;*/
+    color: white;
+}
+  
+  .show {display: block;}

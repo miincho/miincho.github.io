@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Collections</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/657fb61b88.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="about">
+  <ion-icon id="home" name="home-outline"></ion-icon>
+</div>
+
+<div class="chat">
+  <ion-icon id="chat" name="chatbox-ellipses-outline"></ion-icon>
+</div>
+
+
+  <div class="slideshow-container" >
+
+    <div class="mySlides fade">
+      <div class="slide-content">
+        <img src="homeimgs/Khari.png" style="width:400px ">
+        
+        <div class="info">
+          <p>
+            Name: Khari (woman)<br> Age: 20 (January 5th, 2003)<br>
+            <br>
+            Total Likes: 177 <br>
+            Duration: March 4th, 2023 - March 7th, 2023
+            <br>
+            <a class="heartButton" href="javascript:setTimeout(()=>{window.location = 'Profile/profile2.4.html' },1000);" ><ion-icon  name="heart" item-right></ion-icon></a>
+            <a class="heartButton" href="javascript:setTimeout(()=>{window.location = 'Profile/profile2.4.html' },1000);" ><ion-icon name="information-circle-outline"></ion-icon>
+            </ion-icon></a>
+
+          </p>
+
+
+        </div>
+        <div class="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="slide-content">
+        <img src="homeimgs/Kha .png" style="width:400px ">
+        <div class="info">
+          <p>
+            Kha, 20 <br>
+            <br>
+            Total Likes: 76 <br>
+            Duration: 3 days <br>
+            <br>
+            <a class="heartButton" href="javascript:setTimeout(()=>{window.location = 'Profile/profile2.4.html' },1000);" ><ion-icon  name="heart" item-right></ion-icon></a>
+
+          </p>
+        </div>
+        <div class="text">
+          
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="slide-content">
+        <img src="homeimgs/Kyu.png" style="width:400px ">
+        <div class="info">
+          <p>
+            Kyu, 20 <br>
+            <br>
+            Total Likes: 163 <br>
+            Duration: 3 days <br>
+            <br>
+            <a class="heartButton" href="javascript:setTimeout(()=>{window.location = 'Profile/profile2.4.html' },1000);" ><ion-icon  name="heart" item-right></ion-icon></a>
+
+          </p>
+        </div>
+        <div class="text">
+        </div>
+      </div>
+    </div>
+    
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+
+    <style>
+
+  ion-icon.active{
+    animation:like 0.5s 1;
+    fill:rgb(159, 34, 34);
+    stroke:none;
+    background-color: transparent;
+
+  }
+
+
+
+  ion-icon{
+    fill:transparent;
+    stroke:rgb(140, 140, 140);
+    stroke-width:20;
+    transition:all 0.5s;
+    font-size: xx-large;
+  }
+  
+  
+  @keyframes like {
+    0%   { transform: scale(1); }
+    90%   { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+  }
+    </style>
+  
+  
+  <script>
+        let heartIcons = document.querySelectorAll('.heartButton ion-icon');
+    heartIcons.forEach(function(icon) {
+  icon.addEventListener('click', function() {
+    icon.classList.toggle('active');
+  });
+});
+
+
+
+
+
+  
+  </script>
+    
+<!--
+<div class="container">
+    <div class="row">
+      <div id="khari"><img src="homeimgs/Khari.png" >         
+        <p>
+        Khari, 20
+        </p>
+        <ion-icon name="heart"></ion-icon>
+      </div>
+
+      <img src="homeimgs/Kha .png" >
+    </div>
+    <div class="row">
+      <img src="homeimgs/Kyu.png" >
+      <img src="homeimgs/Yu.png" >
+    </div>
+  </div>
+-->
+
+  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Call showSlides() to display the first slide when the page loads
+  showSlides(1);
+});
+</script>
+</body>
+</html>

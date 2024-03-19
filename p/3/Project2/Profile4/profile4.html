@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyu </title>
+    <link rel="stylesheet" type="text/css" href="../Profile2/profile2.4.css">
+    <script src="matchesYu.js"></script>
+    <!--<script src="stats2.js"></script>-->
+    <script src="statsYu.js"></script>
+
+
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+</head>
+<body>
+
+
+<div class="grid">
+
+<div class="header">
+
+    <div class="dropdown">
+        <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
+        <div id="myDropdown" class="dropdown-content">
+          <a href="../messages/messages.html">Messages</a>
+          <a href="../about.html">About</a>
+          <a href="../select.html">Home</a>
+          <a href="../profileInfo/yu.html">Info</a>
+        </div>
+    </div>
+
+
+    
+    <div class="caption">
+        <div id="captionImage">
+            
+        </div>
+
+        
+        <div class="CaptionText">
+            <div class="capLeft">
+                <img class="heart" src="../homeimgs/iconHeart.png"> <p>Yu</p>
+            </div>
+            <div class="capRight">
+                <p>40 Likes</p> 
+                <a href="../profileInfo/yu.html"><img class="info" src="../homeimgs/iconInfo.png"> </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="context">
+        <div id="contextStats">
+            <p>
+                <!--18.42% of all matches liked this photo <br> <br>
+                64.29% identified as male <br><br>
+                21.43% identified as nonbinary, multigender <br><br>
+                14.29% identified as female <br>-->
+            </p>
+            <img src="../homeimgs/contextBg.png">
+        </div>
+    </div>
+
+
+    <div class="profileMenu">
+        <div class="contextBanner"> 
+            <p>Profile Sections</p>
+            <img src="../homeimgs/banner.png">
+        </div>
+        <div class="menu">
+            <div class="sections" id="firstPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 1st Photo</div>
+            <div class="sections" id="secondPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 2nd Photo</div>
+            <div class="sections" id="thirdPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 3rd Photo</div>
+            <div class="sections" id="fourthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 4th Photo</div>
+            <div class="sections" id="fifthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 5th Photo</div>
+            <div class="sections" id="sixthPhoto" ><img class="circle" src="../homeimgs/iconHead.png"> 6th Photo</div>
+            <div class="sections" id="firstPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 1st Prompt</div>
+            <div class="sections" id="secondPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 2nd Prompt</div>
+            <div class="sections" id="thirdPrompt" ><img class="circle" src="../homeimgs/iconHead.png"> 3rd Prompt</div>
+        </div>
+    </div>
+
+    <div id="reject">
+        <div class="contextBanner">
+            <p>Reject Pile</p>
+            <img src="../homeimgs/banner.png">
+        </div>
+
+        <img id="trash" src="../homeimgs/iconTrash.png">
+    </div>
+
+</div>
+
+
+<div class="content">
+    <div class="categories">
+        <img class="btn" id="allBtn" src="../homeimgs/catAll.png">
+        <img class="btn" id="manBtn" src="../homeimgs/catMale.png">
+        <img class="btn" id="womanBtn" src="../homeimgs/catFemale.png">
+        <img class="btn" id="otherBtn" src="../homeimgs/CatNon.png">
+
+    </div>
+
+    <div class="categories2">
+        <img class="Otherbtns" id="refresh" src="../homeimgs/iconRefresh.png">
+        <img class="Otherbtns" id="camera" src="../homeimgs/iconCamera.png">
+    </div>
+    
+</div>
+
+
+
+    <!--JSON data goes here-->
+    <div id="matches" class="headshots" draggable="true">
+    </div>
+
+
+
+<!--<img id="fourth" src="profileimgs/4thPhoto.png">-->
+        <!--dropdown menu function-->
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+
+
+
+
+
+           /* for (var i = 1; i < profileSections.length; i++) {
+                profileSections[i].style.display = 'none';
+            }
+            });*/
+
+            </script>
+
+
+   
+</body>
+</html>

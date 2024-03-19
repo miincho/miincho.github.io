@@ -1,0 +1,81 @@
+[{
+    "Profile": "Kyu1",
+    "Image": "1stPhoto.png",
+    "StatAll": "20.25% of all matches liked this photo",
+    "StatMale": "96.97% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "3.03% identified as nonbinary, multi\ngender",
+    "ImageNumber": "1st Photo"
+  },
+  {
+    "Profile": "Kyu2",
+    "Image": "2ndPhoto.png",
+    "StatAll": "2.45% of all matches liked this photo",
+    "StatMale": "100% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "00.00% identified as nonbinary, multi\ngender",
+    "ImageNumber": "2nd Photo"
+  },
+  {
+    "Profile": "Kyu3",
+    "Image": "3rdPhoto.png",
+    "StatAll": "1.84% of all matches liked this photo",
+    "StatMale": "100% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "00.00% identified as nonbinary, multi\ngender",
+    "ImageNumber": "3rd Photo"
+  },
+  {
+    "Profile": "Kyu4",
+    "Image": "4thPhoto.png",
+    "StatAll": "30.67% of all matches liked this photo",
+    "StatMale": "84% identified as male",
+    "StatFemale": "10% identified as female",
+    "StatNon": "6% identified as nonbinary, multi\ngender",
+    "ImageNumber": "4th Photo"
+  },
+  {
+    "Profile": "Kyu5",
+    "Image": "5thPhoto.png",
+    "StatAll": "3.68% of all matches liked this photo",
+    "StatMale": "100% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "00.00% identified as nonbinary, multi\ngender",
+    "ImageNumber": "5th Photo"
+  },
+  {
+    "Profile": "Kyu6",
+    "Image": "6thPhoto.png",
+    "StatAll": "7.98% of all matches liked this photo",
+    "StatMale": "100% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "00.00% identified as nonbinary, multi\ngender",
+    "ImageNumber": "6th Photo"
+  },
+  {
+    "Profile": "Kyu7",
+    "Image": "1stPrompt.png",
+    "StatAll": "15.95% of all matches liked this photo",
+    "StatMale": "88.46% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "11.53% identified as nonbinary, multi\ngender",
+    "ImageNumber": "1st Prompt"
+  },
+  {
+    "Profile": "Kyu8",
+    "Image": "2ndPrompt.png",
+    "StatAll": "9.82% of all matches liked this photo",
+    "StatMale": "93.75% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "6.25% identified as nonbinary, multi\ngender",
+    "ImageNumber": "2nd Prompt"
+  },
+  {
+    "Profile": "Kyu9",
+    "Image": "3rdPrompt.png",
+    "StatAll": "6.75% of all matches liked this photo",
+    "StatMale": "81.82% identified as male",
+    "StatFemale": "00.00% identified as female",
+    "StatNon": "18.18% identified as nonbinary, multi\ngender",
+    "ImageNumber": "3rd Prompt"
+  }]

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Collection</title>
+    <link rel="stylesheet" href="select.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+</head>
+<body>
+
+    <div class="dropdown">
+        <img onclick="myFunction()" class="dropbtn" src="homeimgs/iconDice.png">
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../Project2/messages/messages.html">Messages</a>
+            <a href="about.html">About</a>
+            <a href="#home">Home</a>
+            <a href="profileInfo/khari.html">Profile Info</a>
+        </div>
+      </div>
+
+
+
+    <div class="grid">
+        <div class="item1">
+            <p id="titleText">Select Your Character</p>
+            <img class="banner" src="homeimgs/banner.png">
+        </div>
+        <div class="item2">
+            <div class="selections">
+                <a href="Profile1/profile1.html"><img class="selectPhotos" src="homeimgs/selectKhari.png"></a>
+                <div class="caption">
+                    <div class="capLeft">
+                        <img class="heart" src="homeimgs/iconHeart.png"> <p>Khari</p>
+                    </div>
+                    <div class="capRight">
+                        <p>177 Likes</p> 
+                        <a href="../Project2/profileInfo/khari.html"><img class="info" src="homeimgs/iconInfo.png"> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="selections">
+                <a href="Profile3/profile3.html"><img class="selectPhotos" src="homeimgs/selectKyu.png"></a>
+                <div class="caption">
+                    <div class="capLeft">
+                        <img class="heart" src="homeimgs/iconHeart.png"> <p>Kyu</p>
+                    </div>
+                    <div class="capRight">
+                        <p>163 Likes</p> 
+                        <a href="../Project2/profileInfo/Kyu.html"><img class="info" src="homeimgs/iconInfo.png"> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="selections">
+                <a href="Profile2/profile2.4.html"><img class="selectPhotos" src="homeimgs/selectKha.png"></a>
+                <div class="caption">
+                    <div class="capLeft">
+                        <img class="heart" src="homeimgs/iconHeart.png"> <p>Kha</p>
+                    </div>
+                    <div class="capRight">
+                        <p>76 Likes</p> 
+                        <a href="../Project2/profileInfo/kha.html"><img class="info" src="homeimgs/iconInfo.png"> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="selections">
+                <a href="Profile4/profile4.html"><img class="selectPhotos" src="homeimgs/selectYu.png"></a>
+                <div class="caption">
+                    <div class="capLeft">
+                        <img class="heart" src="homeimgs/iconHeart.png"> <p>Yu</p>
+                    </div>
+                    <div class="capRight">
+                        <p>40 Likes</p> 
+                        <a href="../Project2/profileInfo/yu.html"><img class="info" src="homeimgs/iconInfo.png"> </a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+      </div>
+
+
+
+
+
+      <!--dropdown menu function-->
+
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
