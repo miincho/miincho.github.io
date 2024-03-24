@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching through art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="content">
+        <div class="sidebar">
+            <div class="tophalf">
+                <div class="title">searching through art</div>
+                <div class="desc">
+                    how can categorization and perspective change the way we perceive art?
+                    <br><br><br>
+                    Adjust the image qualities to view the artwork differently
+                </div>
+                <div class="sliders">
+                    <p>size:</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="size">
+                    <p>blur:</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="blur">
+                </div>            
+            </div>
+            <div class="pages">
+                <div class="caption">randomize images >></div>
+                <div id="rand" class="randompage"></div>
+            </div>
+        </div>
+
+        <div class="righthand">
+            <div class="topbar">
+                <div id="people" class="selection">people</div>
+                <div id="animals" class="selection">animals</div>
+                <div id="nature" class="selection">nature</div>
+                <div id="food" class="selection">food</div>
+                <div id="water" class="selection">water</div>
+                <div id="everything" class="selection">everything.</div>
+            </div>
+            <div id="images">
+                <div id="col-one" class="column"></div>
+                <div id="col-two" class="column"></div>
+                <div id="col-three" class="column"></div>
+                <div id="col-four" class="column"></div>
+                <div id="col-five" class="column"></div>
+            </div>    
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
