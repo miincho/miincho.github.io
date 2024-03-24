@@ -197,3 +197,12 @@ input[type=text]:focus{
     background-color: #d9d9d9;
     outline: none;
 }
+
+/*blue effect*/
+img { 
+    transition: filter 1s linear; 
+}
+
+.blur { 
+    filter: blur(30px); 
+}
