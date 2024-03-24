@@ -16,11 +16,7 @@ function changepages(pageNumber) {
                 imgContainer.appendChild(art);
             });
 
-            art.addEventListener('click', toggleBlur);
-    
-            function toggleBlur() {
-              this.classList.toggle('blur');
-            }
+
         })
     // .then(resp => console.log(resp))
         .catch(error => console.error("error", error));
@@ -47,7 +43,11 @@ changepages(defaultnum);
     const waterFilter = document.getElementById("water");
     const noFilter = document.getElementById("everything");
 
-
+    // art.addEventListener('click', toggleBlur);
+    
+    // function toggleBlur() {
+    //   this.classList.toggle('blur');
+    // }
 
 
 /*image padding*/
