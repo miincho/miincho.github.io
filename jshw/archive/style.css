@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'light';
-    src: url('fonts/pentameter-condensed-light-trial-webfont.woff2') format('woff2'),
-         url('fonts/pentameter-condensed-light-trial-webfont.woff') format('woff');
+    src: url('assets/pentameter-condensed-light-trial-webfont.woff2') format('woff2'),
+         url('assets/pentameter-condensed-light-trial-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'regular';
-    src: url('fonts/pentameter-condensed-regular-trial-webfont.woff2') format('woff2'),
-         url('fonts/pentameter-condensed-regular-trial-webfont.woff') format('woff');
+    src: url('assets/pentameter-condensed-regular-trial-webfont.woff2') format('woff2'),
+         url('assets/pentameter-condensed-regular-trial-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'bold';
-    src: url('fonts/pentameter-condensed-semibold-trial-webfont.woff2') format('woff2'),
-         url('fonts/pentameter-condensed-semibold-trial-webfont.woff') format('woff');
+    src: url('assets/pentameter-condensed-semibold-trial-webfont.woff2') format('woff2'),
+         url('assets/pentameter-condensed-semibold-trial-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -65,7 +65,7 @@ body{
 }
 
 .sidebar div{
-    margin: 3%
+    margin: 2% 3% 3% 3%;
 }
 
 .desc{
@@ -134,7 +134,7 @@ body{
 }
 
 .slider {
-    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 10px;
     background: #D9D9D9;
@@ -185,6 +185,11 @@ body{
     /* align-self: center; */
 }
 
+.randompage:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
 input[type=text]{
     font-family: 'light';
     border: 1px sollid black;
@@ -203,6 +208,74 @@ img {
     transition: filter 1s linear; 
 }
 
-.blur { 
-    filter: blur(30px); 
+
+/*reset button*/
+.reset{
+    font-family: 'regular';
+    font-weight: 590;
+    font-size: 0.9em;
+    border: 1px solid black;
+    padding: 2%;
+    display:block;
+    margin-top:300px;
+    display: flex;
+    justify-content: center;
+}
+
+.reset:hover{
+    background-color: black;
+    color: #D9D9D9;
+    cursor: pointer;
+}
+
+/*gallery*/
+.gallery:hover{
+    text-decoration: underline;
+}
+
+/*popup element*/
+.popup-div {
+    background-color: #D9D9D9;
+    font-family: 'regular';
+    font-weight: 590;
+    font-size: 0.9em;
+    border: 1px solid #000000;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%, -50%);
+    z-index: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.popup-text-div {
+    padding: 3%;
+    max-width: 400px;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    /* border: 1px solid #000; */
+}
+
+.bold{
+    font-family: "bold";
+}
+
+.cloned-art{
+    height:150px;
+    padding:3%;
+    display: block;
+    margin: auto;
+}
+
+/*gallery images*/
+.galleryimages{
+    display: none;
 }

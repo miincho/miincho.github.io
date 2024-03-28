@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>searching through art</title>
+    <title>Art Through Color</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,18 +11,30 @@
     <div class="content">
         <div class="sidebar">
             <div class="tophalf">
-                <div class="title">searching through art</div>
+                <div class="title">Art Through Color  </div>
                 <div class="desc">
-                    how can categorization and perspective change the way we perceive art?
+                    <!-- how can categorization and perspective change the way we perceive art? -->
                     <br><br><br>
                     Adjust the image qualities to view the artwork differently
+                    <br><br>
+                    <span id="gallerybtn" class="gallery">View Example Gallery >></span>
                 </div>
                 <div class="sliders">
                     <p>size:</p>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="size">
+                    <input type="range" min="0" max="300" value="150" class="slider" id="size" oninput="changeSize()">
                     <p>blur:</p>
-                    <input type="range" min="1" max="100" value="50" class="slider" id="blur">
-                </div>            
+                    <input type="range" min="0" max="100" value="50" class="slider" id="blur" oninput="changeBlur()">
+                    <!-- <p>halftone:</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="halftone" oninput="changeHalftone()"> -->
+                    <p>contrast:</p>
+                    <input type="range" min="0" max="200" value="100" class="slider" id="contrast" oninput="changeContrast()">
+                    <p>invert:</p>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="invert" oninput="changeInvert()">
+                    <p>saturation:</p>
+                    <input type="range" min="0" max="300" value="150" class="slider" id="saturation" oninput="changeSaturation()">
+                </div>    
+                <br><br>
+                <div class="reset" id="resetbtn">Reset Values</div>        
             </div>
             <div class="pages">
                 <div class="caption">randomize images >></div>
@@ -32,22 +44,25 @@
 
         <div class="righthand">
             <div class="topbar">
-                <div id="people" class="selection">people</div>
-                <div id="animals" class="selection">animals</div>
-                <div id="nature" class="selection">nature</div>
-                <div id="food" class="selection">food</div>
-                <div id="water" class="selection">water</div>
-                <div id="everything" class="selection">everything.</div>
+                <div class="selection">this site is for...</div>
+                <div class="selection">inspiration</div>
+                <div class="selection">finding new art</div>
+                <div class="selection">appreciating colors</div>
+                <div class="selection">learning history</div>
+                <div class="selection">and more</div>
             </div>
-            <div id="images">
-                <div id="col-one" class="column"></div>
-                <div id="col-two" class="column"></div>
-                <div id="col-three" class="column"></div>
-                <div id="col-four" class="column"></div>
-                <div id="col-five" class="column"></div>
-            </div>    
+            <div id="images"></div>    
+            <div id="galleryimgs" class="galleryimages">
+                <img src="assets/art1.png" alt="">
+                <img src="assets/art2.png" alt="">
+                <img src="assets/art3.png" alt="">
+                <img src="assets/art4.png" alt="">
+                <img src="assets/art5.png" alt="">
+                <img src="assets/art6.png" alt="">
+            </div>
         </div>
     </div>
+    <!-- <script src="glfx.js"></script> -->
     <script src="main.js"></script>
 </body>
 </html>
