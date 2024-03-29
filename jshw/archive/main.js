@@ -1,17 +1,17 @@
-function changepages(pageNumber) {
-    //api limits to 100 images per request; setting page number as a variable to add a randomize image feature later
-    const url = `https://api.artic.edu/api/v1/artworks?page=${pageNumber}&limit=100`;
+// Fetch images with the entered keyword or randomize page
+function fetchImages(pageNumber, keyword = '') {
+    const url = keyword !== '' 
+        ? `https://api.artic.edu/api/v1/artworks/search?q=${keyword}&limit=100&fields=id,image_id,title,artist_display,medium_display,place_of_origin` //specifying fields because not all of them show up by default for some reason
+        : `https://api.artic.edu/api/v1/artworks?page=${pageNumber}&limit=100`;
+
+    const imgContainer = document.getElementById("images");
+    imgContainer.innerHTML = ""; // Clear previous images
 
     fetch(url)
         .then(response => response.json())
-        // .then(resp => console.log(resp))
         .then((resp) => {
             console.log(resp);
-            const imgContainer = document.getElementById("images");
-            imgContainer.innerHTML = ""; //remove previous images when page is randomized
-
             resp.data.forEach(artwork =>{
-                //creating image element
                 const art = document.createElement("img");
 
                 //creating iiif URL for each image
@@ -19,27 +19,16 @@ function changepages(pageNumber) {
                 const imageId = artwork.image_id;
                 const iiifUrl = `${baseUrl}/${imageId}/full/,150/0/default.jpg`;
 
-                //getting info for each artwork;
+                //getting info for each artwork
                 const artistname = artwork.artist_display;
                 const artdate = artwork.title;
                 const artmedium = artwork.medium_display;
                 const artlocation = artwork.place_of_origin;
+                const title = artwork.title;
 
-
-                // Function to remove the existing popup div when another img is clicked
-                function removePopup() {
-                    const onscreen = document.querySelector('.popup-div');
-                    if (onscreen) {
-                        document.body.removeChild(onscreen);
-                    }
-                }
-
-                //dispalying info in a popup when each img is clicked
                 function infoPopup() {
-                    //calling functioln to clear previous div
                     removePopup()
 
-                    //creating elements and linking the css to them
                     const popupdiv = document.createElement('div');
                     popupdiv.classList.add('popup-div');
                 
@@ -55,72 +44,78 @@ function changepages(pageNumber) {
                         <span class="bold">Artist:</span> ${artistname}<br><br>
                         <span class="bold">Date:</span> ${artdate}<br><br>
                         <span class="bold">Medium:</span> ${artmedium}<br><br>
-                        <span class="bold">Location:</span> ${artlocation}
+                        <span class="bold">Location:</span> ${artlocation}<br><br>
+                        <span class="bold">Title:</span> ${title}
                         </div>
                     `;
 
-                    //duplicate image so it stays in the container
                     const clonedArt = art.cloneNode(true);
                     clonedArt.classList.add('cloned-art');
 
-
-                    //appending all elements to the div
                     popupdiv.appendChild(clonedArt);
                     popupdiv.appendChild(textDiv);
                     popupdiv.appendChild(exitbtn);
+
+                    document.body.appendChild(popupdiv);
                 
-                    //remove the popup div when the exit button is clicked
                     exitbtn.addEventListener('click', function() {
                         document.body.removeChild(popupdiv);
                     });
-                
-                    //append div to the body
-                    document.body.appendChild(popupdiv);
                 }
+
+                function removePopup() {
+                    const onscreen = document.querySelector('.popup-div');
+                    if (onscreen) {
+                        document.body.removeChild(onscreen);
+                    }
+                }
+
                 art.addEventListener('click', infoPopup);
 
-
-
-                //appending  image element to image container
                 art.src = iiifUrl;     
                 imgContainer.appendChild(art);
-
-                // art.addEventListener('click', toggleBlur);
-                // function toggleBlur() {
-                // this.classList.toggle('blur');
-                // }
-
-
-
             });
         })
         .catch(error => console.error("error", error));
 }
 
-//select a random page number from 1 through 9398
+// Fetch new images with the entered keyword
+const searchInput = document.querySelector("#search input");
+
+function searchByKeyword() {
+    const keyword = searchInput.value.trim();
+    console.log("Keyword:", keyword); 
+    fetchImages(1, keyword); 
+}
+
+searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        searchByKeyword(); 
+    }
+});
+
+//select a random page number from 1 through 500
 function randomizePage() {
     const newnum = Math.floor(Math.random() * 500);
-    changepages(newnum);
+    fetchImages(newnum);
     console.log(newnum);
 }
 
 const btn = document.getElementById("rand");
 btn.addEventListener("click", randomizePage);
 
-// set default page as 50
+// set default page as 500
 const defaultnum = 500;
-changepages(defaultnum);
-
+fetchImages(defaultnum);
 
 let blur = document.getElementById("blur");
 let size = document.getElementById("size");
 let contrast = document.getElementById("contrast");
 let invert = document.getElementById("invert");
 let saturation = document.getElementById("saturation");
-
 const imgContainer = document.getElementById("images");
 
-//setting image values in an array to prevent overriding
+//setting image values in an array to prevent overriding previous effects
 var filters = {
     blur: 0,
     size: 150,
@@ -169,25 +164,13 @@ function changeSaturation() {
 let reset = document.getElementById('resetbtn');
 
 reset.addEventListener('click', function(){
-    blur.value = 0;
-    size.value = 150;
-    contrast.value = 100;
-    invert.value = 0;
-    saturation.value = 150;
-
-    filters.blur = blur.value;
-    filters.size = size.value;
-    filters.contrast = contrast.value;
-    filters.invert = invert.value;
-    filters.saturation = saturation.value;
-
     let images = imgContainer.querySelectorAll('img');
     images.forEach(function(img) {
-        img.style.filter =  "blur(" + filters.blur + "px) " +
-                            "contrast(" + filters.contrast + "%) " +
-                            "invert(" + filters.invert + "%) " +
-                            "saturate(" + filters.saturation + "%)";
-        img.style.height = filters.size + "px";
+        img.style.filter =  "blur(0px) " +
+                            "contrast(100%) " +
+                            "invert(0%) " +
+                            "saturate(150%)";
+        img.style.height = "150px";
     });
 });
 
@@ -213,6 +196,8 @@ gallerybtn.addEventListener('click', showgallery);
 
 
 
+
+//page 266 
 
 
 // function changeBlur(){
