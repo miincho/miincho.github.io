@@ -209,6 +209,7 @@ hr{
 
 .view-details{
     display: inline-block;
+    display:none; /*removed for now*/
     font-size: 0.8em;
     font-weight: 600;
     border: 1px solid #8B8B8B;
