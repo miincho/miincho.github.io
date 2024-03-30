@@ -261,7 +261,7 @@ hr{
 /*2*/
 .p2-img1 {
     grid-area: second-one;
-    width: 92%;
+    width: 91%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -629,7 +629,7 @@ a{
     }
 
     .p1-img2, .p1-img3, 
-    .p2-img1, .p2-img2, .p2-img4,
+    .p2-img1, .p2-img4,
     .p3-img2, .p3-img3,
     .p4-img3,
     .p5-img2,
