@@ -83,6 +83,7 @@ hr{
     padding-top: 1%;
     padding-left:2%;
     padding-right:2%;
+    margin-bottom: 2%;
 }
 
 .header-left{
@@ -110,7 +111,7 @@ hr{
     justify-content: center;
     align-items: center;
     width: 25px;
-    animation: rotation 20s infinite linear;
+    /* animation: rotation 20s infinite linear; */
     position: fixed;
     top: 4%;
     right:2.5%;
@@ -419,6 +420,8 @@ hr{
 
 #drag1, #drag2, #drag3, #drag4, #drag5, #drag6, #drag7, #drag8, #drag9, #drag10, #drag11, #drag12, #drag13, #drag14, #drag15{
     position: absolute;
+    display:none;
+
 }
 
 /*1*/
