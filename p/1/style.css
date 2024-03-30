@@ -59,7 +59,7 @@ body{
 }
 
 .name{
-  font-style: italic;
+  /* font-style: italic; */
   padding-right: 2%
 }
 
@@ -104,7 +104,7 @@ body{
 
 .hero-img{
   /* margin: 3% 0 3% 0; */
-  background-color: #1B1B1B; 
+  background-color: #0F0F0F; 
   padding: 3% 2% 0% 2%;
 }
 
@@ -133,7 +133,8 @@ body{
 }
 
 .project-title{
-  font-size: 3em;
+  font-size: 2em;
+  color: #c9c9c9;
   line-height: 1;
   font-family: 'plex_regular';
   padding-top: 4%;
@@ -141,15 +142,9 @@ body{
 }
 
 .descriptions{
-  /* font-size: 0.85em; */
+  font-size: 0.9em;
   max-width: 30vw;
   margin: 10% 0 0 0;
-}
-
-.timeline span{
-  color: #FF0000;
-  /* line-height: 2; */
-  /* font-weight: 700; */
 }
 
 .timeline{
@@ -157,6 +152,7 @@ body{
   flex-direction: column;
   align-items: flex-end; 
   justify-content: flex-end;
+  font-size: 0.9em;
 }
 
 .timeline div{
@@ -184,17 +180,20 @@ body{
 
 .bodytext{
   max-width: 30vw;
+  font-size: 0.9em;
 }
 
 .pixel-header{
   font-family: 'plex_regular';
-  font-size: 1.5em;
-  padding: 4% 4% 0 4%;
+  /* text-decoration: underline; */
+  font-size: 1em;
+  padding: 2.5% 4% 0 4%;
   /* padding-bottom: 15%; */
 }
 
 .color-subheader{
-  color: #FF0000;
+  color: #c9c9c9;
+  font-family: 'plex_medium';
   padding-bottom: 2%;
 }
 
@@ -252,6 +251,7 @@ body{
   padding-top: 8%;
   padding-bottom: 2%;
   max-width: 30vw;
+  font-size: 0.9em;
 }
 
 /*footer*/
