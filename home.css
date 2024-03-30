@@ -259,25 +259,31 @@ hr{
 }
 
 /*2*/
-.p2-img1{
+.p2-img1 {
     grid-area: second-one;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.p2-img2{
+
+.p2-img2 {
     grid-area: second-two;
-    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.p2-img3{
+/* .p2-img3{
     grid-area: second-three;
 }
 .p2-img4{
     grid-area: second-four;
-}
+} */
 
 .two{
     display: grid;
     grid-template-areas: 
-    'second-one second-two second-two second-three'
-    'second-one second-two second-two second-four';
+    'second-one second-two second-two';
     gap: 15px;
 }
 
