@@ -15,27 +15,25 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="gradient"></div>
     <div class="header">
         <div class="header-left">
-            <a href="/index.html"><div class="name">m1nkyung cho</div></a>
-            <!-- <div id="click-me" class="sentences">is wishing your dreams come true <3</div> -->
+            <a href="/miincho.github.io/index.html"><div id="click-me" class="sentences"><span class="name">MINKYUNG CHO</span></div></a>
         </div>
-        <div class="icon"><img src="/assets/Asset 2.svg"></div>
+        <div class="about"> <span class="tabs ab">ABOUT</span><span class="tabs"><a href="mailto:minkyungcho2003@gmail.com" target="_blank">CONTACT</a></span></div> 
     </div>
+
 
     <hr>
 
     <div class="me">
         <div class="me-img">
-            <img id='image' src="/assets/me2.png">
+            <img id='image' src="./assets/me2.png">
             <div class="spanss">
-                <span><a href="https://www.linkedin.com/in/minkyung-cho-a83313237" target="_blank">LinkedIn</a></span>
-                <span><a href="mailto:minkyungcho2003@gmail.com" target="_blank">Email</a></span>
-                <span><a href="https://github.com/miincho" target="_blank">Github</a></span>
-                <span><a href="https://www.instagram.com/min.c03/" target="_blank">Instagram</a></span>
-                <span><a href="/assets/MinkyungCho_Resume.pdf" target="_blank">Resume</a></span>
-                </div>
+                <div><a href="/assets/MinkyungCho_Resume.pdf" target="_blank">> Resume</a></div>
+                <div><a href="https://www.linkedin.com/in/minkyung-cho-a83313237" target="_blank">> LinkedIn</a></div>
+                <div><a href="mailto:minkyungcho2003@gmail.com" target="_blank">> Email</a></div>
+                <div><a href="https://github.com/miincho" target="_blank">> Github</a></div>
+            </div>
         </div>
         <div class="me-text">
             <span> "But people themselves alter so much that there is something new to be observed in them forever" 
@@ -62,10 +60,10 @@
         bottom: 0;
         width: 100%; */
         
-        background-image: linear-gradient(#121212, #1C1C1C);
+        /* background-image: linear-gradient(#121212, #1C1C1C); */
         display:flex;
         justify-content: flex-end;
-        padding-top: 3%;
+        padding-top: 1.5%;
         padding-bottom: 2%;
         border-top: 1px solid #8B8B8B;
         /* padding-left:2%; */
@@ -92,7 +90,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center; 
-        padding-top: 8%;
+        padding-top: 10%;
         padding-bottom: 8%;
         /* margin-top: 5%; */
         background-color: #0f0f0f;
@@ -123,6 +121,7 @@
     .me-text{
         max-width: 30vw;
         padding-left: 10vw;
+        font-size: 0.9em;
     }
     .me-text span{
         font-style: italic;
@@ -179,24 +178,49 @@
     }
 
     .header{
-        display: flex;
-        justify-content: space-between;
-        background-image: linear-gradient(#121212, #1C1C1C);
-        padding-top: 1%;
-        padding-left:2%;
-        padding-right:2%;
-        padding-bottom: 2%; 
-    }
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid #6d6d6d   ;
+    background-color: #0F0F0F;
+    padding-top: 1.5%;
+    padding-left:1.5%;
+    padding-right:1.5%;
+    padding-bottom: 1.5%;
+    position: fixed;
+    top: 0;
+    width: 100vw; 
+    z-index: 1000; 
+    box-sizing: border-box;
+}
 
-    .header-left{
-        z-index: 100;
-    }
+.name{
+    padding-right: 2%
+}
 
-    .name{
-        color: #B0B0B0;
-        font-family: 'argent_italic';
-        font-size: 2.9em;
-    }
+.sentences{
+    font-size: 0.9em;
+    white-space: nowrap;
+    line-height: 1.4; 
+}
+
+.about{
+    font-size: 0.9em;
+    white-space: nowrap;
+    /* display: flex;
+    align-items: center;  */
+}
+
+.tabs{
+    padding: 15px;
+}
+.tabs:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.tabs.ab{
+    text-decoration: underline;
+}
 
     .icon {
     display: flex;
@@ -224,10 +248,34 @@
     }
   }
 
-  /*media query ughhhhhhhhhhhhhhhh*/
+  .spanss a:hover {
+    text-decoration: underline;
+}
+
+  /*media query*/
 @media(max-width: 700px){
 
+    .name{
+    font-size: 1em;
+    }
+
+    .header-left{
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    }
+
+    .about{
+    padding-right: 5%;
+    padding-top: 5%;
+    }
+
+    span.tabs{
+    font-size: 0.9em;
+    }
+
     .me{
+        margin-top: 10vh;
         display: flex;
         flex-direction: column;
     }
@@ -251,7 +299,10 @@
 
     .spanss{
         margin: 5%;
+        margin-left: 25%;
     }
+
+
 
     .me-text{
         padding-left: 10%;
@@ -270,7 +321,7 @@
     }
 
     .name{
-        font-size: 2em;
+        font-size: 1em;
     }
 }
 

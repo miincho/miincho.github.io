@@ -75,6 +75,11 @@ body{
 .tabs{
   padding: 15px;
 }
+.tabs:hover{
+  text-decoration: underline;
+  cursor:pointer;
+}
+
 
 .icon {
     display: flex;
