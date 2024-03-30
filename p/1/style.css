@@ -280,17 +280,27 @@ a{
 
 /*the worst part of my day*/
 @media(max-width: 700px){
-  .icon img{
-    width:25px;
-  }
-
   .name{
-    padding-top: 15px;
-    font-size: 2em;
-  }
+    font-size: 1em;
+}
+
+.header-left{
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.about{
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+span.tabs{
+  font-size: 0.9em;
+}
 
   .p1-img1{
-    margin-top: 10%;
+    margin-top: 20%;
     border: 1px solid #6d6d6d;
   }
 
@@ -299,8 +309,8 @@ a{
   }
 
   .project-title{
-    font-size: 2em;
-  }
+    font-size: 1.5em;
+}
 
   .project-info{
     display: flex;
@@ -314,7 +324,7 @@ a{
   }
 
   .pixel-header{
-    font-size: 1.9em;
+    font-size: 0.9em;
     padding-top: 5%;
     padding-bottom: 5%;
   }
@@ -362,6 +372,7 @@ a{
 
   .footer{
     padding-bottom: 10%;
+    font-size: 0.8em;
   }
 
   .footer div{
