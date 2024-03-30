@@ -1,11 +1,3 @@
-// function hidePreloader() {
-//     var preloader = document.getElementById("preloader");
-//     preloader.style.display = "none";
-//     window.removeEventListener("load", hidePreloader);
-// }
-
-// window.addEventListener("load", hidePreloader);
-
 /*draggable text boxes*/
 $(function() {
     $("#drag1").draggable({
@@ -61,20 +53,3 @@ $(function() {
         containment: "document"
     });
 });
-
-// /*header - gravity boxes*/
-// let draggables = document.getElementsByClassName('draggables');
-
-const changeableText = document.getElementById('click-me');
-const textOptions = [`is hoping you're happy :]`, 'is sleeping past noon', 'is fighting bears in the arctic', 'is wishing your dreams come true <3', 'is behind you.....boo!', 'is eating pizza']; 
-
-function getRandomText() {
-  const randomIndex = Math.floor(Math.random() * textOptions.length);
-  return textOptions[randomIndex];
-}
-
-function changeRandomText() {
-  changeableText.textContent = getRandomText();
-}
-
-changeableText.addEventListener('click', changeRandomText);

@@ -43,22 +43,38 @@ body{
 }
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    background-image: linear-gradient(#121212, #1C1C1C);
-    padding-top: 1%;
-    padding-left:2%;
-    padding-right:2%;
-}
-
-.header-left{
-  z-index: 100;
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 1px solid #6d6d6d   ;
+  background-color: #0F0F0F;
+  padding-top: 1.5%;
+  padding-left:1.5%;
+  padding-right:1.5%;
+  padding-bottom: 1.5%;
+  position: fixed;
+  top: 0;
+  width: 100vw; 
+  z-index: 1000; 
+  box-sizing: border-box;
 }
 
 .name{
-    color: #B0B0B0;
-    font-family: 'argent_italic';
-    font-size: 2.9em;
+  font-style: italic;
+  padding-right: 2%
+}
+
+.sentences{
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.about{
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.tabs{
+  padding: 15px;
 }
 
 .icon {
@@ -86,16 +102,6 @@ body{
     }
   }
 
-  .gradient {
-    width: 100%;
-    height: 100px; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, #121212, transparent);
-    z-index: 99;
-}
-
 .hero-img{
   /* margin: 3% 0 3% 0; */
   background-color: #1B1B1B; 
@@ -111,6 +117,7 @@ body{
 }
 
 .p1-img1{
+  margin-top: 7vh;
   width: 100%;
   border: 1.5px solid #8B8B8B; 
 }
@@ -128,7 +135,7 @@ body{
 .project-title{
   font-size: 3em;
   line-height: 1;
-  font-family: 'argent_italic';
+  font-family: 'plex_regular';
   padding-top: 4%;
   padding-left: 2%
 }
@@ -180,8 +187,8 @@ body{
 }
 
 .pixel-header{
-  font-family: 'argent_italic';
-  font-size: 2.5em;
+  font-family: 'plex_regular';
+  font-size: 1.5em;
   padding: 4% 4% 0 4%;
   /* padding-bottom: 15%; */
 }
