@@ -1,19 +1,13 @@
-/*Scrollbar*/
-  /* Firefox */
-  * {
+  *{
     scrollbar-width: auto;
     scrollbar-color: #ababab #0f0f0f;
   }
-
-  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 10px;
   }
-
   *::-webkit-scrollbar-track {
     background: #0f0f0f;
   }
-
   *::-webkit-scrollbar-thumb {
     background-color: #ababab;
     border-radius: 0px;
@@ -38,20 +32,10 @@ hr{
     padding:0;
 }
 
-.gradient {
-    width: 100%;
-    height: 100px; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to bottom, #121212, transparent);
-    z-index: 99;
-}
-
 .header{
     display: flex;
     justify-content:space-between;
-    border-bottom: 1px solid #6d6d6d   ;
+    border-bottom: 1px solid #6d6d6d;
     background-color: #0F0F0F;
     padding-top: 1.5%;
     padding-left:2%;
@@ -77,8 +61,6 @@ hr{
 .about{
     font-size: 0.9em;
     white-space: nowrap;
-    /* display: flex;
-    align-items: center;  */
 }
 
 .tabs{
@@ -88,72 +70,6 @@ hr{
 .tabs:hover{
     text-decoration: underline;
     cursor:pointer;
-}
-
-.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    /* animation: rotation 20s infinite linear; */
-    position: fixed;
-    top: 4%;
-    right:2.5%;
-    z-index: 100;
-}
-  
-.icon:hover{
-    filter: drop-shadow(0px 0px 3px #6d6d6d);
-    animation-play-state: paused;
-}
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-
-.physics-boxes{
-    position: relative;
-    font-size: 0.9em;
-    padding-left:2%;
-    padding-right:2%;
-    margin-top: 50px;
-    margin-bottom: 4%;
-    display:flex;
-    justify-content: right;
-    /* border: 1px solid;  */
-}
-
-.titleone{
-    left:8%; 
-    top: -30%;
-    position: absolute;
-}
-
-.titletwo{
-    left:25%; 
-    bottom: -10%; 
-    position: absolute;
-}
-
-.physics-right{
-    text-align: right;
-    max-width: 600px;
-}
-
-.draggable{
-    display: inline-block;
-    line-height: 1.35;
-    max-width: 310px;
-    border: 1px solid #8B8B8B;
-    padding: 12px;
-    margin-top: 2%;
-    background-color: #171717;
 }
 
 /*mid*/
@@ -193,22 +109,6 @@ hr{
     line-height: 1;
     font-family: 'plex_medium';
     padding-top: 2%;
-}
-
-.view-details{
-    display: inline-block;
-    display:none; /*removed for now*/
-    font-size: 0.8em;
-    font-weight: 600;
-    border: 1px solid #8B8B8B;
-    padding: 8px;
-    margin-top: 10%;
-}
-
-.view-details:hover{
-    background-color: #8B8B8B;
-    color:#0F0F0F;
-    cursor:pointer;
 }
 
 .projects{
@@ -273,12 +173,6 @@ hr{
     justify-content: center;
     align-items: center;
 }
-/* .p2-img3{
-    grid-area: second-three;
-}
-.p2-img4{
-    grid-area: second-four;
-} */
 
 .two{
     display: grid;
@@ -311,22 +205,16 @@ hr{
     grid-area: fourth-one;
     margin: auto;
 }
-/* .p4-img2{
-    grid-area: fourth-two;
-} */
+
 .p4-img3{
     grid-area: fourth-three;
     margin: auto;
 }
-/* .p4-img4{
-    grid-area: fourth-four;
-} */
 
 .four{
     display: grid;
     grid-template-areas: 
     'fourth-one fourth-three fourth-three';
-    /* 'fourth-four fourth-two'; */
     gap: 15px;
 }
 
@@ -391,148 +279,7 @@ hr{
     gap: 15px;
 }
 
-
-/*draggable divs*/
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh {
-    position: relative;
-}
-
-.project-draggables div{
-    display: inline-block;
-    font-size: 0.7em;
-    font-weight: 600;
-    line-height: 1.35;
-    border: 1px solid #8B8B8B;
-    padding: 10px;
-    margin-top: 2%;
-    background-color: #0F0F0F;
-}
-
-.project-draggables div:hover{
-    cursor: move;
-}
-
-
-#drag1, #drag2, #drag3, #drag4, #drag5, #drag6, #drag7, #drag8, #drag9, #drag10, #drag11, #drag12, #drag13, #drag14, #drag15{
-    position: absolute;
-    display:none;
-
-}
-
-/*1*/
-#drag1{
-    width: 135px;
-    height: 29px;
-    left: 30%;
-    bottom: 5%;
-}
-
-#drag2{
-    width: 235px;
-    height: 47px;
-    right: 15%;
-    bottom:43%;
-}
-
-/*2*/
-#drag3{
-    width: 145px;
-    height: 30px;
-    left: 39%;
-    top: 15%;
-}
-
-#drag4{
-    width: 170px;
-    height: 45px;
-    right: 14%;
-    bottom:18%;
-}
-
-/*3*/
-#drag5{
-    width: 144px;
-    height: 30px;
-    left: 20%;
-    bottom:10%;
-}
-
-#drag6{
-    width: 125px;
-    height: 43px;
-    left: 68%;
-    top: 33%;
-}
-
-#drag7{
-    width: 105px;
-    height: 30px;
-    left: 72%;
-    top: 42%;
-}
-
-/*4*/
-#drag8{
-    width: 178px;
-    height: 45px;
-    left: 40%;
-    top: 5%;
-}
-
-#drag9{
-    width: 178px;
-    height: 47px; 
-    right: 5%;
-    bottom: 8%;
-}
-
-/*5*/
-#drag10{
-    width: 180px;
-    height: 48px;
-    left: 55%;
-    top: 65%;
-}
-
-#drag11{
-    width: 208px;
-    height: 48px; 
-    left: 62%;
-    top: 75%;
-}
-
-#drag12{
-    width: 90px;
-    height: 30px;
-    left: 79%;
-    top: 8%;
-}
-
-/*6*/
-#drag13{
-    width: 148px;
-    height: 46px;
-    left: 22%;
-    bottom: 15%;
-}
-
-#drag14{
-    width: 115px;
-    height: 44px; 
-    right: 23%;
-    top: 0.2%;
-}
-
-#drag15{
-    width: 165px;
-    height: 45px;
-    right: 0.2%;
-    bottom: 5%;
-
-}
-
 /*footer*/
-
 a{
     text-decoration: none;
     color:inherit;
@@ -560,10 +307,6 @@ a{
 @media(max-width: 700px){
     .middle{
         margin-top: 15vh;
-    }
-
-    .project-draggables div{
-        display:none;
     }
 
     .header{
@@ -618,11 +361,6 @@ a{
         margin-top: 60vh;     
     }
 
-    .draggable{
-        font-size: 0.8em;
-        max-width: 278px;
-    }
-
     .img-grid{
         display:block;
         padding-top: 20px;
@@ -643,10 +381,6 @@ a{
         margin: 0 3% 0 3%;
     }
 
-    .view-details{
-        display: none;
-    }
-
     .project-title{
         font-size: 1.5em;
     }
@@ -659,9 +393,5 @@ a{
 
     .footer{
         font-size: 0.8em;
-    }
-
-    .secondsentence{
-        display: none;
     }
 }

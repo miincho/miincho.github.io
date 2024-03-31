@@ -1,19 +1,14 @@
 /*Scrollbar*/
-  /* Firefox */
   * {
     scrollbar-width: auto;
     scrollbar-color: #ababab #0f0f0f;
   }
-
-  /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 10px;
   }
-
   *::-webkit-scrollbar-track {
     background: #0f0f0f;
   }
-
   *::-webkit-scrollbar-thumb {
     background-color: #ababab;
     border-radius: 0px;
@@ -25,21 +20,21 @@
 }
 
 hr{
-    border:none;
-    height: 0.5px;
-    background-color: #8B8B8B;
-    margin:0;
-    padding:0;
+  border:none;
+  height: 0.5px;
+  background-color: #8B8B8B;
+  margin:0;
+  padding:0;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #0F0F0F; 
-    color: #8B8B8B;
-    font-family: 'plex_regular';
-    line-height: 1.2;
-    overflow-x:hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #0F0F0F; 
+  color: #8B8B8B;
+  font-family: 'plex_regular';
+  line-height: 1.2;
+  overflow-x:hidden;
 }
 
 .header{
