@@ -77,11 +77,11 @@ hr{
     background-color: #0F0F0F;
 }
 
-.first{
+.eighth{
     margin-top: 6vh;    
 }
 
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh{
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
     padding-left:2%;
     padding-right:2%;
 }
@@ -279,6 +279,27 @@ hr{
     gap: 15px;
 }
 
+/*8*/
+.p8-img1 {
+    grid-area: second-one;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p8-img2 {
+    grid-area: second-two;
+    max-height:97.5%;
+}
+
+.eight{
+    display: grid;
+    grid-template-areas: 
+    'second-one second-one second-two';
+    gap: 15px;
+}
+
 /*footer*/
 a{
     text-decoration: none;
@@ -372,7 +393,8 @@ a{
     .p4-img3,
     .p5-img2,
     .p6-img2, .p6-img3,
-    .p7-img2, .p7-img3
+    .p7-img2, .p7-img3,
+    .p8-img2
     {
         display:none;
     }
