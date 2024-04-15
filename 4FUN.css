@@ -1,0 +1,158 @@
+#fun-tab{
+    text-decoration: underline;
+}
+
+.body-content{
+    margin-top:4.5%; 
+    font-size: 0.9em;
+}
+
+.the-categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.websites{
+    flex: 0 0 50%;
+    height: 2vh;
+    border-right: 1px solid #5b5b5b;
+}
+
+.posters{
+    flex: 0 0 50%;
+}
+
+/* .title{
+
+} */
+
+.websites, .posters, .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 0 1% 0;
+}
+
+/*projects section*/
+
+.proj{
+    padding:5%;
+    
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.websites-container, .projects-container{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3%;
+}
+
+.websites-container{
+    flex: 0 0 50%;
+    border-right: 1px solid #5b5b5b;
+}
+
+img{
+    width: 100%;
+}
+
+.cap /*no cap on god we lit*/{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1%;
+}
+
+.cap-left, .cap-right{
+    font-size: 0.8em;
+}
+
+/*posters section*/
+.proj1-vid{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.basil{
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+.proj1-oly{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fitted-posters{
+    height: 85vh;
+    width: auto;
+}
+
+  /*media query*/
+  @media(max-width: 700px){
+
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .name{
+        white-space: nowrap;
+    }
+
+    .header-left{
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    }
+
+    .about{
+    padding-right: 5%;
+    padding-top: 5%;
+    }
+
+    span.tabs{
+    font-size: 0.9em;
+    }
+
+
+    .body-content{
+        margin-top: 20%;
+    }
+
+    .the-categories{
+        display: none;
+    }
+
+    .project-container{
+        flex-direction: column;
+    }
+
+    .title{
+        padding: 1% 0 3% 0;
+    }
+
+    .websites, .websites-container{
+        border:none;
+    }
+
+    .cap-right{
+        text-align: right;
+    }
+
+    .fitted-posters{
+        width: 100%;
+        height:auto;
+        padding-bottom: 2%;
+    }
+
+}

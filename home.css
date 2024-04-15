@@ -14,6 +14,10 @@
     border: 3px none #ffffff;
   }
 
+#work-tab{
+    text-decoration: underline;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -303,6 +307,8 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid #8B8B8B; */
+
 }
 
 .p8-img2 {
