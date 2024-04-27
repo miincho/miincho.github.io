@@ -52,6 +52,10 @@ hr{
     box-sizing: border-box;
 }
 
+.name:hover{
+    text-decoration: underline;
+}
+
 .name{
     padding-right: 2%
 }
