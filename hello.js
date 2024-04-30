@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const div = document.getElementById("content");
-    const maxSpans = 1250; 
+    const maxSpans = 1500; 
     const fontSizeMultiplier = 3; 
-    
+    const cooldownTime = 1000;
+
     let span = document.createElement('span');
     let initials = document.createTextNode("MC ");
     span.appendChild(initials);
-    // span.style.display = "inline";
 
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -21,9 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(`Total spans created: ${numSpansToCreate}`);
 
+    let cooldownActive = false;
     div.addEventListener("mouseover", (e) => {
-        if (e.target.tagName === 'SPAN') {
+        if (!cooldownActive && e.target.tagName === 'SPAN') {
             const spans = div.querySelectorAll('span');
+
+            //disable the effect for the cooldown period
+            cooldownActive = true;
+            setTimeout(() => {
+                cooldownActive = false;
+            }, cooldownTime);
 
             spans.forEach((span) => {
                 span.style.transition = "font-size 0.5s ease";

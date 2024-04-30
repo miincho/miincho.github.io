@@ -28,6 +28,14 @@
 
 } */
 
+#work-tab{
+    text-decoration: none;
+}
+
+#fun-tab{
+    text-decoration: underline;
+}
+
 .websites, .posters, .title{
     display: flex;
     align-items: center;
