@@ -1,0 +1,80 @@
+:root{
+    --main-bg-color: white;
+    --main-border-color: black;
+    --border-width: 1px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+body  {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+body{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 2%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    background-color: var(--main-bg-color);
+    color: var(--main-border-color);
+}
+
+.topbar{
+    font-size: 1.4em;
+    font-weight: 900;
+    padding-bottom: 10vh;
+    position: sticky;
+}
+
+
+.column{
+    /* border: solid 1px var(--main-border-color); */
+    min-width: 15vw;
+    max-width: 17vw;
+}
+
+.content{
+    display:flex;
+}
+
+.options{
+    height: 80vh;
+    overflow-y: scroll;
+    /* border-top: solid var(--border-width) var(--main-border-color);
+    border-bottom: solid var(--border-width) var(--main-border-color); */
+}
+
+.module{
+    border: solid var(--border-width) var(--main-border-color);
+    /* border-left: solid var(--border-width) var(--main-border-color);
+    border-right: solid var(--border-width) var(--main-border-color);
+    border-bottom: solid var(--border-width) var(--main-border-color); */
+    padding:3%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.module:hover{
+    cursor: pointer;
+}
+
+/* .module p{
+    filter: blur(5px);
+}
+.module p:hover{
+    filter: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+} */
+
+.define, .quote{
+    padding-top: 7%;
+    font-weight: 480;
+    font-style: italic;
+}
+

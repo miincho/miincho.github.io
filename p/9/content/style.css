@@ -1,0 +1,119 @@
+body::-webkit-scrollbar {
+    display: none;
+  }
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+
+body{
+    margin:0;
+    padding: 0;
+    /* overflow: hidden; */
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.pro span:hover{
+    cursor: pointer;
+}
+
+.content{
+    height: 100vh;
+    width: 100vw;
+}
+
+.top-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 2.8% 0 2.8%;
+    height: 8vh;
+}
+
+.top-bar-desc, .top-bar-proceed, .top-bar-title{
+    display: flex;
+    align-items: flex-end;
+}
+
+.top-bar-proceed{
+    font-size: 0.8em;
+    flex-direction: column;
+    justify-content: end;
+    align-items: baseline;
+}
+
+.top-bar-title{
+    /* font-size: 1.8em; */
+    line-height: 0.9;
+    font-weight: 900;
+}
+
+.top-bar-desc{
+    font-size: 0.8em;
+    font-weight: 500;
+    max-width: 27vw;
+    line-height: 0.98;
+}
+
+.middle-content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5vh;
+}
+
+.canvas-container{
+    margin: 0 1.5% 0 1.5%;
+    height: 75vh;
+    /* border: 2px solid pink; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#canvas-resizer{
+    width: 100%;
+    margin: 0.4%;
+}
+
+canvas{
+    /* border: 2px solid rgb(110, 161, 34); */
+    /* height:70vh;
+    width: 90vw; */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-category1, .side-category2, .top-category1, .top-category2{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.side-category1 {
+    height: fit-content;
+    white-space: nowrap;    
+    transform: rotate(-90deg);
+    /* border: 1px solid purple; */
+    max-width: 1vw;
+}
+
+.side-category2 {
+    height: fit-content;
+    white-space: nowrap;    
+    transform: rotate(90deg);
+    /* border: 1px solid purple; */
+    max-width: 1vw;
+}
