@@ -11,7 +11,7 @@ function fetchImages(pageNumber, keyword = '') {
         .then(response => response.json())
         .then((resp) => {
             console.log(resp);
-            resp.data.forEach(artwork =>{
+            resp.data.forEach( artwork =>{
                 const art = document.createElement("img");
 
                 //creating iiif URL for each image
