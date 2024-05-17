@@ -191,41 +191,34 @@ function drawCircle(x, y) {
 }
 
 //check mouse location with distance formula
-function isMouseOverCircle(mouseX, mouseY, circleX, circleY) {
-    return Math.sqrt((mouseX - circleX) ** 2 + (mouseY - circleY) ** 2) < 8; //making it slightly larger than radius for better hovering
+function hover(mouseX, mouseY, circleX, circleY) {
+    return Math.sqrt((mouseX - circleX) ** 2 + (mouseY - circleY) ** 2) < 8; //making it slightly larger than radius for easier hovering
 }
 
 //redraw circles and associated text based on mouse movement
 function redrawCircles(mouseX, mouseY) {
-    //clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //clear canvas
+    grid(); //redraw grid
 
-    // Redraw grid
-    grid();
-
-    // Redraw circles
+    //redraw circles
     data.forEach(item => {
         const pixelX = (item.locX / 100) * canvas.width;
         const pixelY = (item.locY / 100) * canvas.height;
         drawCircle(pixelX, pixelY);
 
         // Check if mouse is over the current circle
-        if (isMouseOverCircle(mouseX, mouseY, pixelX, pixelY, 3)) {
+        if (hover(mouseX, mouseY, pixelX, pixelY, 3)) {
             ctx.font = "14.5px IBM Plex Mono";
             ctx.fillText(`${item.word}`, pixelX + 15, pixelY + 5);
-            // ctx.font = "italic 12px IBM Plex Mono";
-            // ctx.fillText(`${item.definition}`, pixelX + 12, pixelY+15);
         }
     });
 }
 
-// Function to handle mouse movement
+//redraw circles and associated text based on mouse position
 canvas.addEventListener("mousemove", function(event) {
     const rect = canvas.getBoundingClientRect();
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
-
-    // Redraw circles and associated text based on mouse position
     redrawCircles(mouseX, mouseY);
 });
 
