@@ -191,9 +191,9 @@ fetch('data.json')
 
             //disabling pointer events for each child div so the same column cant be clicked twice
             function disableButton(parentDiv) {
-                const child = parentDiv.child;
-                for (let i = 0; i < child.length; i++) {
-                    child[i].style.pointerEvents = 'none'; 
+                const children = parentDiv.children;
+                for (let i = 0; i < children.length; i++) {
+                    children[i].style.pointerEvents = 'none'; 
                 }            
             }
 
