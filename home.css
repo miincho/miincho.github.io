@@ -89,7 +89,7 @@ hr{
     margin-top: 6vh;    
 }
 
-.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth{
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth, .ninth{
     padding-left:2%;
     padding-right:2%;
 }
@@ -327,6 +327,26 @@ hr{
     gap: 15px;
 }
 
+/*9*/
+.p9-img1{
+    grid-area: one;
+    border: 1px solid #3f3f3f;
+}
+.p9-img2{ /*video*/
+    grid-area: two;
+}
+.p9-img3{ /*img*/
+    grid-area: three;
+}
+
+.nine{
+    display: grid;
+    grid-template-areas: 
+    'one one two'
+    'one one three';
+    gap: 15px;
+}
+
 /*footer*/
 a{
     text-decoration: none;
@@ -423,7 +443,8 @@ a{
     .p5-img1,
     .p6-img1, .p6-img3,
     .p7-img2, .p7-img3,
-    .p8-img2
+    .p8-img2,
+    .p9-img2, .p9-img3
     {
         display:none;
     }
