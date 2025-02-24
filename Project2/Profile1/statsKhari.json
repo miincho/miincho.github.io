@@ -1,0 +1,82 @@
+[{
+      "Profile": "Khari1",
+      "Image": "1stPhoto.png",
+      "StatAll": "37.85% of all matches liked this photo",
+      "StatMale": "86.57% identified as male",
+      "StatFemale": "8.96% identified as female",
+      "StatNon": "4.48% identified as nonbinary, multi\ngender",
+      "ImageNumber": "1st Photo"
+    },
+    {
+      "Profile": "Khari2",
+      "Image": "2ndPhoto.png",
+      "StatAll": "10.17% of all matches liked this photo",
+      "StatMale": "83.33% identified as male",
+      "StatFemale": "16.67% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "2nd Photo"
+    },
+    {
+      "Profile": "Khari3",
+      "Image": "3rdPhoto.png",
+      "StatAll": "4.52% of all matches liked this photo",
+      "StatMale": "87.5% identified as male",
+      "StatFemale": "12.5% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "3rd Photo"
+    },
+    {
+      "Profile": "Khari4",
+      "Image": "4thPhoto.png",
+      "StatAll": "7.34% of all matches liked this photo",
+      "StatMale": "92.31% identified as male",
+      "StatFemale": "7.69% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "4th Photo"
+    },
+    {
+      "Profile": "Khari5",
+      "Image": "5thPhoto.png",
+      "StatAll": "3.95% of all matches liked this photo",
+      "StatMale": "100% identified as male",
+      "StatFemale": "00.00% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "5th Photo"
+    },
+    {
+      "Profile": "Khari6",
+      "Image": "6thPhoto.png",
+      "StatAll": "10.73% of all matches liked this photo",
+      "StatMale": "89.43% identified as male",
+      "StatFemale": "5.26% identified as female",
+      "StatNon": "5.26% identified as nonbinary, multi\ngender",
+      "ImageNumber": "6th Photo"
+    },
+    {
+      "Profile": "Khari7",
+      "Image": "1stPrompt.png",
+      "StatAll": "13.56% of all matches liked this photo",
+      "StatMale": "95.83% identified as male",
+      "StatFemale": "4.17% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "1st Prompt"
+    },
+    {
+      "Profile": "Khari8",
+      "Image": "2ndPrompt.png",
+      "StatAll": "3.95% of all matches liked this photo",
+      "StatMale": "100% identified as male",
+      "StatFemale": "00.00% identified as female",
+      "StatNon": "00.00% identified as nonbinary, multi\ngender",
+      "ImageNumber": "2nd Prompt"
+    },
+    {
+      "Profile": "Khari9",
+      "Image": "3rdPrompt.png",
+      "StatAll": "7.91% of all matches liked this photo",
+      "StatMale": "85.71% identified as male",
+      "StatFemale": "7.14% identified as female",
+      "StatNon": "7.14% identified as nonbinary, multi\ngender",
+      "ImageNumber": "3rd Prompt"
+    }
+  ]

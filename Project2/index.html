@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="about.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+ 
+
+
+</head>
+<body>
+  <div class="dropdown">
+    <img onclick="myFunction()" class="dropbtn" src="homeimgs/iconDice.png">
+    <div id="myDropdown" class="dropdown-content">
+      <a href="../Project2/messages/messages.html">Messages</a>
+      <a href="#about">About</a>
+      <a href="select.html">Home</a>
+      <a href="../Project2/profileInfo/khari.html">Profile</a>
+    </div>
+  </div>
+  
+
+<div class="item1">
+    <p id="titleText">Dating Simulator</p>
+    <img class="banner" src="homeimgs/banner.png">
+</div>
+
+
+
+
+    <div class="content">
+        <p>
+            Four dating profiles with identical written information 
+            but different photos were left to run for 3 days. 
+            The purpose of this project was to see the differences 
+            in the # of matches and general response from the 
+            people on the app among the different profiles. 
+            <br><br>
+            There were slight differences added in the naming 
+            and wording of the profile information just to avoid 
+            suspicion and risk of getting banned (lol). The main 
+            focus on curating the photos for each profile was 
+            done with the intent of creating a unique aesthetic 
+            to analyze the importance of your visual presentation 
+            on a dating app. 
+        </p>
+        <img class="backgroundIMG" src="homeimgs/contextBgLarger.png">
+    </div>
+    
+
+            <!--dropdown menu function-->
+
+            <script>
+              /* When the user clicks on the button, 
+              toggle between hiding and showing the dropdown content */
+              function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+              }
+              
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropdowns = document.getElementsByClassName("dropdown-content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                    }
+                  }
+                }
+              }
+              </script>
+
+
+</body>
+</html>

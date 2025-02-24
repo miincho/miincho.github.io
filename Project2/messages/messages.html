@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNREAD MESSAGES</title>
+
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xwl1cdm.css">
+
+</head>
+<body>
+
+    <div class="dropdown">
+        <img onclick="myFunction()" class="dropbtn" src="../homeimgs/iconDice.png">
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#messages">Messages</a>
+            <a href="../about.html">About</a>
+            <a href="../select.html">Home</a>
+            <a href="../profileInfo/khari.html">Profile</a>
+        </div>
+      </div>
+
+
+    <div class="grid">
+        <div class="item1">
+            <p id="titleText">25 Unread Messages</p>
+            <img class="banner" src="../homeimgs/banner.png">
+        </div>
+
+        <div class="phone">
+            <img id ="ring" src="../homeimgs/iconPhone.png">
+        </div>
+
+
+        <div class="item2">
+            <div class="flex">
+
+
+
+
+                <img class="texts" src="imgs/khari1.jpg">
+                <img class="texts" src="imgs/khari2.jpg">
+                <img class="texts" src="imgs/khari3.PNG">
+                <img class="texts" src="imgs/khari4.PNG">
+                <img class="texts" src="imgs/Khari5.PNG">
+                <img class="texts" src="imgs/Khari6.PNG">
+                <img class="texts" src="imgs/Khari7.PNG">
+                <img class="texts" src="imgs/khari8.PNG">
+                <img class="texts" src="imgs/Khari9.PNG">
+                <img class="texts" src="imgs/khari10.PNG">
+                <img class="texts" src="imgs/Khari11.PNG">
+                <img class="texts" src="imgs/kyu1.PNG">
+                <img class="texts" src="imgs/kyu2.PNG">
+                <img class="texts" src="imgs/kyu3.PNG">
+                <img class="texts" src="imgs/kyu4.PNG">
+                <img class="texts" src="imgs/kyu5.PNG">
+                <img class="texts" src="imgs/kyu6.PNG">
+                <img class="texts" src="imgs/kyu7.PNG">
+                <img class="texts" src="imgs/kyu8.PNG">
+                <img class="texts" src="imgs/kyu9.PNG">
+                <img class="texts" src="imgs/kyu10.PNG">
+                <img class="texts" src="imgs/kyu11.PNG">
+                <img class="texts" src="imgs/kyu12.PNG">
+                <img class="texts" src="imgs/kyu13.PNG">
+                <img class="texts" src="imgs/yu1.PNG">
+
+            </div>
+        </div>
+      </div>
+    
+
+
+            <!--dropdown menu function-->
+
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                  document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+                </script>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+ 
+    [{
+        "Profile": "Yu1",
+        "Image": "1stPhoto.png",
+        "StatAll": "15% of all matches liked this photo",
+        "StatMale": "50% identified as male",
+        "StatFemale": "16.67% identified as female",
+        "StatNon": "33.33% identified as nonbinary, multi\ngender",
+        "ImageNumber": "1st Photo"
+      },
+      {
+        "Profile": "Yu2",
+        "Image": "2ndPhoto.png",
+        "StatAll": "12.50% of all matches liked this photo",
+        "StatMale": "60% identified as male",
+        "StatFemale": "20% identified as female",
+        "StatNon": "20% identified as nonbinary, multi\ngender",
+        "ImageNumber": "2nd Photo"
+      },
+      {
+        "Profile": "Yu3",
+        "Image": "3rdPhoto.png",
+        "StatAll": "10% of all matches liked this photo",
+        "StatMale": "25% identified as male",
+        "StatFemale": "75% identified as female",
+        "StatNon": "00.00% identified as nonbinary, multi\ngender",
+        "ImageNumber": "3rd Photo"
+      },
+      {
+        "Profile": "Yu4",
+        "Image": "4thPhoto.png",
+        "StatAll": "5% of all matches liked this photo",
+        "StatMale": "50% identified as male",
+        "StatFemale": "00.00% identified as female",
+        "StatNon": "50% identified as nonbinary, multi\ngender",
+        "ImageNumber": "4th Photo"
+      },
+      {
+        "Profile": "Yu5",
+        "Image": "5thPhoto.png",
+        "StatAll": "10% of all matches liked this photo",
+        "StatMale": "75% identified as male",
+        "StatFemale": "00.00% identified as female",
+        "StatNon": "25% identified as nonbinary, multi\ngender",
+        "ImageNumber": "5th Photo"
+      },
+      {
+        "Profile": "Yu6",
+        "Image": "6thPhoto.png",
+        "StatAll": "15% of all matches liked this photo",
+        "StatMale": "16.67% identified as male",
+        "StatFemale": "50% identified as female",
+        "StatNon": "33.33% identified as nonbinary, multi\ngender",
+        "ImageNumber": "6th Photo"
+      },
+      {
+        "Profile": "Yu7",
+        "Image": "1stPrompt.png",
+        "StatAll": "7.50% of all matches liked this photo",
+        "StatMale": "33.33% identified as male",
+        "StatFemale": "33.33% identified as female",
+        "StatNon": "33.33% identified as nonbinary, multi\ngender",
+        "ImageNumber": "1st Prompt"
+      },
+      {
+        "Profile": "Yu8",
+        "Image": "2ndPrompt.png",
+        "StatAll": "25% of all matches liked this photo",
+        "StatMale": "70% identified as male",
+        "StatFemale": "20% identified as female",
+        "StatNon": "10% identified as nonbinary, multi\ngender",
+        "ImageNumber": "2nd Prompt"
+      },
+      {
+        "Profile": "Yu9",
+        "Image": "3rdPrompt.png",
+        "StatAll": "00.00% of all matches liked this photo",
+        "StatMale": "00.00% identified as male",
+        "StatFemale": "00.00% identified as female",
+        "StatNon": "00.00% identified as nonbinary, multi\ngender",
+        "ImageNumber": "3rd Prompt"
+      }]

@@ -1,0 +1,211 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* or any other height value */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    width: 200px; /* or any other width value */
+    height: 200px; /* or any other height value */
+    object-fit: cover; /* to preserve aspect ratio */
+    margin: 10px; /* add some spacing between images */
+
+  }
+
+  .about, .chat {
+    border-radius:50%;
+    background-color: rgb(71, 71, 71);
+    width:50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+  }
+
+  .chat{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .about{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+#home, #chat{
+  color: #bfbfbf;
+}
+
+body{
+  font-family: "t26-carbon", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #c4c4c4;
+  /*background-image: url('homeimgs/bg.png');*/
+  background-size: cover;
+}
+
+p{
+  font-family: "t26-carbon", monospace;
+}
+
+img{
+  border: 3px solid #656565;
+}
+
+
+/*carousel*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  margin-left: 20px;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: fixed; /* change position to fixed */
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2; /* add z-index to keep them on top of the slides */
+}
+
+.prev {
+  left: 0; /* set left property */
+}
+
+.next {
+  right: 0; /* set right property */
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+}
+
+/* Caption text */
+.text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 18px;
+}
+  
+
+.heartButton {
+  text-align: right;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/*heart button*/
+.heart-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: red;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/*filter info buttons*/
+.panel { display: none; }
+.show { display: block; }
+.button { text-transform: uppercase; }
+.button:hover { cursor: pointer; background-color: #999999; }
