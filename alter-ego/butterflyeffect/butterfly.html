@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly Effect</title>
+    <link rel="stylesheet" href="butterfly.css">
+    <link rel="stylesheet" href="../tests/fontsheet.css">
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+
+</head>
+<body>
+    
+    <div id="particles-js"></div>
+
+    <div class="header_fixed_container">
+        <header>
+            <div class="emotion_selector_parent">
+                <div class="emotion_selector">
+                    <div class="accent1"  data-color="#FF0000" id="SAD">  </div>
+                    <div class="accent2"  data-color="#00C2FF" id="OKAY">  </div>
+                    <div class="accent3" data-color="#00D662" id="HAPPY"> </div>
+                </div>
+                <div class="emotion_caption">YOU'RE FEELING <span id="you"></span></div>
+            </div>
+
+            <div class="progress_bar accent"></div>
+
+            <div class="rotating_square">
+                <div class="container">
+                    <div class="cube">
+                        <div class="face front accent"></div>
+                        <div class="face front accent"></div>
+                        <div class="face back accent"></div>
+                        <div class="face right accent"></div>
+                        <div class="face left accent"></div>
+                        <div class="face top accent"></div>
+                        <div class="face bottom accent"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="text1">
+        LET'S GO OVER  
+    </div>
+    <div class="text2 accent">
+        the butterfly effect
+    </div>
+
+    <hr>
+
+    <div class="article_content fade-in">
+        <div class="article_text accentbgcolor">
+            <div class="header">
+                BUTTERFLY <br> EFFECT
+            </div>
+            <div class="circles">
+                <img src="../assets/black_circles.svg">
+            </div>
+            <div class="definition">
+                /ˈbədərˌflī əˈfek(t)/ <br><br>
+                (in chaos theory) the phenomenon whereby a 
+                minute localized change in a complex system 
+                can have large effects elsewhere.
+            </div>
+            <div class="body_text">
+                The term is closely associated with the work of mathematician and 
+                meteorologist Edward Norton Lorenz. He noted that the butterfly 
+                effect is derived from the metaphorical example of the details of 
+                a tornado (the exact time of formation, the exact path taken) 
+                being influenced by minor perturbations such as a distant butterfly 
+                flapping its wings several weeks earlier. Lorenz originally used a 
+                seagull causing a storm but was persuaded to make it more poetic 
+                with the use of a butterfly and tornado by 1972. He discovered 
+                the effect when he observed runs of his weather model with initial 
+                condition data that were rounded in a seemingly inconsequential manner. 
+                He noted that the weather model would fail to reproduce the results 
+                of runs with the unrounded initial condition data. A very small change 
+                in initial conditions had created a significantly different outcome.
+            </div>
+        </div>
+        <div class="article_images ">
+            <div class="img butter1 accent">
+                <img src="../assets/square-butter1.png">
+                <div class="img_info 1 accentbgcolor"  onclick="toggleCaption(1)">i</div>
+                <div class="img_caption 1">The butterfly effect or sensitive dependence on initial conditions is the property of a dynamical system that, starting from any of various arbitrarily close alternative initial conditions on the attractor, the iterated points will become arbitrarily spread out from each other.</div>
+            </div>
+            <div class="img butter2 accent">
+                <img src="../assets/square-butter2.png">
+                <div class="img_info 2 accentbgcolor">i</div>
+                <div class="img_caption 2">These figures show two segments of the three-dimensional evolution of two trajectories (one in blue, and the other in yellow) for the same period of time in the Lorenz attractor starting at two initial points that differ by only 10−5 in the x-coordinate.</div>
+            </div>
+            <div class="img butter3 accent">
+                <img src="../assets/butterfly2.png">
+                <div class="img_info 3 accentbgcolor">i</div>
+                <div class="img_caption 3">Initially, the two trajectories seem coincident, as indicated by the small difference between the z coordinate of the blue and yellow trajectories, but for t > 23 the difference is as large as the value of the trajectory. The final position of the cones indicates that the two trajectories are no longer coincident at t = 30.</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="filtered_section fade-in">
+        <div class="chapter_container">
+            <div class="chapter_header">FILTER BY</div>
+            <div class="chapter one accentborder"><i class="fa-sharp fa-solid fa-plus accent" id="plus1"></i> IN POPULAR CULTURE</div>
+            <div class="chapter two accentborder"><i class="fa-sharp fa-solid fa-plus accent" id="plus2"></i> IN PHYSICAL SYSTEMS</div>
+            <div class="chapter three accentborder"><i class="fa-sharp fa-solid fa-plus accent" id="plus3"></i> IN QUANTUM MECHANICS</div>
+        </div>
+        <div class="text_content accentborder">
+            <div class="one_content">
+                <span class="content_titles accent">FILMS</span>
+                <br><br>
+                The influence of the concept can be seen in the films The Terminator, 
+                Back to the Future, X-Men: Days of Future Past, Maheshinte Prathikaram and Cloud Atlas.
+                <br><br>
+                In the 1990 film Havana, the character played by Robert Redford states, "A butterfly 
+                can flutter its wings over a flower in China and cause a hurricane in the Caribbean", 
+                and scientists "can even calculate the odds".According to science journalist Peter Dizikes, 
+                the films Havana and The Butterfly Effect mischaracterize the butterfly effect by asserting 
+                the effect can be calculated with certainty, because this is the opposite of its scientific 
+                meaning in chaos theory as it relates to the unpredictability of certain physical systems; 
+                Dizikes writes in 2008, "The larger meaning of the butterfly effect is not that we can readily 
+                track such connections, but that we can't."
+                <br><br>
+                In the 1993 movie Jurassic Park, Dr. Ian Malcolm (played by Jeff Goldblum) attempts to explain 
+                chaos theory to Dr. Ellie Sattler (played by Laura Dern), specifically referencing the butterfly 
+                effect, by stating "It simply deals with unpredictability in complex systems", and "The shorthand 
+                is 'the butterfly effect.' A butterfly can flap its wings in Peking, and in Central Park, you get 
+                rain instead of sunshine."
+                <br><br>
+                Other examples include Terry Pratchett's novel "Interesting Times", which tells of the magical 
+                "Quantum Weather Butterfly" with the ability to manipulate weather patterns. The 2009 film Mr. 
+                Nobody incorporates the butterfly effect and the concept of smaller events that result in 
+                larger changes altering a person's life.
+                <br><br><br>
+                <span class="content_titles accent">TELEVISION</span>
+                <br><br>
+                "My Butterfly", an episode from the TV show Scrubs, features two separate timelines, each 
+                influenced by the butterfly effect. The season four premiere episodes of Ugly Betty are named 
+                "The Butterfly Effect Part 1" and "The Butterfly Effect Part 2", and a review of the episodes 
+                in Vulture states, "Ugly Betty is certainly invested in the physics of the Butterfly Effect, 
+                too: One small change can indeed cause large-scale effects."
+                <br><br><br>
+                <span class="content_titles accent">VIDEO GAMES</span>
+                <br><br>
+                The concept is also incorporated into video games, including Eve Online. The 2015 video game Until 
+                Dawn features the butterfly effect as a central plot point, using the concept to describe how player 
+                choices can drastically affect the outcome of events. The video game series Life Is Strange, first 
+                released in 2015, makes multiple references to the butterfly effect and uses it to describe how 
+                player choices affect the plot of the game.
+            </div>
+            <div class="two_content">
+                <span class="content_titles accent">NATURAL WEATHER</span>
+                <br><br>
+                The butterfly effect is most familiar in terms of weather; it can easily be demonstrated in standard 
+                weather prediction models, for example. The climate scientists James Annan and William Connolley explain 
+                that chaos is important in the development of weather prediction methods; models are sensitive to initial 
+                conditions. They add the caveat: "Of course the existence of an unknown butterfly flapping its wings has 
+                no direct bearing on weather forecasts, since it will take far too long for such a small perturbation to 
+                grow to a significant size, and we have many more immediate uncertainties to worry about. So the direct 
+                impact of this phenomenon on weather prediction is often somewhat wrong." The two kinds of butterfly effects, 
+                including the sensitive dependence on initial conditions, and the ability of a tiny perturbation to create 
+                an organized circulation at large distances, are not exactly the same. A comparison of the two kinds of 
+                butterfly effects and the third kind of butterfly effect has been documented. In recent studies, it was 
+                reported that both meteorological and non-meteorological linear models have shown that instability plays 
+                a role in producing a butterfly effect, which is characterized by brief but significant exponential 
+                growth resulting from a small disturbance.
+                <br><br>
+                According to Lighthill (1986), the presence of SDIC (commonly known as the butterfly effect) implies that chaotic 
+                systems have a finite predictability limit. In a literature review, it was found that Lorenz's perspective on the 
+                predictability limit can be condensed into the following statement:
+                <br><br>
+                By revealing coexisting chaotic and non-chaotic attractors within Lorenz models, Shen and his colleagues 
+                proposed a revised view that "weather possesses chaos and order", in contrast to the conventional view of 
+                "weather is chaotic. As a result, sensitive dependence on initial conditions (SDIC) does not always appear.
+                 Namely, SDIC appears when two orbits become the chaotic attractor; it does not appear when two orbits move 
+                 toward the same point attractor. The above animation for double pendulum motion provides an analogy. For l
+                 arge angles of swing the motion of the pendulum is often chaotic. By comparison, for small angles of swing, 
+                 motions are non-chaotic. Multistability is defined when a system (the double pendulum system) contains more 
+                 than one bounded attractor that depends only on initial conditions. As a result, when two kayaks move along 
+                 strong currents, their paths display SDIC. On the other hand, when two kayaks move into a stagnant area, they 
+                 become trapped, showing no typical SDIC (although a chaotic transient may occur). Such features of SDIC or no 
+                 SDIC suggest two types of solutions and illustrate the nature of multistability.
+
+            </div>
+            <div class="three_content">
+                <span class="content_titles accent">SYSTEM SENSITIVTY</span>
+                <br><br>
+                The potential for sensitive dependence on initial conditions (the butterfly effect) has been studied in a number of cases 
+                in semiclassical and quantum physics including atoms in strong fields and the anisotropic Kepler problem. Some authors 
+                have argued that extreme dependence on initial conditions is not expected in pure quantum treatments; however, the 
+                sensitive dependence on initial conditions demonstrated in classical motion is included in the semiclassical treatments 
+                developed by Martin Gutzwiller and John B. Delos and co-workers. The random matrix theory and simulations with quantum 
+                computers prove that some versions of the butterfly effect in quantum mechanics do not exist.
+                <br><br>
+                Other authors suggest that the butterfly effect can be observed in quantum systems. Zbyszek P. Karkuszewski et al. 
+                consider the time evolution of quantum systems which have slightly different Hamiltonians. They investigate the level 
+                of sensitivity of quantum systems to small changes in their given Hamiltonians. David Poulin et al. presented a quantum 
+                algorithm to measure fidelity decay, which "measures the rate at which identical initial states diverge when subjected 
+                to slightly different dynamics". They consider fidelity decay to be "the closest quantum analog to the purely classical 
+                butterfly effect". Whereas the classical butterfly effect considers the effect of a small change in the position and/or 
+                velocity of an object in a given Hamiltonian system, the quantum butterfly effect considers the effect of a small change in 
+                the Hamiltonian system with a given initial position and velocity. This quantum butterfly effect has been demonstrated 
+                experimentally. Quantum and semiclassical treatments of system sensitivity to initial conditions are known as quantum chaos.
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="text1">
+        EGO GENERATION
+    </div>
+    <div class="text2 accent">
+        details and process
+    </div>
+
+    <div class="ego_container fade-in">
+        <div class="ego_details accentborder">
+            <span class="content_titles accent">HOW DOES IT WORK?  </span>
+            <br><br>
+            We’ve all taken at least one personality quiz before. Instead of checking the boxes of 
+            what our favorite things are, what would be the result if your psychology was the input? 
+            Each room is prefaced with psychological research of how each aspect of ourselves can 
+            reflect into our personality. Inside each room, you will select the categories that 
+            resonate with you most. Depending on your choices, the interface and your avatars will 
+            generate according to these answers. 
+            <br><br><br><br>
+            <span class="content_titles accent">THE FEATURES  </span>
+            <br><br>
+            The concept of the site is to mimic the butterfly effect every step of the way. Your 
+            choices impact your ego generation and even the interfaces of the pages. There are --- 
+            possible avatars, 3 rooms, and 21 interfaces. Each visit to the site will yield you a 
+            different experience. 
+
+
+
+        </div>
+        <div class="ego_example accentborder">
+            <div class="exampleImage"><img src="../assets/ego_example.png"></div>
+            <div class="bottomText">Alter Ego Example</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="start fade-in">
+        <div class="leftstart">
+            START: <span class="next accent">01 -  FEAR</span> 
+            <!-- <img class="startcircle" src="../assets/white_circles.svg"> -->
+        </div>
+            <div class="rightbutton accentbgcolor">
+                <a href="../01FEAR/fear.html">
+        
+            -->         </a>
+
+            </div>
+    </div> 
+
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/5cdb437727.js" crossorigin="anonymous"></script>
+    <script src="butterfly.js"></script>
+</body>
+</html>

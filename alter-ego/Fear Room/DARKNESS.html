@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+      <script src="../3Dassets/libraries/aframe-cursor-teleport-component.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aframe-blink-controls/dist/aframe-blink-controls.min.js"></script>
+    <script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
+    <script src="../3Dassets/libraries/aframe-environment-component.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../tests/fontsheet.css">
+
+  </head>
+  <body>
+    
+    
+<!--   <div class="bg" id="fadeOutContent">
+        <div class="text1">
+            You are Visiting<br>
+            The Morning Room
+        </div>
+        <div class="text2">
+            Explore and Interact with the various objects.<br>
+            Which ones invite you in?
+            <br><br><br><br><br><br>
+            [Click to Explore]
+        </div>
+  </div> -->
+    
+    
+  <div class="overlay">
+    <div class="box"></div> 
+    <div class="topright">
+       <img src="https://cdn.glitch.global/270fb0ce-6b16-4cf7-824c-9c236ba829f3/thickerUpperRight.svg?v=1701641320042"> 
+    </div>
+    <div class="bottomright">
+      <img src="https://cdn.glitch.global/270fb0ce-6b16-4cf7-824c-9c236ba829f3/thickerWhiteCircles.svg?v=1701641319903">
+    </div>
+    <div class="topleft">
+      <div class="emotion_selector_parent">
+        <div class="emotion_selector">
+          <div class="accent1"  data-color="#FF0000" id="SAD">  </div>
+          <div class="accent2"  data-color="#00C2FF" id="OKAY">  </div>
+          <div class="accent3" data-color="#00D662" id="HAPPY"> </div>
+        </div>
+        <div class="emotion_caption">YOU'RE FEELING <span id="you"></span></div>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="instruct accentborder" id="fadeOutContent">
+            <div class="enter">ENTERING YOUR</div>
+            <div class="roomName accent">FEAR ROOM</div>
+            <div class="directions">
+                <div class="movement">
+                    <span class="red_titles accent">Movement Controls</span>
+                    <br><br>
+                    [Click and drag mouse] <br>
+                    to move camera view
+                    <br><br>
+                    [Click checkpoints] <br>
+                    on the ground to move 
+                </div>
+                <div class="interaction">
+                    <span class="red_titles accent">Interaction</span>
+                    <br><br>
+                    [Click the white spheres] <br>
+                    to interact with the scene. <br><br>
+                    All descisions are final.
+                </div>
+            </div>
+            <div class="next">[Click anywhere to Continue]</div>
+        </div>
+
+
+    
+    
+      <div  class="popUpQuest" id="firstCheck">
+          <div class="title">Confront the darkness?</div>
+          <div class="yes1">yes</div>
+          <div class="no1">no</div>
+      </div>
+
+        <div  class="popUpQuest" id="firstCheckNo">
+            <div class="title">The Darkness felt your reluctance <br> and swallowed you whole</div>
+            <div class="yes1" id="secondChoice">[ACCEPT FATE]</div>
+            <div class="no1"></div>
+        </div>
+        
+    
+      <div class="popUpQuest" id="secondCheck">
+          <div class="title">Sit and Stare back?</div>
+          <div class="yes1">yes</div>
+          <div class="no1">no</div>
+      </div>
+    
+            <div class="popUpQuest" id="secondCheckYes">
+                <div class="title">Their oppressive glare has left <br>
+                    you with a churning stomache. <br>
+                    You want to look away but you fear doing so</div>
+                <div class="yes1" id="thirdChoice">[LEAVE ROOM]</div>
+                <div class="no1"></div>
+            </div>
+        
+            <div class="popUpQuest" id="secondCheckNo">
+                <div class="title">You attempt to leave with but it <br>
+                    seems like they won't allow you to escape...</div>
+                <div class="yes1" id="fourthChoice">[ACCEPT FATE]</div>
+                <div class="no1"></div>
+            </div>
+            
+    
+    <!--           stool one/good ending -->
+      <div class="popUpQuest" id="thirdCheck">
+          <div class="title">Sit and Listen?</div>
+          <div class="yes1">yes</div>
+          <div class="no1">no</div>
+      </div>
+    
+            <div class="popUpQuest" id="thirdCheckYes">
+                <div class="title">You closed your eyes and listened <br>
+                    to the sounds of nature while gazing up the moon. <br>
+                    Nothing attacked you and you are safe</div>
+                <div class="yes1" id="fifthChoice">[LEAVE ROOM]</div>
+                <div class="no1"></div>
+            </div>
+
+            <div class="popUpQuest" id="thirdCheckNo">
+                <div class="title">The Darkness felt your reluctance <br>
+                                    and found a way to make you stay forever.... <br>
+                                    You were never seen again.</div>
+                <div class="yes1" id="sixthChoice">[ACCEPT FATE]</div>
+                <div class="no1"></div>
+            </div>
+    
+    
+    
+    <a-scene   cursor="rayOrigin: mouse"  xr-mode-ui="enabled: false" fog="type: exponential; color: black; density: 0.1;" environment="preset: default" raycaster="objects: .clickable" renderer="colorManagement: true;">
+           <script src="bug-min.js"></script>
+<!-- player -->
+<a-entity id="cameraRig" position="4.76779 0.05493 -42.74139" rotation="0 182.45 0" cursor-teleport="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable">
+  <a-entity id="head" position="0 1.52 0" camera look-controls="mouseDrag: true" raycaster="objects: .clickable">
+<!--       <a-cursor color="black" material="" raycaster="" cursor="" geometry=""></a-cursor> -->
+  </a-entity>
+
+  <a-entity
+    laser-controls="hand: left"
+    raycaster="objects: .clickable; far: 100"
+    line="color: red; opacity: 0.75"
+    blink-controls="
+      collisionEntities: .collision;
+      cameraRig: #cameraRig;
+      teleportOrigin: #head;
+      curveShootingSpeed: 6"></a-entity>
+  <a-entity
+    laser-controls="hand: right"
+    raycaster="objects: .clickable"
+    line="color: red; opacity: 0.75"
+    blink-controls="
+      collisionEntities: .collision;
+      cameraRig: #cameraRig;
+      teleportOrigin: #head;
+      curveShootingSpeed: 6"></a-entity>
+</a-entity>
+
+<a-sphere
+  id="sphere1"
+  radius="5"
+  material="color: white"
+  geometry="radius: 0.18"
+  position="5.29001 1.7832 -24.49087"
+  class="clickable"
+ >
+</a-sphere>
+      
+<a-sphere id="sphere2" radius="5" material="color: white" geometry="radius: 0.18" position="27.171 1.9628 -0.151" class="clickable">
+</a-sphere>
+      
+      
+<!--           stool one -->
+<a-sphere id="sphere3" radius="5" material="color: white" geometry="radius: 0.18" position="-28.3709 1.88375 3.89859" class="clickable">
+</a-sphere>
+
+      
+      <a-entity id="tree" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/TREEV1-min.png?v=1701583578046; transparent: true" billboard="" position="-6.4145 2.295 -11.361" rotation="1.281 166.955 0" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="tree2" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/TREEV3-min.png?v=1701583577389; transparent: true" billboard="" position="-9.07969 2.2 6.2812" rotation="2.36345 136.82222 0" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="tree3" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/TREEV3-min.png?v=1701583577389; transparent: true" billboard="" position="-21.23331 2.295 -2.14915" rotation="0.915052758483809 147.18718461814322 0" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="tree4" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/TREEV3-min.png?v=1701583577389; transparent: true" billboard="" position="-21.98131 2.295 11.57331" rotation="0.6990033481630029 151.46628891049608 0" scale="5 5 5">
+      </a-entity>
+      
+      
+      <a-entity id="redtree" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/REDTREEV1-min.png?v=1701651543939; transparent: true" billboard="" position="11.30303 1.76171 6.04757" rotation="4.573349120734231 157.37127 -3.7540194736971535" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="redtree2" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/REDTREEV2-min.png?v=1701651544210; transparent: true" billboard="" position="15.46287 2.32534 -7.40245" rotation="1.0652112295091931 -162.93942960806143 0" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="redtree3" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/REDTREEV3-min.png?v=1701651544454; transparent: true" billboard="" position="32.64107 2.295 1.31232" rotation="0.915052758483809 147.18718461814322 0" scale="5 5 5">
+      </a-entity>
+      
+      <a-entity id="redtree4" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/REDTREEV3-min.png?v=1701651544454; transparent: true" billboard="" position="19.93362 2.27409 7.01609" rotation="0.7805944255878379 -159.7870926332178 -2.485038967627381e-17" scale="5 5 5">
+      </a-entity>
+      
+      
+      <a-entity id="moon" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/MOON-min.png?v=1701651603590; transparent: true" billboard="" position="-32.40994 8.93452 3.20931" rotation="9.627455668780318 138.34630473138733 8.064973715643092e-16" scale="3 3 3">
+      </a-entity>
+      
+           <!-- Add a point light for the glowing effect -->
+<!--           <a-light type="point" intensity="2" distance="10" decay="1" color="#ffeb3b" position="-34.141 11.50548 1.742"></a-light> -->
+      
+      <a-entity id="eye1" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/eye.png?v=1701656736243; transparent: true" billboard="" position="27.6371 7.61099 5.21486" rotation="8.976213165733368 -160.67278926158284 0" scale="3 3 3">
+      </a-entity>
+      
+      
+      <a-entity id="eye2" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/eye.png?v=1701656736243; transparent: true" billboard="" position="26.56703 6.1298 -5.59292" rotation="6.588046568471359 -150.7875805625387 0" scale="4 4 4">
+      </a-entity>
+      
+      
+      <a-entity id="eye3" geometry="" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/eye.png?v=1701656736243; transparent: true" billboard="" position="32.27809 10.418 -0.13435" rotation="10.766 -149.127 0" scale="2 2 2">
+      </a-entity>
+      
+      
+   
+        <a-gltf-model id="sign" src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/3DarrowSign.glb?v=1701651767396" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/3DarrowSign.glb?v=1701651767396" visible="" class="collision" position="1.14175 2.1133 -4.7702" scale="5 5 5" rotation="">
+        </a-gltf-model>
+      
+      
+     <a-gltf-model id="gasspatch" class="collision" src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/untitled.glb?v=1701658943365" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/untitled.glb?v=1701658943365" visible="" position="-33.33156 -0.15 7.89711" scale="0.05 0.05 0.05" rotation="0 145.73 0">
+        </a-gltf-model>
+ 
+      
+      <a-gltf-model id="gasspatch2" class="collision" src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/untitled.glb?v=1701658943365" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/untitled.glb?v=1701658943365" visible="" position="-33.63613 -0.15  -2.53823" scale="0.05 0.05 0.05" rotation="0 145.73 0">
+        </a-gltf-model>
+      
+<!--       <a-sphere id="sphere2" radius="5" material="color: #c70000" geometry="radius: 0.15" position="8.79318 1.99221 -24.49087" cursor="" raycaster="">
+      </a-sphere> -->
+      
+      
+      <!-- Remove the existing plane geometry -->
+      <!-- a-entity class="collision" position="0 0.1 0" rotation="-90 0 0" geometry="primitive: plane; width: 8; height: 8" material="color: #ffcc80"></a-entity -->
+
+      <!-- Add custom-ground component for textured ground -->
+<!--       <a-entity custom-ground="width: 8; height: 8; src: url(https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/greenground.png?v=1701509928586);" position= "0 0.1 0"></a-entity>
+       -->
+      <!-- scene geometry -->
+<!--       <a-entity class="collision" position="0 0.1 0" rotation="-90 0 0" geometry="primitive: plane; width: 8; height: 8" material="color: #ffcc80"></a-entity> -->
+<!--       <a-entity class="collision" position="2 0.06358 2" geometry="width: 2; height: 0.1; depth: 2" material="src: https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/PURPLEROAD-min.png?v=1701573041205"></a-entity> -->
+
+<!--       <a-entity class="collision" position="2 1.5 -2" geometry="primitive: box; width: 2; height: .1; depth: 2" material="color: #80cbc4"></a-entity>
+      <a-entity class="collision" position="-2 2.25 -2" geometry="primitive: box; width: 2; height: .1; depth: 2" material="color: #9ccc65"></a-entity>
+      <a-entity class="collision" position="-2 3 2" geometry="primitive: box; width: 2; height: .1; depth: 2" material="color: #3f51b5"></a-entity>
+      <a-entity class="collision" position="-2 -1 2" geometry="primitive: sphere; radius: 2;" material="color: #f55d42"></a-entity> -->
+        <a-gltf-model src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/JoinedCurvedRoads.glb?v=1701592818193" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/JoinedCurvedRoads.glb?v=1701592818193" visible="" class="collision" position="-84.73239 -5 -27.66702" scale="" rotation="0 61.03999999999999 0">
+        </a-gltf-model>
+      
+      <a-gltf-model id="stool1" src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/stool%20(2).glb?v=1701659607618" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/stool%20(2).glb?v=1701659607618" visible="" class="collision" position="-28.3709 0.16579 3.89859" scale="0.4 0.4 0.4" rotation="0 61.03999999999999 0">
+      </a-gltf-model>
+      
+      <a-gltf-model id="stool2" src="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/stool%20(2).glb?v=1701659607618" gltf-model="https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/stool%20(2).glb?v=1701659607618" visible="" class="collision" position="27.17077 0.06734 -0.15093" scale="0.4 0.4 0.4" rotation="0 61.03999999999999 0">
+      </a-gltf-model>
+      
+
+      
+        
+      
+      
+      
+      
+    </a-scene>
+    
+    <script>
+          AFRAME.registerComponent('custom-ground', {
+          init: function () {
+          // Create a plane geometry for the ground
+          var geometry = new THREE.PlaneGeometry(100, 100, 1, 1);
+
+          // Load the texture
+          var textureLoader = new THREE.TextureLoader();
+          var texture = textureLoader.load('https://cdn.glitch.global/bd5c3edd-7235-4357-9976-fcbca2f6c7a4/greenground.png?v=1701509928586');
+          texture.wrapS = THREE.RepeatWrapping;
+          texture.wrapT = THREE.RepeatWrapping;
+          texture.repeat.set(10, 10); // Adjust the repeat value based on your scene size
+
+          // Create the material with the loaded texture
+          var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
+
+          // Create the mesh and set its position
+          var mesh = new THREE.Mesh(geometry, material);
+          mesh.rotation.x = -Math.PI / 2; // Rotate the plane to be horizontal
+
+          // Attach the mesh to the A-Frame entity
+          this.el.setObject3D('mesh', mesh);
+        }
+      });
+    </script>
+    
+        <script src="script.js"></script>
+  </body>
+</html>

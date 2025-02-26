@@ -1,0 +1,50 @@
+body{
+    margin:0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    font-family: Montreal_Med;
+}
+
+.spacer{
+    height: 100vh;
+}
+
+.emotion_selector_parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.emotion_selector{
+    display:flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+#SAD, #OKAY, #HAPPY{
+    border: 2px solid white;
+    padding: 30px;
+    transition: all 0.7s ease;
+}
+
+#SAD:hover {
+    border: 2px solid #FF0000;
+    color:#FF0000;
+}
+
+#SAD:hover  span {
+    color:#FF0000;
+}
+
+#OKAY:hover {
+    border: 2px solid #00C2FF;
+    color:#00C2FF;
+}
+
+#HAPPY:hover {
+    border: 2px solid #00D662;
+    color:#00D662;
+}

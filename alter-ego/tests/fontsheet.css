@@ -1,0 +1,196 @@
+/*Neue Montreal Mono*/
+@font-face {
+    font-family: 'Montreal_Med';
+    src: url('../fonts/Montreal_Medium.woff2') format('woff2'),
+         url('../fonts/Montreal_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montreal_Reg_It';
+    src: url('../fonts/Montreal_Regular_Italic.woff2') format('woff2'),
+         url('../fonts/Montreal_Regular_Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montreal_Book';
+    src: url('../fonts/ppneuemontrealmono-book-webfont.woff2') format('woff2'),
+         url('../fonts/ppneuemontrealmono-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Old Editorial*/
+@font-face {
+    font-family: 'Editorial_It';
+    src: url('../fonts/Editorial_Italic.woff2') format('woff2'),
+         url('../fonts/Editorial_Italic.woffs') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Editorial_Ult';
+    src: url('../fonts/Editorial_Ultralight.woff2') format('woff2'),
+         url('../fonts/Editorial_Ultralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Editorial_Ult_It';
+    src: url('../fonts/Editorial_Ultralight_Italic.woff2') format('woff2'),
+         url('../fonts/Editorial_Ultralight_Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Monument Grotesk*/
+@font-face {
+    font-family: 'ABC_Medium';
+    src: url('../fonts/ABC_Medium.woff2') format('woff2'),
+         url('../fonts/ABC_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Redaction*/
+@font-face {
+    font-family: 'Redaction20_It';
+    src: url('../fonts/redaction20-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction20-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction20_Reg';
+    src: url('../fonts/redaction20-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction20-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction35_Bold';
+    src: url('../fonts/redaction35-bold-webfont.woff2') format('woff2'),
+         url('../fonts/redaction35-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction35_It';
+    src: url('../fonts/redaction35-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction35-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction35_Reg';
+    src: url('../fonts/redaction35-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction35-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction50_Bold';
+    src: url('../fonts/redaction50-bold-webfont.woff2') format('woff2'),
+         url('../fonts/redaction50-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction50_It';
+    src: url('../fonts/redaction50-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction50-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction50_Reg';
+    src: url('../fonts/redaction50-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction50-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction70_Bold';
+    src: url('../fonts/redaction70-bold-webfont.woff2') format('woff2'),
+         url('../fonts/redaction70-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction70_It';
+    src: url('../fonts/redaction70-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction70-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction70_Reg';
+    src: url('../fonts/redaction70-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction70-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction100_Bold';
+    src: url('../fonts/redaction100-bold-webfont.woff2') format('woff2'),
+         url('../fonts/redaction100-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction100_It';
+    src: url('../fonts/redaction100-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction100-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction100_Reg';
+    src: url('../fonts/redaction100-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction100-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction_Bold';
+    src: url('../fonts/redaction-bold-webfont.woff2') format('woff2'),
+         url('../fonts/redaction-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction_It';
+    src: url('../fonts/redaction-italic-webfont.woff2') format('woff2'),
+         url('../fonts/redaction-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redaction_Reg';
+    src: url('../fonts/redaction-regular-webfont.woff2') format('woff2'),
+         url('../fonts/redaction-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

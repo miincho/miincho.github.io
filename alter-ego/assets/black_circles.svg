@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.37 117.38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-1 red-circle" cx="36.58" cy="36.58" r="35.58"/> <!-- Adding the red-circle class here -->
+      <circle class="cls-1" cx="85.78" cy="36.58" r="35.58"/>
+      <circle class="cls-1" cx="60.62" cy="80.8" r="35.58"/>
+    </g>
+  </g>
+</svg>
