@@ -274,6 +274,7 @@ hr{
 .sectionright{
     display: flex;
     flex-direction: column;
+    min-width: 15vw;
 }
 
 
