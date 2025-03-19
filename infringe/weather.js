@@ -15,54 +15,56 @@
 // 	console.error(error);
 // }
 
-// async function fetchWeather(lat, lon) {
-//     const today = new Date().toISOString().split('T')[0]; // Get today's date (YYYY-MM-DD)
-//     const url = `https://meteostat.p.rapidapi.com/point/daily?lat=${lat}&lon=${lon}&alt=43&start=${today}&end=${today}`;
+const url = `https://meteostat.p.rapidapi.com/point/daily?lat=${lat}&lon=${lon}&alt=43&start=${today}&end=${today}`;
 
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'x-rapidapi-key': 'e1a3ead126msh1def8f62fa48c99p173776jsnb3f282ad90a5',
-//             'x-rapidapi-host': 'meteostat.p.rapidapi.com'
-//         }
-//     };
+async function fetchWeather(lat, lon) {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date (YYYY-MM-DD)
+    const url = `https://meteostat.p.rapidapi.com/point/daily?lat=${lat}&lon=${lon}&alt=43&start=${today}&end=${today}`;
 
-//     try {
-//         const response = await fetch(url, options);
-//         const result = await response.json();
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': 'e1a3ead126msh1def8f62fa48c99p173776jsnb3f282ad90a5',
+            'x-rapidapi-host': 'meteostat.p.rapidapi.com'
+        }
+    };
 
-//         if (result.data.length > 0) {
-//             const todayData = result.data[0];
+    try {
+        const response = await fetch(url, options);
+        const result = await response.json();
 
-//             weatherData = {
-//                 lat: lat,
-//                 lon: lon,
-//                 precipitation: todayData.prcp || 0, // Precipitation in mm
-//                 windSpeed: todayData.wspd || 0      // Wind speed in km/h
-//             };
+        if (result.data.length > 0) {
+            const todayData = result.data[0];
 
-//             console.log(weatherData);
-//         } else {
-//             console.warn("No weather data available for today.");
-//         }
-//     } catch (error) {
-//         console.error("Weather API Error:", error);
-//     }
-// }
+            weatherData = {
+                lat: lat,
+                lon: lon,
+                precipitation: todayData.prcp || 0, // Precipitation in mm
+                windSpeed: todayData.wspd || 0      // Wind speed in km/h
+            };
 
-// function getUserLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(
-//             (position) => {
-//                 const lat = position.coords.latitude;
-//                 const lon = position.coords.longitude;
-//                 fetchWeather(lat, lon);
-//             },
-//             (error) => {
-//                 console.error("Geolocation Error:", error);
-//             }
-//         );
-//     } else {
-//         console.error("Geolocation not supported by this browser.");
-//     }
-// }
+            console.log(weatherData);
+        } else {
+            console.warn("No weather data available for today.");
+        }
+    } catch (error) {
+        console.error("Weather API Error:", error);
+    }
+}
+
+function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                fetchWeather(lat, lon);
+            },
+            (error) => {
+                console.error("Geolocation Error:", error);
+            }
+        );
+    } else {
+        console.error("Geolocation not supported by this browser.");
+    }
+}

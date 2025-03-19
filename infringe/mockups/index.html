@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFRINGE</title>
+    <style>
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        body::-webkit-scrollbar {
+        display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        }
+
+        @font-face {
+            font-family: 'Haas Grot Text 55 Roman';
+            src: url('../assets/HaasGrotText-55Roman.woff2') format('woff2'),
+                url('../assets/HaasGrotText-55Roman.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body{
+            font-family: 'Haas Grot Text 55 Roman';
+            background-color: black;
+            color: rgb(206, 206, 206);
+            padding:0;margin:0;
+        }
+
+        img,video{
+            /* width:100%; */
+            margin-bottom: 5%;
+            margin-top: 0.5%;
+        }
+
+        .flex{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex img{
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img src="assets/largertextIntrocard.png" alt="">
+
+        Endpoints for Coily, Curly, Wavy, and Straight Hair
+        <video controls muted>
+            <source src="assets/endpoints.mp4" type="video/mp4">
+        </video>
+
+        Weather and Geolocation API <br>
+        Humidity → Frizz
+        <video controls muted>
+            <source src="assets/frizz.mp4" type="video/mp4">
+        </video>
+
+        Wind Speed → Movement
+        <video controls muted>
+            <source src="assets/wind.mp4" type="video/mp4">
+        </video>
+
+        Temperature → Number of Strands
+        <video controls muted>
+            <source src="assets/tempstrands.mp4" type="video/mp4">
+        </video>
+
+        12 Variations
+        <video controls muted>
+            <source src="assets/variations.mp4" type="video/mp4">
+        </video>
+
+        Magazines
+        <img src="assets/3-mag.png" alt="">
+        <img src="assets/mag-closeup.png" alt="">
+
+        Website <br>
+        Desktop
+        <video controls muted>
+            <source src="assets/desktopwebsite.mp4" type="video/mp4">
+        </video>
+
+        Website <br>
+        Mobile
+        <img src="assets/mobilewebsite.png" alt="">
+
+        Social Media Icons
+        <video autoplay loop muted>
+            <source src="assets/ig-profile.mp4" type="video/mp4">
+        </video>
+
+        Street Posters
+        <div class="flex">
+            <img src="assets/poster2.png" alt="">
+            <img src="assets/poster1.png" alt="">
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+    <script>
+        // Initialize Lenis
+        const lenis = new Lenis({
+        autoRaf: true,
+        });
+
+        // Listen for the scroll event and log the event data
+        lenis.on('scroll', (e) => {
+        console.log(e);
+        });
+    </script>
+</body>
+</html>
