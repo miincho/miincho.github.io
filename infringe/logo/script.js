@@ -15,7 +15,7 @@ function map(value, low1, high1, low2, high2) {
 
 async function userLocation() {
     try {
-        const response = await fetch('http://ip-api.com/json/');
+        const response = await fetch('https://ip-api.com/json/');
         if (!response.ok) throw new Error(`Failed to fetch location: ${response.status}`);
         
         const data = await response.json();
