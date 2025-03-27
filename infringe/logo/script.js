@@ -1,5 +1,5 @@
 let userLat, userLon;
-// let weatherData = {};
+let weatherData = {};
 
 let hairTypesForLocation = null;
 let p5Canvas = document.getElementById("canvas");
