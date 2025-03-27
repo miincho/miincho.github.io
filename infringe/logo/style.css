@@ -1,0 +1,66 @@
+body{
+    margin:0;padding:0;
+    overflow: hidden;
+    background: linear-gradient(#222222,#222222 3%, #000000 60%,#000000 ) !important;
+}
+
+@font-face {
+    font-family: 'Haas Grot Disp 65';
+    src: url('../assets/HaasGrotDisp-65Medium.woff2') format('woff2'),
+        url('../assets/HaasGrotDisp-65Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Haas Grot Text 55 Roman';
+    src: url('../assets/HaasGrotText-55Roman.woff2') format('woff2'),
+        url('../assets/HaasGrotText-55Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Haas Grot Disp 75';
+    src: url('../assets/HaasGrotDisp-75Bold.woff2') format('woff2'),
+        url('../assets/HaasGrotDisp-75Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+#canvas {
+    width: 100vw;
+    height: 100vh;
+    /* position: absolute;
+    top: 50%;
+    left: 0; */
+    z-index: 1;
+    background: transparent;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.weatherStats{
+    font-family: 'Haas Grot Text 55 Roman';
+    display:flex;
+    justify-content: space-between;
+    gap: 0.5%;
+
+    position: fixed;  /* Fix to the bottom */
+    bottom: 0.8%;  /* Attach to the bottom of the viewport */
+    left: 50%;  /* Move to the center of the viewport */
+    transform: translateX(-50%); /* Center it by shifting left by half its width */
+    width: 99%;
+}
+
+.weatherStats div{
+    color: #FF0000;
+    font-size: 0.85em;
+    padding: 0.2%;
+    border: 1.3px solid #FF0000;
+    width: 100%;
+    text-align: center;
+}

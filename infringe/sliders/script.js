@@ -70,13 +70,119 @@ function map(value, low1, high1, low2, high2) {
 
 
 let slider, waveSlider, noiseSlider;
+//4x3 chart
+
+//1
 let weatherData = { 
     lat: 40, 
     lon: 125,
-    temp: 55,
-    humidity: 50,
-    wind: 9
+    temp: 10,
+    humidity: 0,
+    wind: 0
 };
+
+
+// //2
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 30,
+//     humidity: 20,
+//     wind: 10
+// };
+
+
+// //3
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 20
+// };
+
+
+// //4
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 50
+// };
+
+// //5
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 30,
+//     humidity: 20,
+//     wind: 10
+// };
+
+// //6
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 30
+// };
+
+// //7
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 60
+// };
+
+// //8
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 90,
+//     humidity: 80,
+//     wind: 80
+// };
+
+// //9
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 40
+// };
+
+// //10
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 70
+// };
+
+// //11
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 90,
+//     humidity: 80,
+//     wind: 90
+// };
+
+// //12
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 110,
+//     humidity: 100,
+//     wind: 100
+// };
+
 let randomStrands =[];
 let randomStrand2 = [];
 const textSizeReference = 145; // The text size used
@@ -92,7 +198,7 @@ function setup() {
     canvas.parent("canvas");
 
     for (let i = 0; i < 100; i++) { // Adjust size based on expected points
-        randomStrands.push([random(-3, 3), random(-3, 3)]);
+        randomStrands.push([random(-5, 5), random(-5, 5)]);
     }
 
     for (let i = 0; i < 100; i++) { // Adjust size based on expected points
@@ -125,7 +231,7 @@ function draw() {
     noStroke();
     clear();
     // background(0);
-    fill("#ffffff");
+    fill("#FFE22A");
     textAlign(CENTER, CENTER);
     textFont(font);
     textSize(280);
@@ -155,7 +261,7 @@ function draw() {
     //outer stroke
     noFill();
     strokeWeight( w2);  
-    stroke('#000000');  
+    stroke('#777777');  
     
     //letter spacing + positioning
     const letterSpacings = [95, 200, 170, 190, 85, 200, 205, 100];
@@ -168,7 +274,7 @@ function draw() {
     letters.forEach((letter, index) => {
         push();
         translate(xOffset, startY);
-        drawLetter(letter.straight, letter.curly, t, index, waveIntensity, noiseIntensity);
+        drawLetter(letter.wavy, letter.coily, t, index, waveIntensity, noiseIntensity);
         pop();
         xOffset += letterSpacings[index];
     });
@@ -177,13 +283,14 @@ function draw() {
     xOffset = startX;
     noFill();
     strokeWeight(w);
-    stroke('#ffffff');
+
+    stroke('#000');
     
     //drawing each letter w inner stroke
     letters.forEach((letter, index) => {
         push();
         translate(xOffset, startY);
-        drawLetter(letter.straight, letter.curly, t, index, waveIntensity, noiseIntensity);
+        drawLetter(letter.wavy, letter.coily, t, index, waveIntensity, noiseIntensity);
         pop();
         xOffset += letterSpacings[index];
     });
@@ -203,11 +310,15 @@ function drawLetter(hairType1, hairType2, t, index, waveIntensity, noiseIntensit
     // const frizzAmount = 0;
     // const frizzFrequency = 0;
 
+    // let color1 = color("#000"); // Black
+    // let color2 = color("#A67C52"); // Light Brown
+
     const frizzAmount = frizzSlider.value();
     const frizzFrequency = frizzCountSlider.value();
     // console.log(frizzAmount)
 
     for (let i = 1; i < hairType1.length; i++) {
+
         // Interpolate and apply effects to each control point separately
         const cp1 = applyEffects(scalePoint(lerpPoint([hairType1[i][0], hairType1[i][1]], [hairType2[i][0], hairType2[i][1]], t), scale), i * 3, waveIntensity, noiseIntensity);
         const cp2 = applyEffects(scalePoint(lerpPoint([hairType1[i][2], hairType1[i][3]], [hairType2[i][2], hairType2[i][3]], t), scale), i * 3 + 1, waveIntensity, noiseIntensity);

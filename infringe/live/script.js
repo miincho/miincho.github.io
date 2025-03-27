@@ -1,7 +1,5 @@
 let userLat, userLon;
-let weatherData = {};
 
-let hairTypesForLocation = null;
 let p5Canvas = document.getElementById("canvas");
 let latDiv = document.getElementById("lat");
 let lonDiv = document.getElementById("lon");
@@ -13,144 +11,128 @@ function map(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
-async function userLocation() {
-    try {
-        const response = await fetch('http://ip-api.com/json/');
-        if (!response.ok) throw new Error(`Failed to fetch location: ${response.status}`);
-        
-        const data = await response.json();
-        userLat = data.lat;
-        userLon = data.lon;
-        console.log(userLat)
-        
-        latDiv.innerHTML = `Latitude: ${userLat}`;
-        lonDiv.innerHTML = `Longitude: ${userLon}`;
+//1
+let weatherData = { 
+    lat: 40, 
+    lon: 125,
+    temp: 10,
+    humidity: 0,
+    wind: 0
+};
 
-        hairTypesForLocation = getHairTypesByLocation(userLat, userLon);
 
-        await fetchWeather(userLat, userLon);
-    } catch (error) {
-        console.error("Error fetching IP location:", error);
-    }
-}
-
-async function fetchWeather(lat, lon) {
-    try {
-        const corsProxy = "https://cors-anywhere.herokuapp.com/";
-        const apiKey = "00f4094ad2731e49cd2ea6d2821bda4f";
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&exclude=daily&appid=${apiKey}`;
-        
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Weather API error: ${response.status}`);
-        const result = await response.text();
-        const data = JSON.parse(result);
-        console.log("Weather Data:", data);
-
-        weatherData = {
-            temp: data.main.temp || 0,
-            humidity: data.main.humidity || 0,
-            wind: data.wind.speed || 0,
-            lat: lat,
-            lon: lon
-        };
-
-        tempDiv.innerHTML = `Temperature: ${weatherData.temp} °F`;
-        humidityDiv.innerHTML = `Humidity: ${weatherData.humidity}%`;
-        windDiv.innerHTML = `Wind Speed: ${weatherData.wind} mph`;
-
-        /*
-            Temperature -  Multiple strands of hair (hair tied when its hot, down when its cold
-            Humidity - frizz, duplicate overlap?
-            Wind Speed - wave motion
-            Latitude, Longitude - hair type
-            Time of Day - color scheme, hair volume...
-        */
-        
-    } catch (error) {
-        console.error("Error fetching weather data:", error);
-    }
-}
-
-// start function
-userLocation();
-
+// 2 mag 2 logo
 // let weatherData = { 
-    // lat: 90, 
-    // lon: 60,
-    // temp: 35,
-    // humidity: 2,
-    // wind: 5
+//     lat: 40, 
+//     lon: 125,
+//     temp: 30,
+//     humidity: 20,
+//     wind: 5
 // };
 
-// tempDiv.innerHTML = `Temperature: ${weatherData.temp} °F`;
-// humidityDiv.innerHTML = `Humidity: ${weatherData.humidity}%`;
-// windDiv.innerHTML = `Wind Speed: ${weatherData.wind} mph`;
-// latDiv.innerHTML = `Latitude: ${weatherData.lat}`;
-// lonDiv.innerHTML = `Longitude: ${weatherData.lon}`;
+
+// //3
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 20
+// };
+
+
+// //4
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 50
+// };
+
+// //5
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 30,
+//     humidity: 20,
+//     wind: 10
+// };
+
+// //6
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 30
+// };
+
+// //7
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 60
+// };
+
+// //8
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 90,
+//     humidity: 80,
+//     wind: 80
+// };
+
+// //9
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 50,
+//     humidity: 40,
+//     wind: 40
+// };
+
+// //10
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 70,
+//     humidity: 60,
+//     wind: 70
+// };
+
+// //11
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 90,
+//     humidity: 80,
+//     wind: 90
+// };
+
+// //12
+// let weatherData = { 
+//     lat: 40, 
+//     lon: 125,
+//     temp: 110,
+//     humidity: 100,
+//     wind: 100
+// };
+
+
+tempDiv.innerHTML = `Temperature: ${weatherData.temp} °F`;
+humidityDiv.innerHTML = `Humidity: ${weatherData.humidity}%`;
+windDiv.innerHTML = `Wind Speed: ${weatherData.wind} mph`;
+latDiv.innerHTML = `Latitude: ${weatherData.lat}`;
+lonDiv.innerHTML = `Longitude: ${weatherData.lon}`;
 
 let randomStrands =[];
 let randomStrand2 = [];
 const textSizeReference = 145; // The text size used
 const scaleFactor = textSizeReference / 100; // Adjust based on letter data scale
-
-// Define a function to select hair types based on latitude and longitude
-function getHairTypesByLocation(latitude, longitude) {
-    // Normalize latitude from -90 to 90 -> 0 to 1
-    const latNormalized = (latitude + 90) / 180;
-    
-    // Normalize longitude from -180 to 180 -> 0 to 1
-    const longNormalized = (longitude + 180) / 360;
-    
-    // Use latitude to determine the primary hair type
-    // Northern hemisphere tends toward straighter, southern toward curlier
-    let primaryType, secondaryType;
-    
-    if (latNormalized < 0.25) {
-      // Southern regions - more coily hair
-      primaryType = 'coily';
-    } else if (latNormalized < 0.5) {
-      // Mid-southern regions - more curly hair
-      primaryType = 'curly';
-    } else if (latNormalized < 0.75) {
-      // Mid-northern regions - wavy hair
-      primaryType = 'wavy';
-    } else {
-      // Northern regions - straighter hair
-      primaryType = 'straight';
-    }
-    
-    // Use longitude to determine the secondary hair type
-    // We'll create a gradient effect as we move east/west
-    if (longNormalized < 0.25) {
-      secondaryType = 'coily';
-    } else if (longNormalized < 0.5) {
-      secondaryType = 'curly';
-    } else if (longNormalized < 0.75) {
-      secondaryType = 'wavy';
-    } else {
-      secondaryType = 'straight';
-    }
-
-      // Make sure secondary type is different from primary type
-    if (secondaryType === primaryType) {
-        // Get the next type in a cyclic manner
-        const hairTypes = ['straight', 'wavy', 'curly', 'coily'];
-        const currentIndex = hairTypes.indexOf(primaryType);
-        // Get the next type in the array (cycle back to beginning if needed)
-        const nextIndex = (currentIndex + 1) % hairTypes.length;
-        secondaryType = hairTypes[nextIndex];
-    }
-
-    const interpValue = (latNormalized * 0.6) + (longNormalized * 0.4);
-
-    return {
-      primary: primaryType,
-      secondary: secondaryType,
-      interpValue: interpValue
-    };
-  }
-  // Modify your existing code to use location data
-  let userLatitude, userLongitude;
 
 function preload() {
     font = loadFont('../assets/neue.otf');
@@ -162,45 +144,34 @@ function setup() {
     canvas.parent("canvas");
 
     for (let i = 0; i < 100; i++) { // Adjust size based on expected points
-        randomStrands.push([random(-5, 5), random(-5, 5)]);
+        randomStrands.push([random(-3, 3), random(-3, 3)]);
     }
 
     for (let i = 0; i < 100; i++) { // Adjust size based on expected points
         randomStrand2.push([random(-5, 5), random(-5, 5)]);
     }
+
+    // slider = createSlider(0, 1, 0, 0.1);
+    // slider.position(0, 0);
+
 }
 
 function draw() {
-    // if (!weatherData.temp && !hairTypesForLocation) {
-
     noStroke();
     clear();
     // background(0);
-    fill("#FF0000");
+    fill("#D70000");
     textAlign(CENTER, CENTER);
     textFont(font);
     textSize(280);
-    text('INFRINGE', windowWidth/2, windowHeight/2.5);
-
-    textFont(bodyFont);
-    textSize(40);
-    text('Anthropology of Hair', windowWidth/2, windowHeight/2.5 + 180);
+    text('INFRINGE', windowWidth/2, windowHeight/2);
 
     const w = 2.5;
     const w2 = 5;
 
-        // Use location-based interpolation value if available, otherwise fall back to slider
-        let t;
-        if (hairTypesForLocation) {
-            // Override the slider with location-based interpolation
-            t = hairTypesForLocation.interpValue;
-            // Optionally update the slider to match (visual feedback)
-            // slider.value(t);
-        } else {
-            // const hairSlider = slider.value();
-            // t = hairMap(hairSlider);
-        }
-          
+    //value from 0 to 1 in incrmeents of 0.1
+    t = hairMap(0.2);
+
     // const waveValue = waveSlider.value();
     const waveIntensity = map(weatherData.wind, 0, 100, 0, 150);
     const noiseIntensity =  map(weatherData.wind, 0, 100, 0, 100);
@@ -209,30 +180,20 @@ function draw() {
     //outer stroke
     noFill();
     strokeWeight( w2);  
-    stroke('#ffffff');  
+    stroke('#777777');  
     
     //letter spacing + positioning
     const letterSpacings = [95, 200, 170, 190, 85, 200, 205, 100];
     const totalWidth = letterSpacings.reduce((sum, space) => sum + space, 0);
     const startX = (windowWidth / 2) - (totalWidth / 2) - 35;
-    const startY = windowHeight / 3.3;
+    const startY = windowHeight / 2.55;
     let xOffset = startX;
     
     //drawing each letter w outer stroke
     letters.forEach((letter, index) => {
         push();
         translate(xOffset, startY);
-
-          // Get the correct hair types based on location
-          let hairType1, hairType2;
-          if (hairTypesForLocation) {
-              hairType1 = letter[hairTypesForLocation.primary] || letter.straight;
-              hairType2 = letter[hairTypesForLocation.secondary] || letter.curly;
-          } else {
-              hairType1 = letter.straight;
-              hairType2 = letter.wavy;
-          }
-          drawLetter(hairType1, hairType2, t, index, waveIntensity, noiseIntensity);
+        drawLetter(letter.straight, letter.wavy, t, index, waveIntensity, noiseIntensity);
         pop();
         xOffset += letterSpacings[index];
     });
@@ -246,32 +207,11 @@ function draw() {
     letters.forEach((letter, index) => {
         push();
         translate(xOffset, startY);
-
-          // Get the correct hair types based on location
-          let hairType1, hairType2;
-          if (hairTypesForLocation) {
-              hairType1 = letter[hairTypesForLocation.primary] || letter.straight;
-              hairType2 = letter[hairTypesForLocation.secondary] || letter.curly;
-          } else {
-              hairType1 = letter.straight;
-              hairType2 = letter.wavy;
-          }
-          
-          drawLetter(hairType1, hairType2, t, index, waveIntensity, noiseIntensity);
-        
+        drawLetter(letter.straight, letter.wavy, t, index, waveIntensity, noiseIntensity);
         pop();
         xOffset += letterSpacings[index];
     });
-
-    //       if (hairTypesForLocation) {
-    //       fill(255);
-    //       textSize(18);
-    //       textAlign(LEFT, BOTTOM);
-    //       text(`Hair blend: ${hairTypesForLocation.primary} + ${hairTypesForLocation.secondary}`, 20, windowHeight - 40);
-    //     //   text(`Blend ratio: ${(hairTypesForLocation.interpValue * 100).toFixed(0)}%`, 20, windowHeight - 20);
-    //   }
 }
-// }
 
 function drawLetter(hairType1, hairType2, t, index, waveIntensity, noiseIntensity) {
     beginShape();
@@ -307,7 +247,7 @@ function drawLetter(hairType1, hairType2, t, index, waveIntensity, noiseIntensit
         //add parameter to add multiple hairs 
         // bezierVertex(cp1[0]+ random(-5,5), cp1[1] + random(-5,5), cp2[0] + random(-5,5), cp2[1] + random(-5,5), p[0] + random(-5,5), p[1] + random(-5,5));
 
-        bezierVertex(cp1[0], cp1[1], cp2[0], cp2[1], p[0], p[1]);
+        // bezierVertex(cp1[0], cp1[1], cp2[0], cp2[1], p[0], p[1]);
         // bezierVertex(cp1[0], cp1[1], cp2[0], cp2[1], p[0], p[1]);
     }
     endShape();
