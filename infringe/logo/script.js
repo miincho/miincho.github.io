@@ -15,22 +15,27 @@ function map(value, low1, high1, low2, high2) {
 
 async function userLocation() {
     try {
-        const response = await fetch('https://ip-api.com/json/');
-        if (!response.ok) throw new Error(`Failed to fetch location: ${response.status}`);
-        
-        const data = await response.json();
-        userLat = data.lat;
-        userLon = data.lon;
-        console.log(userLat)
-        
-        latDiv.innerHTML = `Latitude: ${userLat}`;
-        lonDiv.innerHTML = `Longitude: ${userLon}`;
+        if (!navigator.geolocation) {
+            throw new Error("Geolocation is not supported by your browser.");
+        }
 
-        hairTypesForLocation = getHairTypesByLocation(userLat, userLon);
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            const userLat = position.coords.latitude;
+            const userLon = position.coords.longitude;
 
-        await fetchWeather(userLat, userLon);
+            console.log(userLat, userLon);
+
+            latDiv.innerHTML = `Latitude: ${userLat.toFixed(2)}`;
+            lonDiv.innerHTML = `Longitude: ${userLon.toFixed(2)}`;
+
+            hairTypesForLocation = getHairTypesByLocation(userLat, userLon);
+
+            await fetchWeather(userLat, userLon);
+        }, (error) => {
+            console.error("Error getting location:", error.message);
+        });
     } catch (error) {
-        console.error("Error fetching IP location:", error);
+        console.error("Error fetching geolocation:", error);
     }
 }
 
