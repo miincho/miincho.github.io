@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ippodo Tea</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="parent-container">
+    <div class="container">
+
+        <div class="taskbar">
+            <div class="title">Ippodo Tea <br>Package Generator</div>
+
+            <div class="name">
+                <div class="subtitle teaName">Tea Name</div>
+                <input id="input-product" class="typeName" contentEditable="true"></input>
+            </div>
+
+            <div class="category">
+                <div class="subtitle">Category</div>
+                <div class="buttonGroup" id="categoryGroup">
+                    <div class= button id="sencha">Sencha</div>
+                    <div class= button id="gyokuro">Gyokuro</div>
+                    <div class= button id="matcha">Matcha</div>
+                    <div class= button id="bancha">Bancha</div>
+                </div>
+            </div>
+
+            <div class="emotion">
+                <div class="subtitle">Emotion</div>
+                <div class="buttonGroup" id="emotionGroup">
+                    <div class= button id="concentrate">Concentrate</div>
+                    <div class= button id="relax">Relax</div>
+                    <div class= button id="invigorate">Invigorate</div>
+                    <div class= button id="nostalgia">Nostalgia</div>
+                    <div class= button id="appetize">Appetize</div>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="subtitle">Body</div>
+                <div class="buttonGroup" id="bodyGroup">
+                    <div class= button id="rich">Rich</div>
+                    <div class= button id="medium">Medium</div>
+                    <div class= button id="light">Light</div>
+
+                </div>
+            </div>
+
+            <div class="strength">
+                <div class="subtitle">Strength</div>
+                <input type="range" min="1" max="10" value="5" class="slider" id="strengthRange">            
+            </div>
+
+            <div class="fragrance">
+                <div class="subtitle">Fragrance</div>
+                <input type="range" min="1" max="10" value="5" class="slider" id="fragranceRange">            
+            </div>
+
+            <div class="generateContainer">
+                <div class="button" id="generate">Generate</div>
+            </div>
+        </div>
+
+        <div class="canvas" id="canvas-container"></div>
+
+    </div>
+
+</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+        <script src="main.js"></script>
+
+</body>
+</html>

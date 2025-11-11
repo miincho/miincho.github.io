@@ -1,0 +1,161 @@
+    @font-face {
+      font-family: 'BF-regular'; /* Choose a name for your font */
+      src: url('bradford-regular.woff2') format('woff2'); /* Specify the path to your WOFF2 file */
+      font-weight: normal; /* Define the font weight (e.g., normal, bold, 100-900) */
+      font-style: normal; /* Define the font style (e.g., normal, italic, oblique) */
+      font-display: swap; /* Optional: Controls how the font loads and displays */
+    }
+
+    @font-face {
+      font-family: 'BF-italic'; /* Choose a name for your font */
+      src: url('bradford-italic.woff2') format('woff2'); /* Specify the path to your WOFF2 file */
+      font-weight: normal; /* Define the font weight (e.g., normal, bold, 100-900) */
+      font-style: normal; /* Define the font style (e.g., normal, italic, oblique) */
+      font-display: swap; /* Optional: Controls how the font loads and displays */
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: #ffffff;
+        border:1px solid black;
+        border-radius: 50px;
+        outline: none;
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        border-radius: 50px;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #000000;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #000000;
+        cursor: pointer;
+    }
+
+   body{
+      font-family: 'BF-regular';
+      background-color: #e1e1e1;
+    }
+
+    .parent-container {
+        display: flex;
+        align-items: center; /* Centers items vertically */
+        height: 98vh;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        /* border: solid 1px black; */
+        margin:2%
+    }
+
+    .taskbar{
+        z-index: 5;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding:7%;
+        /* border: solid 1px black; */
+        height: 85vh;
+        width: 25vw;
+    }
+
+    #emotionGroup{
+        width: 20vw;
+    }
+
+    .emotion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .title{
+        font-size: 2.3em;
+        text-align: CENTER;
+        padding: 0% 0 13% 0;
+    }
+
+    .subtitle{
+        font-size: 1.3em;
+        text-align: CENTER;
+    }
+
+    .teaName{
+        margin-bottom: 1.7%;
+    }
+
+    .typeName{
+        width: 22vw;
+        font-family: 'BF-italic';
+        text-align: center;
+        font-size: 1.1em;
+
+    }
+
+    .buttonGroup{
+        margin-top: 1.5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button{
+      font-family: 'BF-italic';
+      border: solid 1px black;
+      padding:2% 3.5% 2% 3.5%;
+      display:inline-block;
+      border-radius: 8px;
+      margin:1.5px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .generateContainer{
+        display:flex;
+        justify-content: center;
+    }
+
+    .button:hover{
+        cursor:pointer;
+        background-color: #000000;
+        color: white;
+
+    }
+
+    .button.selected {
+        background-color: #000000;
+        color: white;
+        border: 1px solid #000000;
+    }
+
+    .name, .category, .emotion, .strength, .fragrance, .body{
+        padding-bottom: 8%
+    }
+
+    .canvas {
+    position: relative;
+    /* width: 550px;
+    height: 800px;  */
+    flex-shrink: 0;
+
+    }
+
+    #canvas-container canvas {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    border-radius: 10px;
+
+    }
